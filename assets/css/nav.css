@@ -1,0 +1,293 @@
+/* ============================================================
+   NAV.CSS — Sensation Group
+   Depends on: base.css (custom properties)
+============================================================ */
+
+/* ============================================================
+   NAV SHELL
+============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: var(--black);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================================
+   NAV LOGO
+============================================================ */
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   NAV LINKS
+============================================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+}
+
+/* ============================================================
+   NAV CTA
+============================================================ */
+.nav-cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 20px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.nav-cta:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+/* ============================================================
+   LANGUAGE SWITCHER
+   Placed after .nav-cta in the nav-inner row (desktop)
+============================================================ */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 16px;
+}
+
+.lang-switcher button {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lang-switcher button:hover,
+.lang-switcher button.active {
+  color: var(--white);
+}
+
+.lang-switcher button.active {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================
+   HAMBURGER BUTTON
+============================================================ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 999;
+  flex-direction: column;
+  padding: 48px;
+  gap: 0;
+  overflow-y: auto;
+}
+
+.nav-mobile-menu.open {
+  display: flex;
+}
+
+.nav-mobile-menu a {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 6vw, 40px);
+  font-weight: 700;
+  color: var(--white);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.nav-mobile-menu a:hover {
+  opacity: 0.6;
+}
+
+.nav-mobile-menu .mobile-cta {
+  margin-top: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 24px;
+  text-align: center;
+  color: var(--white);
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px
+============================================================ */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0 32px;
+  }
+
+  .nav-links {
+    gap: 28px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px
+============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
+  }
+
+  .nav {
+    padding: 0 24px;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  /* Hide desktop lang-switcher, show inside mobile menu instead */
+  .nav-inner > .lang-switcher {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* Language switcher inside mobile menu */
+  .nav-mobile-menu .lang-switcher {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    margin-top: 32px;
+    margin-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 24px;
+  }
+
+  .nav-mobile-menu .lang-switcher button {
+    flex: 1;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    padding: 12px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .nav-mobile-menu .lang-switcher button:hover,
+  .nav-mobile-menu .lang-switcher button.active {
+    color: var(--white);
+  }
+
+  .nav-mobile-menu .lang-switcher button.active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px
+============================================================ */
+@media (max-width: 480px) {
+  .nav-mobile-menu {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Sensation Group</title>
+  <meta name="description" content="Projecto de evento premium do Sensation Group." />
+  <link rel="canonical" href="https://sensationgroup.com/portfolio-item.html" />
+
+  <!-- Open Graph (JS updates dynamically) -->
+  <meta property="og:title" content="Portfolio — Sensation Group" />
+  <meta property="og:description" content="Projecto de evento premium do Sensation Group." />
+  <meta property="og:type" content="article" />
+
+  <!-- JSON-LD CreativeWork (JS populates) -->
+  <script type="application/ld+json" id="json-ld-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Portfolio — Sensation Group",
+    "description": "Projecto de evento premium do Sensation Group.",
+    "url": "https://sensationgroup.com/portfolio-item.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "Sensation Group",
+      "url": "https://sensationgroup.com"
+    }
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── CSS Variables shorthand ── */
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-400);
+    }
+    .breadcrumb a {
+      color: var(--gray-400);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb a:hover {
+      color: var(--black);
+    }
+    .breadcrumb-sep {
+      color: var(--gray-200);
+    }
+    .breadcrumb span:last-child {
+      color: var(--black);
+    }
+
+    /* ── Project Header ── */
+    .item-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 48px 80px;
+    }
+    .item-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 6vw, 80px);
+      color: var(--black);
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+    .item-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 0;
+    }
+    .item-meta-pill {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray-600);
+      padding: 6px 14px;
+      border: 1px solid var(--gray-200);
+      background: var(--gray-100);
+    }
+    .item-meta-sep {
+      width: 1px;
+      height: 16px;
+      background: var(--gray-200);
+      margin: 0 16px;
+    }
+
+    /* ── Skeleton / Loading state ── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--gray-100) 25%, var(--gray-200) 50%, var(--gray-100) 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 1.4s ease-in-out infinite;
+      border-radius: 2px;
+    }
+    @keyframes skeleton-shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .skeleton-title {
+      height: clamp(36px, 6vw, 80px);
+      width: 70%;
+      margin-bottom: 16px;
+    }
+    .skeleton-title-2 {
+      height: clamp(36px, 6vw, 80px);
+      width: 50%;
+      margin-bottom: 32px;
+    }
+    .skeleton-pill {
+      height: 32px;
+      width: 120px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    /* ── Hero Image ── */
+    .item-hero-image {
+      width: 100%;
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--gray-100);
+    }
+
+    /* ── Body Text ── */
+    .item-body-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--gray-600);
+    }
+    .item-body-text h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--black);
+      margin: 32px 0 16px;
+      line-height: 1.3;
+    }
+    .item-body-text p {
+      margin-bottom: 20px;
+    }
+
+    /* ── Gallery Grid ── */
+    .item-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    @media (max-width: 768px) {
+      .item-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .item-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-img {
+      aspect-ratio: 4 / 3;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--gray-100);
+    }
+
+    /* ── Testimonial ── */
+    .item-testimonial-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 48px;
+    }
+    .item-testimonial-wrap blockquote {
+      font-family: 'Syne', sans-serif;
+      font-weight: 500;
+      font-size: clamp(22px, 3vw, 34px);
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.45;
+      margin: 0 0 28px;
+    }
+    .item-testimonial-wrap cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: normal;
+    }
+
+    /* ── Related Grid ── */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    @media (max-width: 768px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .related-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .related-card-img {
+      aspect-ratio: 3 / 4;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--gray-100);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: opacity 0.3s;
+    }
+    .related-card:hover .related-card-img {
+      opacity: 0.85;
+    }
+    .related-card-cat {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gray-400);
+      margin-bottom: 6px;
+    }
+    .related-card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--black);
+      line-height: 1.3;
+    }
+
+    /* ── Section helpers ── */
+    .section-wrap--off {
+      background: var(--white);
+    }
+    .section-wrap--white {
+      background: var(--white);
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    }
+    .section-inner--tight {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px 0;
+    }
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gray-400);
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 3vw, 40px);
+      color: var(--black);
+      margin-bottom: 40px;
+      line-height: 1.15;
+    }
+
+    /* ── Dual CTA ── */
+    .dual-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .dual-cta-card {
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .dual-cta-card--dark { background: var(--black); }
+    .dual-cta-card--light { background: var(--off-white); }
+    .dual-cta-card-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .dual-cta-card--dark .dual-cta-card-label { color: rgba(255,255,255,0.4); }
+    .dual-cta-card--light .dual-cta-card-label { color: var(--gray-400); }
+    .dual-cta-card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.15;
+    }
+    .dual-cta-card--dark .dual-cta-card-title { color: var(--white); }
+    .dual-cta-card--light .dual-cta-card-title { color: var(--black); }
+    .dual-cta-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 14px 28px;
+      transition: opacity 0.2s;
+      width: fit-content;
+    }
+    .dual-cta-card--dark .dual-cta-card-link { background: var(--white); color: var(--black); }
+    .dual-cta-card--light .dual-cta-card-link { background: var(--black); color: var(--white); }
+    .dual-cta-card-link:hover { opacity: 0.8; }
+
+    /* ── Dark section ── */
+    .section-dark {
+      background: var(--black);
+      padding: 100px 48px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .dual-cta { grid-template-columns: 1fr; }
+      .dual-cta-card { padding: 64px 32px; }
+      .item-header { padding: 32px 24px 64px; }
+      .section-inner { padding: 64px 24px; }
+      .section-dark { padding: 64px 24px; }
+      .item-testimonial-wrap { padding: 0 24px; }
+    }
+
+    /* ── Testimonial hidden state ── */
+    .item-testimonial-section--hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── SECTION 1: Breadcrumb ── -->
+    <div style="padding-top: calc(var(--nav-height, 72px) + 48px); padding-bottom: 0;" class="section-wrap--off">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 48px;">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="portfolio.html">Portfolio</a>
+          <span class="breadcrumb-sep">/</span>
+          <span id="item-category">Projecto</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ── SECTION 2: Project Header ── -->
+    <section class="section-wrap--off" aria-labelledby="item-title">
+      <div class="item-header">
+
+        <!-- Loading skeleton shown before JS hydrates -->
+        <div id="item-header-skeleton" aria-hidden="true">
+          <div class="skeleton skeleton-title"></div>
+          <div class="skeleton skeleton-title-2"></div>
+          <div class="skeleton skeleton-pill"></div>
+          <div class="skeleton skeleton-pill"></div>
+          <div class="skeleton skeleton-pill"></div>
+        </div>
+
+        <!-- Actual content (hidden until JS fills it) -->
+        <div id="item-header-content" style="display: none;">
+          <h1 id="item-title">—</h1>
+          <div class="item-meta-row" role="list" aria-label="Detalhes do projecto">
+            <span id="item-client" class="item-meta-pill" role="listitem"></span>
+            <div class="item-meta-sep" aria-hidden="true"></div>
+            <span id="item-date" class="item-meta-pill" role="listitem"></span>
+            <div class="item-meta-sep" aria-hidden="true"></div>
+            <span id="item-category-tag" class="item-meta-pill" role="listitem"></span>
+            <div class="item-meta-sep" aria-hidden="true"></div>
+            <span id="item-brand" class="item-meta-pill" role="listitem"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: Hero Image ── -->
+    <div id="item-hero-img" class="item-hero-image" role="img" aria-label="Imagem principal do projecto"></div>
+
+    <!-- ── SECTION 4: Description ── -->
+    <section class="section-wrap--white" aria-label="Descrição do projecto">
+      <div class="section-inner">
+        <div id="item-description" class="item-body-text">
+          <!-- Skeleton placeholder -->
+          <div id="item-desc-skeleton" aria-hidden="true" style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="skeleton" style="height: 18px; width: 100%;"></div>
+            <div class="skeleton" style="height: 18px; width: 95%;"></div>
+            <div class="skeleton" style="height: 18px; width: 88%;"></div>
+            <div class="skeleton" style="height: 18px; width: 92%;"></div>
+            <div class="skeleton" style="height: 18px; width: 70%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5: Gallery ── -->
+    <section class="section-wrap--off" aria-label="Galeria de imagens">
+      <div class="section-inner">
+        <p class="section-label">Galeria</p>
+        <div id="item-gallery" class="item-gallery-grid">
+          <!-- Skeleton gallery placeholders -->
+          <div class="gallery-img skeleton" aria-hidden="true"></div>
+          <div class="gallery-img skeleton" aria-hidden="true"></div>
+          <div class="gallery-img skeleton" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 6: Testimonial (hidden if no data) ── -->
+    <section class="section-dark item-testimonial-section--hidden" id="item-testimonial-section" aria-label="Testemunho">
+      <div class="item-testimonial-wrap">
+        <blockquote id="item-testimonial-text"></blockquote>
+        <cite id="item-testimonial-author"></cite>
+      </div>
+    </section>
+
+    <!-- ── SECTION 7: Related Projects ── -->
+    <section class="section-wrap--off" aria-label="Projectos relacionados">
+      <div class="section-inner">
+        <p class="section-label">Mais trabalho</p>
+        <h2 class="section-title">Projectos Relacionados</h2>
+        <div id="item-related" class="related-grid">
+          <!-- Skeleton related cards -->
+          <div aria-hidden="true">
+            <div class="related-card-img skeleton"></div>
+            <div class="skeleton" style="height: 12px; width: 60%; margin-bottom: 8px;"></div>
+            <div class="skeleton" style="height: 16px; width: 80%;"></div>
+          </div>
+          <div aria-hidden="true">
+            <div class="related-card-img skeleton"></div>
+            <div class="skeleton" style="height: 12px; width: 55%; margin-bottom: 8px;"></div>
+            <div class="skeleton" style="height: 16px; width: 75%;"></div>
+          </div>
+          <div aria-hidden="true">
+            <div class="related-card-img skeleton"></div>
+            <div class="skeleton" style="height: 12px; width: 65%; margin-bottom: 8px;"></div>
+            <div class="skeleton" style="height: 16px; width: 70%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 8: Dual CTA ── -->
+    <section class="dual-cta" aria-label="Próximos passos">
+      <div class="dual-cta-card dual-cta-card--dark">
+        <p class="dual-cta-card-label">Vamos trabalhar juntos</p>
+        <h2 class="dual-cta-card-title">Tem um projecto em mente?</h2>
+        <a href="contacto.html" class="dual-cta-card-link">Pedir Proposta →</a>
+      </div>
+      <div class="dual-cta-card dual-cta-card--light">
+        <p class="dual-cta-card-label">O nosso trabalho</p>
+        <h2 class="dual-cta-card-title">Ver todo o portfolio.</h2>
+        <a href="portfolio.html" class="dual-cta-card-link">Ver Portfolio →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-col-title">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-col-title">Empresa</p>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="areas.html">Áreas</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
+          <li><a href="careers.html">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-col-title">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+      <nav class="footer-socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Portfolio item loader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.ContentLoader) {
+        ContentLoader.fetchData('portfolio').then(function (data) {
+          if (data) ContentLoader.renderPortfolioItem(data);
+        });
+      }
+
+      // Update JSON-LD dynamically after item loads
+      // ContentLoader.renderPortfolioItem should call updateItemMeta() below
+      // once it has resolved the item from the ?id= param.
+    });
+
+    /**
+     * Called by ContentLoader (or inline after item resolves) to hydrate
+     * the page with a specific portfolio item's data.
+     *
+     * Expected item shape:
+     * {
+     *   id, title, category, client, date, brand,
+     *   heroImage, description, gallery: [url,...],
+     *   testimonial: { text, author } | null,
+     *   related: [{ id, title, category, image }]
+     * }
+     */
+    function updateItemMeta(item) {
+      if (!item) return;
+
+      // ── <title> & meta ──
+      document.title = item.title + ' — Portfolio — Sensation Group';
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', item.description || 'Projecto de evento premium do Sensation Group.');
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', item.title + ' — Sensation Group');
+
+      // ── JSON-LD ──
+      var schemaEl = document.getElementById('json-ld-schema');
+      if (schemaEl) {
+        schemaEl.textContent = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          'name': item.title,
+          'description': item.description || '',
+          'url': 'https://sensationgroup.com/portfolio-item.html?id=' + item.id,
+          'image': item.heroImage || '',
+          'dateCreated': item.date || '',
+          'creator': {
+            '@type': 'Organization',
+            'name': 'Sensation Group',
+            'url': 'https://sensationgroup.com'
+          }
+        });
+      }
+
+      // ── Breadcrumb category ──
+      var catEl = document.getElementById('item-category');
+      if (catEl) catEl.textContent = item.category || 'Projecto';
+
+      // ── Header ──
+      var skeletonEl = document.getElementById('item-header-skeleton');
+      var contentEl = document.getElementById('item-header-content');
+      if (skeletonEl) skeletonEl.style.display = 'none';
+      if (contentEl) contentEl.style.display = '';
+
+      var titleEl = document.getElementById('item-title');
+      if (titleEl) titleEl.textContent = item.title || '';
+
+      var clientEl = document.getElementById('item-client');
+      if (clientEl) clientEl.textContent = item.client || '';
+
+      var dateEl = document.getElementById('item-date');
+      if (dateEl) dateEl.textContent = item.date || '';
+
+      var catTagEl = document.getElementById('item-category-tag');
+      if (catTagEl) catTagEl.textContent = item.category || '';
+
+      var brandEl = document.getElementById('item-brand');
+      if (brandEl) brandEl.textContent = item.brand || '';
+
+      // ── Hero image ──
+      var heroEl = document.getElementById('item-hero-img');
+      if (heroEl && item.heroImage) {
+        heroEl.style.backgroundImage = "url('" + item.heroImage + "')";
+        heroEl.setAttribute('aria-label', item.title);
+      }
+
+      // ── Description ──
+      var descEl = document.getElementById('item-description');
+      if (descEl) {
+        var descSkeleton = document.getElementById('item-desc-skeleton');
+        if (descSkeleton) descSkeleton.remove();
+        descEl.innerHTML = item.description || '';
+      }
+
+      // ── Gallery ──
+      var galleryEl = document.getElementById('item-gallery');
+      if (galleryEl && item.gallery && item.gallery.length) {
+        galleryEl.innerHTML = '';
+        item.gallery.forEach(function (imgUrl) {
+          var div = document.createElement('div');
+          div.className = 'gallery-img';
+          div.style.backgroundImage = "url('" + imgUrl + "')";
+          div.setAttribute('role', 'img');
+          galleryEl.appendChild(div);
+        });
+      }
+
+      // ── Testimonial ──
+      var testimonialSection = document.getElementById('item-testimonial-section');
+      if (item.testimonial && item.testimonial.text) {
+        var quoteEl = document.getElementById('item-testimonial-text');
+        var authorEl = document.getElementById('item-testimonial-author');
+        if (quoteEl) quoteEl.textContent = '“' + item.testimonial.text + '”';
+        if (authorEl) authorEl.textContent = item.testimonial.author || '';
+        if (testimonialSection) testimonialSection.classList.remove('item-testimonial-section--hidden');
+      }
+
+      // ── Related projects ──
+      var relatedEl = document.getElementById('item-related');
+      if (relatedEl && item.related && item.related.length) {
+        relatedEl.innerHTML = '';
+        item.related.forEach(function (rel) {
+          var a = document.createElement('a');
+          a.className = 'related-card';
+          a.href = 'portfolio-item.html?id=' + rel.id;
+
+          var imgDiv = document.createElement('div');
+          imgDiv.className = 'related-card-img';
+          if (rel.image) imgDiv.style.backgroundImage = "url('" + rel.image + "')";
+
+          var catP = document.createElement('p');
+          catP.className = 'related-card-cat';
+          catP.textContent = rel.category || '';
+
+          var titleP = document.createElement('p');
+          titleP.className = 'related-card-title';
+          titleP.textContent = rel.title || '';
+
+          a.appendChild(imgDiv);
+          a.appendChild(catP);
+          a.appendChild(titleP);
+          relatedEl.appendChild(a);
+        });
+      }
+    }
+
+    // Expose globally so ContentLoader can call it
+    window.updateItemMeta = updateItemMeta;
+  </script>
+
+</body>
+</html>

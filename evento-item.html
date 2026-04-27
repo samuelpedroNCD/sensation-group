@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evento — Sensation Group</title>
+  <meta name="description" content="Detalhes do evento — Sensation Group." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sensationgroup.com/evento-item.html" />
+
+  <!-- Open Graph (updated dynamically by JS) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Evento — Sensation Group" />
+  <meta property="og:description" content="Detalhes do evento produzido pelo Sensation Group." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-eventos.jpg" />
+  <meta property="og:url" content="https://sensationgroup.com/evento-item.html" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:site_name" content="Sensation Group" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Evento — Sensation Group" />
+  <meta name="twitter:description" content="Detalhes do evento produzido pelo Sensation Group." />
+  <meta name="twitter:image" content="https://sensationgroup.com/assets/img/og-eventos.jpg" />
+
+  <!-- JSON-LD: Event (JS will populate) -->
+  <script id="json-ld-event" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Evento — Sensation Group",
+    "organizer": {
+      "@type": "Organization",
+      "@id": "https://sensationgroup.com/#organization",
+      "name": "Sensation Group"
+    }
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Breadcrumb Wrap ── */
+    .breadcrumb-wrap {
+      padding-top: calc(80px + 48px);
+      padding-bottom: 0;
+      padding-left: 48px;
+      padding-right: 48px;
+      background: var(--off-white);
+    }
+
+    /* ── Event Header ── */
+    .event-header {
+      background: var(--off-white);
+      padding: 32px 48px 64px;
+    }
+    .event-header-inner {
+      max-width: 900px;
+    }
+    .event-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 6vw, 80px);
+      font-weight: 800;
+      line-height: 0.97;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      margin-bottom: 32px;
+    }
+    .event-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .event-meta-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--gray-400);
+      letter-spacing: 0.04em;
+    }
+    .event-meta-sep {
+      width: 1px;
+      height: 14px;
+      background: var(--gray-200);
+      flex-shrink: 0;
+    }
+    .event-meta-location {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--gray-400);
+    }
+    .event-type-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gray-400);
+      border: 1px solid var(--gray-200);
+      padding: 4px 12px;
+    }
+
+    /* ── Hero Image ── */
+    .event-hero-image {
+      width: 100%;
+      height: 55vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--gray-100);
+    }
+
+    /* ── Description ── */
+    .event-body-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--gray-600);
+    }
+
+    /* ── Similar CTA (dark section) ── */
+    .similar-cta {
+      text-align: center;
+      padding: 100px 48px;
+      background: var(--black);
+    }
+    .similar-cta-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 24px;
+    }
+    .similar-cta-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 5.5vw, 72px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .similar-cta-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      text-decoration: none;
+      transition: color 0.2s;
+      margin-bottom: 32px;
+    }
+    .back-link:hover {
+      color: var(--black);
+    }
+    .back-link::before {
+      content: '←';
+      font-size: 14px;
+    }
+
+    /* ── Loading state ── */
+    .event-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40vh;
+      background: var(--off-white);
+    }
+    .event-loading p {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+
+    /* ── Not found state ── */
+    .event-not-found {
+      text-align: center;
+      padding: 100px 48px;
+      background: var(--off-white);
+    }
+    .event-not-found h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .event-not-found p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--gray-400);
+      margin-bottom: 40px;
+    }
+
+    /* ── Description section padded ── */
+    .section-wrap--desc {
+      padding: 80px 48px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .breadcrumb-wrap {
+        padding-top: calc(72px + 40px);
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+      .event-header {
+        padding: 28px 32px 56px;
+      }
+      .similar-cta {
+        padding: 80px 32px;
+      }
+      .section-wrap--desc {
+        padding: 64px 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .breadcrumb-wrap {
+        padding-top: calc(64px + 32px);
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .event-header {
+        padding: 24px 24px 48px;
+      }
+      .event-meta {
+        gap: 12px;
+      }
+      .event-meta-sep {
+        display: none;
+      }
+      .event-hero-image {
+        height: 40vh;
+      }
+      .similar-cta {
+        padding: 64px 24px;
+      }
+      .section-wrap--desc {
+        padding: 56px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .breadcrumb-wrap {
+        padding-top: calc(60px + 28px);
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .event-header {
+        padding: 20px 20px 40px;
+      }
+      .event-hero-image {
+        height: 32vh;
+      }
+      .event-body-text {
+        font-size: 15px;
+      }
+      .similar-cta {
+        padding: 56px 20px;
+      }
+      .section-wrap--desc {
+        padding: 48px 20px;
+      }
+      .cta-section {
+        grid-template-columns: 1fr;
+      }
+      .cta-card {
+        padding: 56px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── 1. Breadcrumb ── -->
+    <div class="breadcrumb-wrap">
+      <nav class="breadcrumb" aria-label="Localização na página">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="eventos.html">Eventos</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span id="item-type">Evento</span>
+      </nav>
+    </div>
+
+    <!-- ── 2. Event Header ── -->
+    <div class="event-header">
+      <div class="event-header-inner">
+        <h1 class="event-title" id="item-title">Carregando evento&hellip;</h1>
+        <div class="event-meta">
+          <span class="event-meta-date" id="item-date"></span>
+          <span class="event-meta-sep" aria-hidden="true"></span>
+          <span class="event-meta-location" id="item-location"></span>
+          <span class="event-type-tag" id="item-type-tag"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. Hero Image ── -->
+    <div id="item-hero-img" class="event-hero-image" role="img" aria-label="Imagem do evento"></div>
+
+    <!-- ── 4. Description ── -->
+    <section class="section-wrap section-wrap--white section-wrap--desc" aria-label="Descrição do evento">
+      <p id="item-description" class="event-body-text">
+        <!-- JS populates -->
+      </p>
+    </section>
+
+    <!-- ── 5. Book Similar CTA ── -->
+    <section class="similar-cta reveal" aria-label="Evento similar">
+      <p class="similar-cta-label">Próximo passo</p>
+      <h2 class="similar-cta-title">Quer um evento similar?</h2>
+      <p class="similar-cta-desc">Fale connosco sobre a sua visão — criamos experiências únicas para cada cliente.</p>
+      <a href="contacto.html" class="btn btn--outline-white">Pedir Proposta →</a>
+    </section>
+
+    <!-- ── 6. Standard CTA Dual-Card ── -->
+    <section class="cta-section reveal" aria-label="Chamada para ação">
+      <div class="cta-card cta-card--dark">
+        <p class="section-num section-num--dark" aria-hidden="true">→</p>
+        <h2 class="cta-title">Tem um evento em mente?</h2>
+        <p class="cta-desc">Fale connosco e descubra como podemos transformar a sua visão em realidade.</p>
+        <a href="contacto.html" class="btn btn--outline-white">Pedir Proposta →</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <p class="section-num" aria-hidden="true">→</p>
+        <h2 class="cta-title">Conheça o nosso portfolio.</h2>
+        <p class="cta-desc">Veja uma seleção dos nossos projetos mais recentes e ambiciosos.</p>
+        <a href="portfolio.html" class="btn btn--dark">Ver Portfolio →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div><p class="footer-logo">Sensation <span>Group</span></p><p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p><p class="footer-locations">PT · EUA</p></div>
+      <nav class="footer-col"><p class="footer-col-title">Marcas</p><ul><li><a href="marcas.html#floor-sensation">Floor Sensation</a></li><li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li><li><a href="marcas.html#premium">Premium Sensation</a></li></ul></nav>
+      <nav class="footer-col"><p class="footer-col-title">Empresa</p><ul><li><a href="sobre.html">Quem Somos</a></li><li><a href="areas.html">Áreas</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="careers.html">Carreiras</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Contacto</p><ul><li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li><li><a href="tel:+351910000000">+351 910 000 000</a></li><li><a href="#">Lisboa, Portugal</a></li><li><a href="#">New York, USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="cookies.html">Cookies</a></nav>
+      <nav class="footer-socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="LinkedIn">LinkedIn</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.ContentLoader) {
+        ContentLoader.fetchData('events').then(function(data) {
+          if (data) ContentLoader.renderEventItem(data);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+/* ============================================================
+   COMPONENTS.CSS — Sensation Group
+   Shared component styles used across all inner pages.
+   Depends on: base.css (custom properties, reset)
+============================================================ */
+
+/* ============================================================
+   PAGE HERO — inner pages (smaller than homepage hero)
+============================================================ */
+.page-hero {
+  position: relative;
+  padding: 160px 48px 88px;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.5) 0%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.page-hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
+}
+
+.page-hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(40px, 7vw, 96px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.page-hero-desc {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin-top: 28px;
+  max-width: 560px;
+}
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 48px;
+}
+
+.breadcrumb a {
+  color: var(--gray-400);
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--black);
+}
+
+.breadcrumb-sep {
+  color: var(--gray-200);
+}
+
+/* ============================================================
+   SECTION WRAPPER
+============================================================ */
+.section-wrap {
+  padding: 100px 48px;
+}
+
+.section-wrap--dark {
+  background: var(--black);
+}
+
+.section-wrap--off {
+  background: var(--off-white);
+}
+
+.section-wrap--white {
+  background: var(--white);
+}
+
+.section-wrap--gray {
+  background: var(--gray-100);
+}
+
+/* ============================================================
+   SECTION HEADER
+============================================================ */
+.section-header {
+  margin-bottom: 64px;
+}
+
+.section-header--row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.section-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gray-200);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-num--dark {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.section-title--dark {
+  color: var(--white);
+}
+
+.section-title--lg {
+  font-size: clamp(36px, 5.5vw, 72px);
+}
+
+/* ============================================================
+   TEXT LINK
+============================================================ */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, gap 0.2s;
+  white-space: nowrap;
+}
+
+.text-link:hover {
+  border-color: var(--black);
+  gap: 14px;
+}
+
+.text-link--white {
+  color: var(--white);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.text-link--white:hover {
+  border-bottom-color: var(--white);
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: gap 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  gap: 16px;
+}
+
+.btn--dark {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.btn--dark:hover {
+  background: var(--gray-600);
+  border-color: var(--gray-600);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--gray-200);
+}
+
+.btn--outline:hover {
+  border-color: var(--black);
+}
+
+.btn--outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--outline-white:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+/* ============================================================
+   FORM ELEMENTS
+============================================================ */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 10px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 14px 16px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--black);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ============================================================
+   CARD GRIDS
+============================================================ */
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.card-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+/* ============================================================
+   HORIZONTAL RULE
+============================================================ */
+.h-rule {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 0;
+}
+
+.h-rule--dark {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================================
+   CTA SECTION — shared dual-card pattern
+   Mirrors the homepage .cta-section for reuse on inner pages.
+   Usage:
+     <section class="cta-section">
+       <div class="cta-card cta-card--dark">…</div>
+       <div class="cta-card cta-card--light">…</div>
+     </section>
+============================================================ */
+.cta-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cta-card {
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card--dark {
+  background: var(--black);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cta-card--light {
+  background: var(--off-white);
+  border-top: 1px solid var(--gray-200);
+}
+
+.cta-label-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.cta-card-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.cta-card--dark .cta-card-num {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.cta-card--light .cta-card-num {
+  color: var(--gray-200);
+}
+
+.cta-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cta-card--dark .cta-label {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-card--light .cta-label {
+  color: var(--gray-400);
+}
+
+.cta-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 3.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.cta-card--dark .cta-title {
+  color: var(--white);
+}
+
+.cta-card--light .cta-title {
+  color: var(--black);
+}
+
+.cta-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.72;
+  margin-bottom: 40px;
+}
+
+.cta-card--dark .cta-desc {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.cta-card--light .cta-desc {
+  color: var(--gray-600);
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cta-card--dark .cta-btn {
+  color: var(--black);
+  background: var(--white);
+}
+
+.cta-card--dark .cta-btn:hover {
+  opacity: 0.85;
+}
+
+.cta-card--light .cta-btn {
+  color: var(--white);
+  background: var(--black);
+}
+
+.cta-card--light .cta-btn:hover {
+  opacity: 0.8;
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px
+============================================================ */
+@media (max-width: 1024px) {
+  .section-wrap {
+    padding: 80px 32px;
+  }
+
+  .page-hero {
+    padding: 140px 32px 72px;
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-header--row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-card {
+    padding: 60px 40px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px
+============================================================ */
+@media (max-width: 768px) {
+  .section-wrap {
+    padding: 64px 24px;
+  }
+
+  .page-hero {
+    padding: 120px 24px 60px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 32px;
+  }
+
+  .card-grid-3,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card--dark {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .cta-card {
+    padding: 60px 24px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px
+============================================================ */
+@media (max-width: 480px) {
+  .section-wrap {
+    padding: 56px 20px;
+  }
+
+  .page-hero {
+    padding: 110px 20px 52px;
+  }
+
+  .cta-card {
+    padding: 48px 20px;
+  }
+}

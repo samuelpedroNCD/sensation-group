@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>As Nossas Marcas — Sensation Group</title>
+  <meta name="description" content="Conheça as três marcas do Sensation Group: Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation." />
+  <link rel="canonical" href="https://sensationgroup.com/marcas.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sensationgroup.com/marcas.html" />
+  <meta property="og:title" content="As Nossas Marcas — Sensation Group" />
+  <meta property="og:description" content="Conheça as três marcas do Sensation Group: Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-marcas.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sensation Group",
+    "url": "https://sensationgroup.com",
+    "logo": "https://sensationgroup.com/assets/img/logo.svg",
+    "description": "Grupo premium de produção de eventos em Portugal e nos Estados Unidos.",
+    "subOrganization": [
+      {
+        "@type": "Organization",
+        "name": "Floor Sensation",
+        "url": "https://sensationgroup.com/marcas.html#floor-sensation",
+        "description": "Especialistas em pisos modulares, pisos de dança e estruturas de palco para eventos premium."
+      },
+      {
+        "@type": "Organization",
+        "name": "Sensation Sound & Lights",
+        "url": "https://sensationgroup.com/marcas.html#sound-lights",
+        "description": "Sistemas de som profissional, design de iluminação, estruturas aéreas e efeitos especiais."
+      },
+      {
+        "@type": "Organization",
+        "name": "Premium Sensation",
+        "url": "https://sensationgroup.com/marcas.html#premium",
+        "description": "Gestão completa de eventos corporativos, casamentos de luxo e eventos privados exclusivos."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Page-specific styles ── */
+
+    /* Group architecture intro */
+    .arch-body {
+      max-width: 680px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--gray-600);
+      margin-bottom: 3.5rem;
+    }
+    .arch-index {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+    .arch-index-item {
+      flex: 1;
+      padding: 2rem 1.75rem;
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s ease;
+    }
+    .arch-index-item:last-child { border-right: none; }
+    .arch-index-item:hover { background: var(--gray-50); }
+    .arch-index-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+    .arch-index-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+    }
+    .arch-index-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.825rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+    .arch-index-link {
+      margin-top: auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    .arch-index-link:hover { text-decoration: underline; }
+
+    /* Brand editorial split layout */
+    .brand-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: 520px;
+    }
+    .brand-split--reverse { direction: rtl; }
+    .brand-split--reverse > * { direction: ltr; }
+
+    .brand-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+    }
+    .brand-content--dark { }
+
+    .brand-img-col {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+    }
+    .brand-img-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .brand-img-col:hover img { transform: scale(1.03); }
+
+    .brand-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 6rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--gray-100);
+      margin-bottom: 1.25rem;
+    }
+    .brand-num--dark {
+      color: rgba(255,255,255,0.06);
+    }
+    .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+    .brand-name--dark { color: var(--white); }
+    .brand-positioning {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.75rem;
+    }
+    .brand-positioning--dark { color: rgba(255,255,255,0.35); }
+    .brand-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+    }
+    .brand-desc--dark { color: rgba(255,255,255,0.6); }
+
+    .brand-services {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+    }
+    .brand-services li {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--gray-600);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .brand-services li::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gray-400);
+      flex-shrink: 0;
+    }
+    .brand-services--dark li { color: rgba(255,255,255,0.5); }
+    .brand-services--dark li::before { background: rgba(255,255,255,0.25); }
+
+    /* section wrap for brand light uses off bg */
+    .brand-wrap-light { background: var(--off-white); }
+    .brand-wrap-white { background: var(--white); }
+
+    /* Brand section full bleed override */
+    .brand-section {
+      overflow: hidden;
+    }
+    .brand-section .section-wrap {
+      padding-bottom: 0;
+    }
+
+    /* Override section-wrap padding for brand sections */
+    .brand-section-inner {
+      padding: 5rem var(--section-x, 6vw) 0;
+    }
+    @media (max-width: 1024px) {
+      .brand-section-inner { padding: 4rem 5vw 0; }
+    }
+    @media (max-width: 768px) {
+      .brand-section-inner { padding: 3rem 4vw 0; }
+    }
+
+    /* Responsive brand split */
+    @media (max-width: 1024px) {
+      .brand-split { grid-template-columns: 1fr; }
+      .brand-split--reverse { direction: ltr; }
+      .brand-img-col { min-height: 320px; }
+      .brand-content { padding: 3rem; }
+      .brand-num { font-size: 4rem; }
+      .arch-index { flex-direction: column; }
+      .arch-index-item { border-right: none; border-bottom: 1px solid var(--gray-200); }
+      .arch-index-item:last-child { border-bottom: none; }
+    }
+    @media (max-width: 768px) {
+      .brand-content { padding: 2.25rem 1.5rem; }
+      .brand-services { grid-template-columns: 1fr; }
+      .brand-num { font-size: 3rem; }
+    }
+
+    /* Section offset for brand anchors */
+    [id="floor-sensation"],
+    [id="sound-lights"],
+    [id="premium"] {
+      scroll-margin-top: 90px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
+        <li><a href="marcas.html" data-i18n="nav.brands">Marcas</a></li>
+        <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher" aria-label="Selecionar idioma">
+        <button data-lang-btn="pt" class="active" aria-label="Português">PT</button>
+        <button data-lang-btn="en" aria-label="English">EN</button>
+        <button data-lang-btn="fr" aria-label="Français">FR</button>
+        <button data-lang-btn="es" aria-label="Español">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <a href="sobre.html" class="mobile-link" data-i18n="nav.about">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link" data-i18n="nav.brands">Marcas</a>
+    <a href="areas.html" class="mobile-link" data-i18n="nav.areas">Áreas</a>
+    <a href="portfolio.html" class="mobile-link" data-i18n="nav.portfolio">Portfolio</a>
+    <a href="eventos.html" class="mobile-link" data-i18n="nav.events">Eventos</a>
+    <a href="insights.html" class="mobile-link" data-i18n="nav.insights">Insights</a>
+    <a href="contacto.html" class="mobile-link" data-i18n="nav.contact">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta" data-i18n="nav.cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="page-hero" aria-label="Cabeçalho da página Marcas">
+      <div class="page-hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80"
+          alt="Evento musical premium com iluminação profissional"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Localização na página">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb-sep" aria-hidden="true">—</span>
+          <span aria-current="page">Marcas</span>
+        </nav>
+        <p class="page-hero-label" data-i18n="marcas.label">02 — Marcas</p>
+        <h1 class="page-hero-title" data-i18n="marcas.headline">Três marcas.<br>Uma visão.</h1>
+        <p class="page-hero-desc" data-i18n="marcas.desc">Cada marca do Sensation Group foi construída para dominar a sua especialidade — juntas, formam um ecossistema único.</p>
+      </div>
+    </section>
+
+    <!-- ── 2. GROUP ARCHITECTURE ── -->
+    <section class="section-wrap section-wrap--off reveal" id="arquitectura" aria-labelledby="arch-title">
+      <div class="section-header">
+        <span class="section-num">00</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.5rem;" data-i18n="marcas.arch.label">Arquitectura do Grupo</p>
+          <h2 class="section-title" id="arch-title" data-i18n="marcas.arch.title">Um grupo. Três especialidades.</h2>
+        </div>
+      </div>
+
+      <p class="arch-body" data-i18n="marcas.arch.body">O Sensation Group estruturou-se em três marcas distintas e complementares. Cada uma ocupa uma posição específica no mercado de produção de eventos — e as três trabalham em sinergia para oferecer aos clientes uma cobertura total das suas necessidades, desde o mais técnico detalhe de palco ao mais sofisticado evento privado. Esta arquitectura permite-nos ser simultaneamente especialistas e generalistas: profundidade em cada vertical, amplitude em todo o grupo.</p>
+
+      <div class="arch-index" role="list" aria-label="Índice das marcas">
+        <div class="arch-index-item reveal" role="listitem">
+          <span class="arch-index-num">01</span>
+          <span class="arch-index-name" data-i18n="marcas.arch.b1.name">Floor Sensation</span>
+          <span class="arch-index-tag" data-i18n="marcas.arch.b1.tag">Pisos, estruturas e superfícies para eventos de qualquer dimensão.</span>
+          <a href="#floor-sensation" class="arch-index-link" data-i18n="marcas.arch.b1.link">Conhecer →</a>
+        </div>
+        <div class="arch-index-item reveal" role="listitem">
+          <span class="arch-index-num">02</span>
+          <span class="arch-index-name" data-i18n="marcas.arch.b2.name">Sensation Sound &amp; Lights</span>
+          <span class="arch-index-tag" data-i18n="marcas.arch.b2.tag">Som, iluminação e efeitos especiais para experiências imersivas.</span>
+          <a href="#sound-lights" class="arch-index-link" data-i18n="marcas.arch.b2.link">Conhecer →</a>
+        </div>
+        <div class="arch-index-item reveal" role="listitem">
+          <span class="arch-index-num">03</span>
+          <span class="arch-index-name" data-i18n="marcas.arch.b3.name">Premium Sensation</span>
+          <span class="arch-index-tag" data-i18n="marcas.arch.b3.tag">Gestão completa de eventos corporativos e privados de luxo.</span>
+          <a href="#premium" class="arch-index-link" data-i18n="marcas.arch.b3.link">Conhecer →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. BRAND 01: FLOOR SENSATION ── -->
+    <section class="section-wrap section-wrap--white reveal" id="floor-sensation" aria-labelledby="floor-title">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.5rem;" data-i18n="marcas.floor.label">Marca 01</p>
+          <h2 class="section-title" id="floor-title">Floor Sensation</h2>
+        </div>
+      </div>
+
+      <div class="brand-split">
+        <div class="brand-content">
+          <p class="brand-num" aria-hidden="true">01</p>
+          <h3 class="brand-name" data-i18n="marcas.floor.name">Floor Sensation</h3>
+          <p class="brand-positioning" data-i18n="marcas.floor.positioning">Superfícies que definem o palco.</p>
+          <p class="brand-desc" data-i18n="marcas.floor.desc">A Floor Sensation é a marca do Sensation Group especializada em soluções de piso e estrutura para eventos. Do piso modular ao ringue de dança, da passadeira VIP à estrutura de palco — somos os especialistas que constroem literalmente as bases do evento. Cada solução é escolhida e instalada com rigor técnico e atenção estética, garantindo que o chão onde tudo acontece está à altura do que acontece em cima.</p>
+          <ul class="brand-services" aria-label="Serviços da Floor Sensation">
+            <li data-i18n="marcas.floor.s1">Pisos modulares</li>
+            <li data-i18n="marcas.floor.s2">Pisos de dança</li>
+            <li data-i18n="marcas.floor.s3">Estruturas de palco</li>
+            <li data-i18n="marcas.floor.s4">Passadeiras VIP</li>
+          </ul>
+          <a href="#" class="text-link" data-i18n="marcas.floor.cta">Conhecer a marca →</a>
+        </div>
+        <div class="brand-img-col">
+          <img
+            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"
+            alt="Piso modular elegante para evento premium"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. BRAND 02: SENSATION SOUND & LIGHTS ── -->
+    <section class="section-wrap section-wrap--dark reveal" id="sound-lights" aria-labelledby="sound-title">
+      <div class="section-header">
+        <span class="section-num section-num--dark">02</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:0.5rem;" data-i18n="marcas.sound.label">Marca 02</p>
+          <h2 class="section-title section-title--dark" id="sound-title">Sensation Sound &amp; Lights</h2>
+        </div>
+      </div>
+
+      <div class="brand-split brand-split--reverse">
+        <div class="brand-content brand-content--dark">
+          <p class="brand-num brand-num--dark" aria-hidden="true">02</p>
+          <h3 class="brand-name brand-name--dark" data-i18n="marcas.sound.name">Sensation Sound &amp; Lights</h3>
+          <p class="brand-positioning brand-positioning--dark" data-i18n="marcas.sound.positioning">Som e luz. Imersão total.</p>
+          <p class="brand-desc brand-desc--dark" data-i18n="marcas.sound.desc">A Sensation Sound &amp; Lights é a marca técnica do grupo, responsável por transformar qualquer espaço numa experiência sensorial completa. Os nossos sistemas de som de alta fidelidade e os nossos designs de iluminação são criados para emocionar — calibrados milimetricamente para cada venue, cada acústica, cada atmosfera. Com estruturas aéreas e efeitos especiais que desafiam a expectativa, elevamos cada evento a uma produção de outro nível.</p>
+          <ul class="brand-services brand-services--dark" aria-label="Serviços da Sensation Sound &amp; Lights">
+            <li data-i18n="marcas.sound.s1">Sistemas de som profissional</li>
+            <li data-i18n="marcas.sound.s2">Design de iluminação</li>
+            <li data-i18n="marcas.sound.s3">Estruturas aéreas</li>
+            <li data-i18n="marcas.sound.s4">Efeitos especiais</li>
+          </ul>
+          <a href="#" class="text-link text-link--white" data-i18n="marcas.sound.cta">Conhecer a marca →</a>
+        </div>
+        <div class="brand-img-col">
+          <img
+            src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=800&q=80"
+            alt="Sistema de iluminação profissional em evento ao vivo"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. BRAND 03: PREMIUM SENSATION ── -->
+    <section class="section-wrap section-wrap--off reveal" id="premium" aria-labelledby="premium-title">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.5rem;" data-i18n="marcas.premium.label">Marca 03</p>
+          <h2 class="section-title" id="premium-title">Premium Sensation</h2>
+        </div>
+      </div>
+
+      <div class="brand-split">
+        <div class="brand-content">
+          <p class="brand-num" aria-hidden="true">03</p>
+          <h3 class="brand-name" data-i18n="marcas.premium.name">Premium Sensation</h3>
+          <p class="brand-positioning" data-i18n="marcas.premium.positioning">Eventos extraordinários. Gestão total.</p>
+          <p class="brand-desc" data-i18n="marcas.premium.desc">A Premium Sensation é a marca de gestão integral de eventos do grupo — a escolha de quem não quer preocupar-se com nenhum detalhe. Desde o conceito inicial à última flor da mesa, gerimos tudo. Eventos corporativos de alto nível, casamentos de luxo e celebrações privadas exclusivas que ficam na memória de quem participa. A nossa promessa é simples: o seu evento vai superar as expectativas de todos os presentes.</p>
+          <ul class="brand-services" aria-label="Serviços da Premium Sensation">
+            <li data-i18n="marcas.premium.s1">Eventos corporativos</li>
+            <li data-i18n="marcas.premium.s2">Casamentos de luxo</li>
+            <li data-i18n="marcas.premium.s3">Eventos privados exclusivos</li>
+            <li data-i18n="marcas.premium.s4">Gestão completa end-to-end</li>
+          </ul>
+          <a href="#" class="text-link" data-i18n="marcas.premium.cta">Conhecer a marca →</a>
+        </div>
+        <div class="brand-img-col">
+          <img
+            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80"
+            alt="Evento de luxo premium com decoração sofisticada"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. CTA ── -->
+    <section class="cta-section reveal" aria-label="Chamada para ação">
+      <div class="cta-card cta-card--dark">
+        <p class="section-num section-num--dark" aria-hidden="true">→</p>
+        <h2 data-i18n="marcas.cta1.title">Precisa de mais do que uma marca?</h2>
+        <p data-i18n="marcas.cta1.desc">As três marcas do grupo trabalham em conjunto. Fale connosco e construímos a solução certa para o seu evento.</p>
+        <a href="contacto.html" class="btn btn--outline-white" data-i18n="marcas.cta1.btn">Entrar em Contacto</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <p class="section-num" aria-hidden="true">→</p>
+        <h2 data-i18n="marcas.cta2.title">Veja o resultado do nosso trabalho.</h2>
+        <p data-i18n="marcas.cta2.desc">O nosso portefólio mostra o que é possível quando as três marcas trabalham ao seu serviço.</p>
+        <a href="portfolio.html" class="btn btn--dark" data-i18n="marcas.cta2.btn">Ver Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col" aria-label="Marcas do grupo">
+        <p class="footer-col-title" data-i18n="footer.brands">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Links da empresa">
+        <p class="footer-col-title" data-i18n="footer.company">Empresa</p>
+        <ul>
+          <li><a href="sobre.html" data-i18n="nav.about">Quem Somos</a></li>
+          <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+          <li><a href="parcerias.html" data-i18n="nav.partnerships">Parcerias</a></li>
+          <li><a href="careers.html" data-i18n="nav.careers">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col" aria-label="Informações de contacto">
+        <p class="footer-col-title" data-i18n="footer.contact">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal" aria-label="Links legais">
+        <a href="privacidade.html" data-i18n="footer.privacy">Privacidade</a>
+        <a href="termos.html" data-i18n="footer.terms">Termos</a>
+        <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      </nav>
+      <nav class="footer-socials" aria-label="Redes sociais">
+        <a href="#" aria-label="Instagram do Sensation Group">Instagram</a>
+        <a href="#" aria-label="LinkedIn do Sensation Group">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

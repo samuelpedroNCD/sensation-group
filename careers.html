@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carreiras — Sensation Group</title>
+  <meta name="description" content="Junte-se à equipa do Sensation Group. Oportunidades de carreira em produção de eventos premium em Portugal e nos EUA." />
+  <meta property="og:title" content="Carreiras — Sensation Group" />
+  <meta property="og:description" content="Junte-se à equipa do Sensation Group. Oportunidades de carreira em produção de eventos premium em Portugal e nos EUA." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Sensation Group",
+        "url": "https://sensationgroup.com",
+        "description": "Produção de eventos premium em Portugal e nos Estados Unidos.",
+        "email": "hello@sensationgroup.com",
+        "sameAs": ["https://instagram.com/sensationgroup", "https://linkedin.com/company/sensationgroup"]
+      },
+      {
+        "@type": "JobPosting",
+        "title": "Técnico de Som e Iluminação",
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" }
+        },
+        "hiringOrganization": { "@type": "Organization", "name": "Sensation Group", "sameAs": "https://sensationgroup.com" },
+        "datePosted": "2026-04-01"
+      },
+      {
+        "@type": "JobPosting",
+        "title": "Gestor de Eventos Corporativos",
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" }
+        },
+        "hiringOrganization": { "@type": "Organization", "name": "Sensation Group", "sameAs": "https://sensationgroup.com" },
+        "datePosted": "2026-04-01"
+      },
+      {
+        "@type": "JobPosting",
+        "title": "Coordenador de Produção",
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" }
+        },
+        "hiringOrganization": { "@type": "Organization", "name": "Sensation Group", "sameAs": "https://sensationgroup.com" },
+        "datePosted": "2026-04-01"
+      },
+      {
+        "@type": "JobPosting",
+        "title": "Business Development Manager (EUA)",
+        "employmentType": "FULL_TIME",
+        "jobLocation": {
+          "@type": "Place",
+          "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
+        },
+        "hiringOrganization": { "@type": "Organization", "name": "Sensation Group", "sameAs": "https://sensationgroup.com" },
+        "datePosted": "2026-04-01"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── SECTION WRAPPERS ─── */
+    .section-wrap { padding: 96px 0; }
+    .section-wrap--off { background: var(--off-white); }
+    .section-wrap--white { background: var(--white); }
+    .section-wrap--dark { background: var(--black); color: var(--white); }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+    }
+    .section-wrap--dark .section-label { color: var(--gray-400); }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      position: relative;
+      height: 580px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .page-hero__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center top;
+      filter: brightness(0.32);
+      transform: scale(1.04);
+      transition: transform 8s ease;
+    }
+    .page-hero:hover .page-hero__bg { transform: scale(1.0); }
+    .page-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 0 40px 72px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .page-hero__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 18px;
+    }
+    .page-hero__title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .page-hero__desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ─── CULTURE ─── */
+    .culture-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+    .culture-intro__heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .culture-intro__body {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      padding-top: 8px;
+    }
+    .culture-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+    .culture-point {
+      border-top: 1px solid var(--gray-200);
+      padding-top: 28px;
+    }
+    .culture-point__num {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .culture-point__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .culture-point__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+    .culture-quote {
+      border-left: 2px solid var(--black);
+      padding: 16px 0 16px 32px;
+    }
+    .culture-quote p {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--black);
+    }
+
+    /* ─── VALUES ─── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 56px;
+    }
+    .value-cell {
+      padding: 48px 36px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .value-cell__num {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+    }
+    .value-cell__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .value-cell__desc {
+      font-size: 13px;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+
+    /* ─── OPEN POSITIONS ─── */
+    .positions-header {
+      margin-bottom: 56px;
+    }
+    .positions-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .positions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .position-card {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 36px 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .position-card:hover { background: var(--off-white); }
+    .position-card__left { min-width: 0; }
+    .position-card__tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .position-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      background: var(--gray-100);
+      padding: 4px 10px;
+    }
+    .position-card__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .position-card__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .btn--outline {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--black);
+      border: 1px solid var(--black);
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn--outline:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ─── APPLICATION FORM ─── */
+    .app-form-header {
+      margin-bottom: 48px;
+    }
+    .app-form-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .app-form-header p {
+      font-size: 15px;
+      color: var(--gray-600);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-grid--full { grid-column: 1 / -1; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+    .form-input,
+    .form-textarea,
+    .form-select {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+      width: 100%;
+    }
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus { border-color: var(--black); }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%235A5A56' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+    .form-input[type="file"] {
+      padding: 10px 16px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+    .form-hint {
+      font-size: 11px;
+      color: var(--gray-400);
+      margin-top: -4px;
+    }
+    .btn--dark {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 16px 40px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn--dark:hover {
+      background: var(--gray-600);
+      transform: translateY(-2px);
+    }
+    .form-success {
+      display: none;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 32px 40px;
+      margin-top: 24px;
+      text-align: center;
+    }
+    .form-success__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .form-success__text {
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+
+    /* ─── DUAL CTA ─── */
+    .dual-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 280px;
+    }
+    .dual-cta__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 48px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .dual-cta__card:hover { opacity: 0.88; }
+    .dual-cta__card--dark {
+      background: var(--black);
+      color: var(--white);
+    }
+    .dual-cta__card--light {
+      background: var(--off-white);
+      color: var(--black);
+      border: 1px solid var(--gray-200);
+    }
+    .dual-cta__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .dual-cta__title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .dual-cta__arrow {
+      font-size: 24px;
+      margin-top: 32px;
+      display: block;
+    }
+    .dual-cta__card--dark .dual-cta__title { color: var(--white); }
+    .dual-cta__card--light .dual-cta__title { color: var(--black); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .culture-points { gap: 24px; }
+    }
+
+    @media (max-width: 768px) {
+      .section-wrap { padding: 72px 0; }
+      .container { padding: 0 24px; }
+      .page-hero { height: 480px; }
+      .page-hero__content { padding: 0 24px 56px; }
+      .culture-intro { grid-template-columns: 1fr; gap: 32px; }
+      .culture-points { grid-template-columns: 1fr; gap: 20px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .position-card { grid-template-columns: 1fr; gap: 16px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .dual-cta { grid-template-columns: 1fr; }
+      .dual-cta__card { padding: 48px 32px; min-height: 220px; }
+    }
+
+    @media (max-width: 480px) {
+      .section-wrap { padding: 56px 0; }
+      .container { padding: 0 20px; }
+      .page-hero { height: 420px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .value-cell { padding: 32px 24px; }
+      .dual-cta__card { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- 1. PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80');"></div>
+      <div class="page-hero__content container">
+        <p class="page-hero__label">Carreiras</p>
+        <h1 class="page-hero__title">Construa a sua<br>carreira connosco.</h1>
+        <p class="page-hero__desc">Somos uma equipa de apaixonados por eventos. Se partilha os nossos valores, queremos conhecê-lo.</p>
+      </div>
+    </section>
+
+    <!-- 2. CULTURE -->
+    <section class="section-wrap section-wrap--off reveal">
+      <div class="container">
+        <p class="section-label">A Nossa Cultura</p>
+        <div class="culture-intro">
+          <h2 class="culture-intro__heading">Mais do que um emprego — uma missão.</h2>
+          <p class="culture-intro__body">No Sensation Group, acreditamos que os grandes eventos nascem de equipas extraordinárias. Cada projecto é uma oportunidade de aprender, crescer e deixar uma marca duradoura em quem está presente. Procuramos pessoas que partilhem este compromisso com a excelência.</p>
+        </div>
+
+        <div class="culture-points">
+
+          <div class="culture-point">
+            <p class="culture-point__num">01</p>
+            <h3 class="culture-point__title">Crescimento Contínuo</h3>
+            <p class="culture-point__desc">Investimos no desenvolvimento da nossa equipa através de formação, mentorias e exposição a projectos de referência internacional. Cada desafio é uma oportunidade de evolução.</p>
+          </div>
+
+          <div class="culture-point">
+            <p class="culture-point__num">02</p>
+            <h3 class="culture-point__title">Impacto Real</h3>
+            <p class="culture-point__desc">O seu trabalho tem visibilidade imediata. Produzimos eventos que ficam na memória de centenas ou milhares de pessoas. O impacto do que fazemos é tangível e mensurável.</p>
+          </div>
+
+          <div class="culture-point">
+            <p class="culture-point__num">03</p>
+            <h3 class="culture-point__title">Equipa de Elite</h3>
+            <p class="culture-point__desc">Trabalha ao lado dos melhores profissionais da indústria. Uma equipa coesa, exigente e apaixonada, onde a colaboração é o motor de todos os projectos.</p>
+          </div>
+
+        </div>
+
+        <blockquote class="culture-quote">
+          <p>"Cada membro da nossa equipa é um especialista apaixonado pelo que faz."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 3. VALUES -->
+    <section class="section-wrap section-wrap--dark reveal">
+      <div class="container">
+        <p class="section-label">O que valorizamos</p>
+        <div class="values-grid">
+
+          <div class="value-cell">
+            <p class="value-cell__num">01</p>
+            <h3 class="value-cell__title">Excelência Técnica</h3>
+            <p class="value-cell__desc">Dominamos as ferramentas e os processos necessários para executar no mais alto nível, sem espaço para o mediocre.</p>
+          </div>
+
+          <div class="value-cell">
+            <p class="value-cell__num">02</p>
+            <h3 class="value-cell__title">Criatividade</h3>
+            <p class="value-cell__desc">Cada evento é uma tela em branco. Encorajamos ideias ousadas e soluções inovadoras que surpreendam e marquem.</p>
+          </div>
+
+          <div class="value-cell">
+            <p class="value-cell__num">03</p>
+            <h3 class="value-cell__title">Responsabilidade</h3>
+            <p class="value-cell__desc">Assumimos os nossos compromissos e cumprimos o que prometemos, aos nossos clientes e entre nós.</p>
+          </div>
+
+          <div class="value-cell">
+            <p class="value-cell__num">04</p>
+            <h3 class="value-cell__title">Espírito de Equipa</h3>
+            <p class="value-cell__desc">Nenhum evento é obra de uma só pessoa. Celebramos o sucesso colectivo e apoiamo-nos mutuamente em cada detalhe.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OPEN POSITIONS -->
+    <section class="section-wrap section-wrap--white reveal">
+      <div class="container">
+        <div class="positions-header">
+          <p class="section-label">Posições em Aberto</p>
+          <h2>Junte-se à equipa.</h2>
+        </div>
+
+        <div class="positions-list">
+
+          <article class="position-card">
+            <div class="position-card__left">
+              <div class="position-card__tags">
+                <span class="position-tag">Full-time</span>
+                <span class="position-tag">Lisboa</span>
+              </div>
+              <h3 class="position-card__title">Técnico de Som e Iluminação</h3>
+              <p class="position-card__desc">Responsável pela operação e configuração de equipamento de som e iluminação em eventos ao vivo. Experiência em consolas digitais e sistemas de rigging é valorizada.</p>
+            </div>
+            <a href="contacto.html" class="btn--outline">Candidatar-se</a>
+          </article>
+
+          <article class="position-card">
+            <div class="position-card__left">
+              <div class="position-card__tags">
+                <span class="position-tag">Full-time</span>
+                <span class="position-tag">Lisboa / Remote</span>
+              </div>
+              <h3 class="position-card__title">Gestor de Eventos Corporativos</h3>
+              <p class="position-card__desc">Gestão end-to-end de eventos corporativos de alto nível: briefing com clientes, coordenação de fornecedores, logística e supervisão em evento. Mínimo 3 anos de experiência na área.</p>
+            </div>
+            <a href="contacto.html" class="btn--outline">Candidatar-se</a>
+          </article>
+
+          <article class="position-card">
+            <div class="position-card__left">
+              <div class="position-card__tags">
+                <span class="position-tag">Full-time</span>
+                <span class="position-tag">Lisboa</span>
+              </div>
+              <h3 class="position-card__title">Coordenador de Produção</h3>
+              <p class="position-card__desc">Apoio à coordenação operacional de múltiplos eventos em simultâneo. Gestão de timelines, fornecedores e equipas de terreno. Perfil organizado, proactivo e resistente à pressão.</p>
+            </div>
+            <a href="contacto.html" class="btn--outline">Candidatar-se</a>
+          </article>
+
+          <article class="position-card">
+            <div class="position-card__left">
+              <div class="position-card__tags">
+                <span class="position-tag">Full-time</span>
+                <span class="position-tag">New York</span>
+              </div>
+              <h3 class="position-card__title">Business Development Manager (EUA)</h3>
+              <p class="position-card__desc">Desenvolvimento de negócio e relações comerciais no mercado norte-americano. Identificação de oportunidades, gestão de parcerias e expansão da carteira de clientes nos EUA.</p>
+            </div>
+            <a href="contacto.html" class="btn--outline">Candidatar-se</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. APPLICATION FORM -->
+    <section class="section-wrap section-wrap--off reveal">
+      <div class="container">
+        <div class="app-form-header">
+          <h2>Candidatura Espontânea</h2>
+          <p>Não encontrou a sua posição? Envie-nos a sua candidatura. Estamos sempre à procura de talentos excepcionais.</p>
+        </div>
+
+        <form id="careers-form" novalidate>
+          <div class="form-grid">
+
+            <!-- Row 1: Nome + Email -->
+            <div class="form-group">
+              <label class="form-label" for="af-name">Nome</label>
+              <input class="form-input" type="text" id="af-name" name="name" placeholder="O seu nome completo" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="af-email">Email</label>
+              <input class="form-input" type="email" id="af-email" name="email" placeholder="email@exemplo.com" required />
+            </div>
+
+            <!-- Row 2: Telefone + Área -->
+            <div class="form-group">
+              <label class="form-label" for="af-phone">Telefone</label>
+              <input class="form-input" type="tel" id="af-phone" name="phone" placeholder="+351 9XX XXX XXX" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="af-area">Área de Interesse</label>
+              <select class="form-select" id="af-area" name="area" required>
+                <option value="" disabled selected>Seleccione uma área</option>
+                <option value="producao">Produção de Eventos</option>
+                <option value="som-iluminacao">Som e Iluminação</option>
+                <option value="comercial">Comercial / Business Dev</option>
+                <option value="coordenacao">Coordenação Operacional</option>
+                <option value="criativo">Criativo / Conceptual</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <!-- Row 3: LinkedIn -->
+            <div class="form-group form-grid--full">
+              <label class="form-label" for="af-linkedin">LinkedIn <span style="font-weight:400;text-transform:none;letter-spacing:0;">(opcional)</span></label>
+              <input class="form-input" type="url" id="af-linkedin" name="linkedin" placeholder="https://linkedin.com/in/seuperfil" />
+            </div>
+
+            <!-- Row 4: Mensagem -->
+            <div class="form-group form-grid--full">
+              <label class="form-label" for="af-message">Mensagem</label>
+              <textarea class="form-textarea" id="af-message" name="message" placeholder="Conte-nos sobre si, a sua experiência e o que o motiva a juntar-se ao Sensation Group..." required></textarea>
+            </div>
+
+            <!-- Row 5: CV Upload -->
+            <div class="form-group form-grid--full">
+              <label class="form-label" for="af-cv">Curriculum Vitae</label>
+              <input class="form-input" type="file" id="af-cv" name="cv" accept=".pdf,.doc,.docx" />
+              <p class="form-hint">Formatos aceites: PDF, DOC, DOCX. Máximo 5 MB.</p>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-grid--full">
+              <button type="submit" class="btn--dark">Enviar Candidatura</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="form-success" id="careers-success" role="alert">
+          <p class="form-success__title">Candidatura recebida.</p>
+          <p class="form-success__text">Obrigado pelo seu interesse. Vamos analisar o seu perfil e entraremos em contacto em breve.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. DUAL CTA -->
+    <div class="dual-cta reveal">
+      <a href="sobre.html" class="dual-cta__card dual-cta__card--dark">
+        <div>
+          <p class="dual-cta__label">Sobre Nós</p>
+          <p class="dual-cta__title">Conheça o grupo.</p>
+        </div>
+        <span class="dual-cta__arrow" style="color:var(--gray-400);">→</span>
+      </a>
+      <a href="portfolio.html" class="dual-cta__card dual-cta__card--light">
+        <div>
+          <p class="dual-cta__label">Portfolio</p>
+          <p class="dual-cta__title">Veja o nosso trabalho.</p>
+        </div>
+        <span class="dual-cta__arrow" style="color:var(--gray-600);">→</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col"><p class="footer-col-title">Marcas</p><ul><li><a href="marcas.html#floor-sensation">Floor Sensation</a></li><li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li><li><a href="marcas.html#premium">Premium Sensation</a></li></ul></nav>
+      <nav class="footer-col"><p class="footer-col-title">Empresa</p><ul><li><a href="sobre.html">Quem Somos</a></li><li><a href="areas.html">Áreas</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="careers.html">Carreiras</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Contacto</p><ul><li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li><li><a href="tel:+351910000000">+351 910 000 000</a></li><li><a href="#">Lisboa, Portugal</a></li><li><a href="#">New York, USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="cookies.html">Cookies</a></nav>
+      <nav class="footer-socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="LinkedIn">LinkedIn</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Reveal on scroll
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function(el) { el.classList.add('visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // Application form submit
+    (function() {
+      var form = document.getElementById('careers-form');
+      var success = document.getElementById('careers-success');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        success.style.display = 'block';
+      });
+    })();
+  </script>
+
+</body>
+</html>

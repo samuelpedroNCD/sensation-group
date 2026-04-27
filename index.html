@@ -1,0 +1,2783 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sensation Group — Experiências Que Ficam</title>
+  <meta name="description" content="Sensation Group — Produção de eventos premium em Portugal e nos EUA. Floor Sensation, Sensation Sound & Lights, Premium Sensation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sensationgroup.com/" />
+  <link rel="alternate" hreflang="pt" href="https://sensationgroup.com/" />
+  <link rel="alternate" hreflang="en" href="https://sensationgroup.com/" />
+  <link rel="alternate" hreflang="fr" href="https://sensationgroup.com/" />
+  <link rel="alternate" hreflang="es" href="https://sensationgroup.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://sensationgroup.com/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sensation Group — Experiências Que Ficam" />
+  <meta property="og:description" content="Produção de eventos premium em Portugal e nos EUA. Três marcas. Uma visão." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-home.jpg" />
+  <meta property="og:url" content="https://sensationgroup.com/" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:site_name" content="Sensation Group" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sensation Group — Experiências Que Ficam" />
+  <meta name="twitter:description" content="Produção de eventos premium em Portugal e nos EUA. Três marcas. Uma visão." />
+  <meta name="twitter:image" content="https://sensationgroup.com/assets/img/og-home.jpg" />
+  <!-- JSON-LD: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sensationgroup.com/#organization",
+        "name": "Sensation Group",
+        "url": "https://sensationgroup.com",
+        "logo": "https://sensationgroup.com/assets/img/logo.png",
+        "description": "Produção de eventos premium em Portugal e nos Estados Unidos.",
+        "foundingLocation": { "@type": "Place", "name": "Lisboa, Portugal" },
+        "areaServed": ["PT", "US"],
+        "sameAs": [
+          "https://instagram.com/sensationgroup",
+          "https://linkedin.com/company/sensationgroup"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "hello@sensationgroup.com",
+          "availableLanguage": ["Portuguese", "English", "French", "Spanish"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sensationgroup.com/#website",
+        "url": "https://sensationgroup.com",
+        "name": "Sensation Group",
+        "publisher": { "@id": "https://sensationgroup.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-50: #FAFAF8;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+      --nav-height: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--off-white);
+      color: var(--black);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY HELPERS
+    ============================================================ */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+
+    /* ============================================================
+       REVEAL ON SCROLL
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      padding: 0 48px;
+      transition: background 0.4s ease, border-color 0.4s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav.scrolled {
+      background: var(--black);
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-logo span {
+      font-weight: 400;
+      opacity: 0.5;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 10px 20px;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--white);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+
+    .nav-hamburger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .nav-hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-hamburger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* Mobile menu */
+    .nav-mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--black);
+      z-index: 999;
+      flex-direction: column;
+      padding: 48px;
+      gap: 0;
+      overflow-y: auto;
+    }
+
+    .nav-mobile-menu.open {
+      display: flex;
+    }
+
+    .nav-mobile-menu a {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: opacity 0.2s;
+      display: block;
+    }
+
+    .nav-mobile-menu a:hover {
+      opacity: 0.6;
+    }
+
+    .nav-mobile-menu .mobile-cta {
+      margin-top: 40px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 16px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    /* Lang Switcher */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-left: 16px;
+    }
+
+    .lang-switcher button {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      background: none;
+      border: none;
+      padding: 6px 8px;
+      cursor: pointer;
+      transition: color 0.2s;
+      font-family: inherit;
+    }
+
+    .lang-switcher button:hover,
+    .lang-switcher button.active {
+      color: var(--white);
+    }
+
+    .lang-switcher button.active {
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+
+    /* Mobile lang switcher */
+    .mobile-lang-switcher {
+      display: flex;
+      gap: 12px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-lang-switcher button {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.2s;
+      font-family: inherit;
+    }
+
+    .mobile-lang-switcher button.active {
+      color: var(--white);
+    }
+
+    /* Footer legal links */
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ============================================================
+       HERO — 00
+    ============================================================ */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.42;
+      transform: scale(1.04);
+      transition: transform 8s ease;
+    }
+
+    .hero-bg.loaded {
+      transform: scale(1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.3) 0%,
+        rgba(10,10,10,0.08) 40%,
+        rgba(10,10,10,0.75) 100%
+      );
+    }
+
+    /* Thin horizontal rules inside hero */
+    .hero-rule-top {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 33%;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      pointer-events: none;
+    }
+
+    .hero-rule-bottom {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      bottom: 210px;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+      pointer-events: none;
+    }
+
+    /* Top-right geo tag */
+    .hero-geo-tag {
+      position: absolute;
+      top: calc(var(--nav-height) + 28px);
+      right: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+    }
+
+    /* Bottom-left section indicator */
+    .hero-indicator {
+      position: absolute;
+      bottom: 36px;
+      left: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 76px;
+      left: 48px;
+      right: 48px;
+    }
+
+    .hero-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(64px, 11vw, 160px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      margin-bottom: 44px;
+    }
+
+    .hero-headline .line-thin {
+      display: block;
+      font-weight: 300;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .hero-headline .line-bold {
+      display: block;
+      font-weight: 800;
+    }
+
+    .hero-bottom-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .hero-tag-pill {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 14px;
+    }
+
+    /* ============================================================
+       TICKER
+    ============================================================ */
+    .ticker {
+      background: var(--black);
+      padding: 18px 0;
+      overflow: hidden;
+    }
+
+    .ticker-track {
+      display: flex;
+      white-space: nowrap;
+      animation: tickerScroll 30s linear infinite;
+    }
+
+    .ticker-item {
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 0 32px;
+      flex-shrink: 0;
+    }
+
+    .ticker-sep {
+      color: var(--gray-600);
+      padding: 0 4px;
+      font-size: 10px;
+      flex-shrink: 0;
+      line-height: 1.8;
+    }
+
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       MANIFESTO (NEW)
+    ============================================================ */
+    .manifesto {
+      background: var(--black);
+      padding: 100px 48px;
+      text-align: center;
+    }
+
+    .manifesto-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .manifesto-rule {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 48px;
+    }
+
+    .manifesto-rule-below {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      margin-top: 48px;
+    }
+
+    .manifesto-since {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 36px;
+    }
+
+    .manifesto-text {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    /* ============================================================
+       INTRO — 01
+    ============================================================ */
+    .intro {
+      position: relative;
+      padding: 100px 48px;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+
+    .section-num-bg {
+      position: absolute;
+      top: 40px;
+      left: 36px;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(80px, 8vw, 120px);
+      font-weight: 800;
+      color: var(--gray-100);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .intro-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .section-label-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .section-label-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gray-400);
+      letter-spacing: 0.1em;
+    }
+
+    .intro-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(30px, 3.2vw, 50px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .intro-right {
+      padding-top: 8px;
+    }
+
+    .intro-text {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+
+    .intro-text strong {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 4px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .text-link:hover {
+      opacity: 0.55;
+    }
+
+    /* ============================================================
+       BRANDS — 02 — EDITORIAL LIST
+    ============================================================ */
+    .brands {
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .brands-top {
+      padding: 80px 48px 48px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .brands-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    /* Desktop split */
+    .brands-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 500px;
+    }
+
+    .brands-list {
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 32px 48px;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--off-white);
+      cursor: pointer;
+      transition: background 0.35s ease;
+    }
+
+    .brand-row:hover,
+    .brand-row.active {
+      background: var(--black);
+    }
+
+    .brand-row:hover .brand-row-num,
+    .brand-row.active .brand-row-num {
+      color: rgba(255,255,255,0.18);
+    }
+
+    .brand-row:hover .brand-row-name,
+    .brand-row.active .brand-row-name {
+      color: var(--white);
+    }
+
+    .brand-row:hover .brand-row-sub,
+    .brand-row.active .brand-row-sub {
+      color: var(--gray-400);
+    }
+
+    .brand-row:hover .brand-row-link,
+    .brand-row.active .brand-row-link {
+      color: rgba(255,255,255,0.55);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .brand-row-num {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(40px, 4vw, 56px);
+      font-weight: 800;
+      color: var(--gray-200);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 64px;
+      transition: color 0.35s ease;
+    }
+
+    .brand-row-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .brand-row-name {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(22px, 2.4vw, 36px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      color: var(--black);
+      transition: color 0.35s ease;
+    }
+
+    .brand-row-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      transition: color 0.35s ease;
+    }
+
+    .brand-row-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      border: 1px solid var(--gray-200);
+      padding: 10px 18px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.35s ease, border-color 0.35s ease;
+      cursor: pointer;
+    }
+
+    /* Brands preview panel */
+    .brands-preview {
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    .brand-preview-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.55s ease;
+    }
+
+    .brand-preview-img.active {
+      opacity: 1;
+    }
+
+    .brand-preview-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,0.22);
+    }
+
+    /* Mobile brand cards */
+    .brands-mobile-cards {
+      display: none;
+      flex-direction: column;
+    }
+
+    .brand-mobile-card {
+      position: relative;
+      height: 260px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+    }
+
+    .brand-mobile-card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .brand-mobile-card:hover .brand-mobile-card-bg {
+      transform: scale(1.05);
+    }
+
+    .brand-mobile-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.18) 100%);
+    }
+
+    .brand-mobile-card-body {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+    }
+
+    .brand-mobile-card-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .brand-mobile-card-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .brand-mobile-card-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ============================================================
+       AREAS — 03
+    ============================================================ */
+    .areas {
+      padding: 100px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .areas-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .areas-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      z-index: 1;
+    }
+
+    .area-card {
+      background: var(--white);
+      padding: 36px 28px;
+      transition: background 0.25s ease;
+    }
+
+    .area-card:hover {
+      background: var(--gray-50);
+    }
+
+    .area-icon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1;
+      color: var(--black);
+    }
+
+    .area-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    .area-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--gray-600);
+      font-weight: 400;
+    }
+
+    /* ============================================================
+       STATS — 04
+    ============================================================ */
+    .stats {
+      background: var(--black);
+      padding: 100px 48px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .stats-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .stats-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+    }
+
+    .stats-rule {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 72px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      padding-right: 48px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat-item:first-child {
+      padding-left: 0;
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(80px, 10vw, 140px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+
+    .stat-plus {
+      font-size: clamp(40px, 5vw, 70px);
+      font-weight: 300;
+      opacity: 0.35;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+
+    .stats-statement {
+      margin-top: 72px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 780px;
+    }
+
+    /* ============================================================
+       PORTFOLIO — 05
+    ============================================================ */
+    .portfolio {
+      padding: 100px 48px;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .portfolio-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 40px;
+    }
+
+    .portfolio-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1.65fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 4px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .portfolio-item:nth-child(1) {
+      grid-row: span 2;
+      min-height: 580px;
+    }
+
+    .portfolio-item:nth-child(2),
+    .portfolio-item:nth-child(3),
+    .portfolio-item:nth-child(4),
+    .portfolio-item:nth-child(5) {
+      min-height: 287px;
+    }
+
+    .portfolio-item-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .portfolio-item:hover .portfolio-item-bg {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.04) 55%);
+    }
+
+    /* Always-visible label */
+    .portfolio-item-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10,10,10,0.76);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .portfolio-item-cat {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.42);
+      margin-bottom: 4px;
+    }
+
+    .portfolio-item-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .portfolio-item-arrow {
+      color: rgba(255,255,255,0.38);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       DIFFERENTIALS — 06
+    ============================================================ */
+    .differentials {
+      padding: 100px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .differentials-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 40px;
+    }
+
+    .differentials-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .diff-table {
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .diff-row {
+      display: grid;
+      grid-template-columns: 64px 1fr 2fr;
+      border-bottom: 1px solid var(--gray-200);
+      transition: background 0.2s ease;
+      cursor: default;
+    }
+
+    .diff-row:hover {
+      background: var(--off-white);
+    }
+
+    .diff-row-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-400);
+      padding: 28px 16px 28px 0;
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+    }
+
+    .diff-row-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--black);
+      padding: 28px 32px;
+      border-right: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+    }
+
+    .diff-row-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-600);
+      padding: 28px 32px;
+      line-height: 1.7;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ============================================================
+       EVENTS — 07
+    ============================================================ */
+    .events {
+      background: var(--black);
+      padding: 100px 48px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .events-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 40px;
+    }
+
+    .events-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    .events-rule {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .event-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      cursor: pointer;
+      transition: padding-left 0.25s ease;
+    }
+
+    .event-row:hover {
+      padding-left: 14px;
+    }
+
+    .event-row-left {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .event-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.28);
+      flex-shrink: 0;
+      min-width: 72px;
+    }
+
+    .event-name {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 700;
+      color: var(--white);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .event-row-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .event-location {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.32);
+    }
+
+    .event-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 12px;
+    }
+
+    /* ============================================================
+       CTA — 08
+    ============================================================ */
+    .cta-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cta-card {
+      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card--dark {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .cta-card--light {
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .cta-label-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .cta-card-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .cta-card--dark .cta-card-num {
+      color: rgba(255,255,255,0.15);
+    }
+
+    .cta-card--light .cta-card-num {
+      color: var(--gray-200);
+    }
+
+    .cta-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .cta-card--dark .cta-label {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .cta-card--light .cta-label {
+      color: var(--gray-400);
+    }
+
+    .cta-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 3.5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .cta-card--dark .cta-title {
+      color: var(--white);
+    }
+
+    .cta-card--light .cta-title {
+      color: var(--black);
+    }
+
+    .cta-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.72;
+      margin-bottom: 40px;
+    }
+
+    .cta-card--dark .cta-desc {
+      color: rgba(255,255,255,0.48);
+    }
+
+    .cta-card--light .cta-desc {
+      color: var(--gray-600);
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 16px 28px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .cta-card--dark .cta-btn {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .cta-card--dark .cta-btn:hover {
+      opacity: 0.85;
+    }
+
+    .cta-card--light .cta-btn {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .cta-card--light .cta-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 72px 48px 40px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo span {
+      font-weight: 400;
+      opacity: 0.4;
+    }
+
+    .footer-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 260px;
+    }
+
+    .footer-locations {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+
+    .footer-col-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col ul a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--gray-600);
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .footer-col ul a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 28px;
+    }
+
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.2s;
+    }
+
+    .footer-copy a:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-socials a {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .footer-socials a:hover {
+      color: var(--white);
+    }
+
+    /* ============================================================
+       RESPONSIVE — 1024px
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .nav {
+        padding: 0 32px;
+      }
+
+      .nav-links {
+        gap: 28px;
+      }
+
+      .hero-content,
+      .hero-indicator {
+        left: 32px;
+        right: 32px;
+      }
+
+      .hero-geo-tag {
+        right: 32px;
+      }
+
+      .hero-indicator {
+        right: auto;
+      }
+
+      .hero-rule-bottom {
+        left: 32px;
+        right: 32px;
+      }
+
+      .manifesto {
+        padding: 80px 32px;
+      }
+
+      .intro,
+      .areas,
+      .portfolio,
+      .differentials {
+        padding: 80px 32px;
+      }
+
+      .intro-inner {
+        gap: 48px;
+      }
+
+      .brands-top {
+        padding: 60px 32px 40px;
+      }
+
+      .brand-row {
+        padding: 28px 32px;
+      }
+
+      .stats {
+        padding: 80px 32px;
+      }
+
+      .stat-item {
+        padding-right: 32px;
+      }
+
+      .events {
+        padding: 80px 32px;
+      }
+
+      .cta-card {
+        padding: 60px 40px;
+      }
+
+      .footer {
+        padding: 60px 32px 32px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE — 768px
+    ============================================================ */
+    @media (max-width: 768px) {
+      :root {
+        --nav-height: 60px;
+      }
+
+      .nav {
+        padding: 0 24px;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .hero-content {
+        left: 24px;
+        right: 24px;
+        bottom: 56px;
+      }
+
+      .hero-geo-tag {
+        right: 24px;
+      }
+
+      .hero-indicator {
+        left: 24px;
+        bottom: 22px;
+      }
+
+      .hero-rule-bottom {
+        left: 24px;
+        right: 24px;
+        bottom: 160px;
+      }
+
+      .hero-tags {
+        display: none;
+      }
+
+      .hero-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .manifesto {
+        padding: 72px 24px;
+      }
+
+      .manifesto-text {
+        text-align: left;
+      }
+
+      .intro {
+        padding: 72px 24px;
+      }
+
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .section-num-bg {
+        font-size: 80px;
+      }
+
+      .brands-top {
+        padding: 60px 24px 32px;
+      }
+
+      .brands-split {
+        display: none;
+      }
+
+      .brands-mobile-cards {
+        display: flex;
+      }
+
+      .areas {
+        padding: 72px 24px;
+      }
+
+      .areas-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        padding: 72px 24px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 0 0 48px 0;
+        margin-bottom: 48px;
+      }
+
+      .stat-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .portfolio {
+        padding: 72px 24px;
+      }
+
+      .portfolio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .portfolio-item:nth-child(1) {
+        grid-row: span 1;
+        min-height: 280px;
+      }
+
+      .portfolio-item:nth-child(2),
+      .portfolio-item:nth-child(3),
+      .portfolio-item:nth-child(4),
+      .portfolio-item:nth-child(5) {
+        min-height: 280px;
+      }
+
+      .differentials {
+        padding: 72px 24px;
+      }
+
+      .differentials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .diff-row {
+        grid-template-columns: 44px 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .diff-row-num {
+        grid-row: span 2;
+        align-items: flex-start;
+        padding-top: 24px;
+      }
+
+      .diff-row-title {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-200);
+        padding: 20px 16px 12px;
+        align-items: flex-start;
+      }
+
+      .diff-row-desc {
+        padding: 12px 16px 20px;
+        align-items: flex-start;
+      }
+
+      .events {
+        padding: 72px 24px;
+      }
+
+      .events-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .event-row-right {
+        display: none;
+      }
+
+      .event-name {
+        white-space: normal;
+        overflow: visible;
+      }
+
+      .cta-section {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-card--dark {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .cta-card {
+        padding: 60px 24px;
+      }
+
+      .footer {
+        padding: 60px 24px 28px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE — 480px
+    ============================================================ */
+    @media (max-width: 480px) {
+      .areas-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .area-card {
+        padding: 22px 16px;
+      }
+
+      .brand-row-link {
+        display: none;
+      }
+
+      .brand-row {
+        gap: 16px;
+      }
+
+      .diff-row {
+        grid-template-columns: 38px 1fr;
+      }
+
+      .cta-card {
+        padding: 48px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Sensation <span>Group</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
+        <li><a href="marcas.html" data-i18n="nav.brands">Marcas</a></li>
+        <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="lang-switcher" aria-label="Selecionar idioma">
+        <button data-lang-btn="pt" class="active" aria-label="Português">PT</button>
+        <button data-lang-btn="en" aria-label="English">EN</button>
+        <button data-lang-btn="fr" aria-label="Français">FR</button>
+        <button data-lang-btn="es" aria-label="Español">ES</button>
+      </div>
+
+      <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Pedir Proposta</a>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <a href="sobre.html" class="mobile-link" data-i18n="nav.about">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link" data-i18n="nav.brands">Marcas</a>
+    <a href="areas.html" class="mobile-link" data-i18n="nav.areas">Áreas</a>
+    <a href="portfolio.html" class="mobile-link" data-i18n="nav.portfolio">Portfolio</a>
+    <a href="eventos.html" class="mobile-link" data-i18n="nav.events">Eventos</a>
+    <a href="insights.html" class="mobile-link" data-i18n="nav.insights">Insights</a>
+    <a href="contacto.html" class="mobile-link" data-i18n="nav.contact">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta" data-i18n="nav.cta">Pedir Proposta →</a>
+  </div>
+
+  <!-- ============================================================
+       HERO — 00
+  ============================================================ -->
+  <section class="hero" id="home" aria-label="Hero — Sensation Group">
+    <div class="hero-bg" id="hero-bg" role="img" aria-label="Evento premium"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-rule-top" aria-hidden="true"></div>
+    <div class="hero-rule-bottom" aria-hidden="true"></div>
+
+    <span class="hero-geo-tag" aria-label="Localizações: Portugal e EUA">PT · EUA</span>
+    <span class="hero-indicator" aria-hidden="true">00 / Home</span>
+
+    <div class="hero-content reveal">
+      <h1 class="hero-headline">
+        <span class="line-thin" data-i18n="hero.line1">Experiências</span>
+        <span class="line-bold" data-i18n="hero.line2">Que Ficam.</span>
+      </h1>
+      <div class="hero-bottom-row">
+        <p class="hero-desc" data-i18n="hero.desc">
+          Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma visão.
+        </p>
+        <div class="hero-tags" aria-label="Serviços principais">
+          <span class="hero-tag-pill" data-i18n="hero.tag1">Eventos Corporativos</span>
+          <span class="hero-tag-pill" data-i18n="hero.tag2">Casamentos de Luxo</span>
+          <span class="hero-tag-pill" data-i18n="hero.tag3">Produção Técnica</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TICKER
+  ============================================================ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item">Floor Sensation</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Sensation Sound &amp; Lights</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Premium Sensation</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Portugal</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Estados Unidos</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Eventos Premium</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Produção Técnica</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Desde 2020</span>
+      <span class="ticker-sep">—</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Floor Sensation</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Sensation Sound &amp; Lights</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Premium Sensation</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Portugal</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Estados Unidos</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Eventos Premium</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Produção Técnica</span>
+      <span class="ticker-sep">—</span>
+      <span class="ticker-item">Desde 2020</span>
+      <span class="ticker-sep">—</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MANIFESTO (NEW)
+  ============================================================ -->
+  <section class="manifesto" aria-labelledby="manifesto-text">
+    <div class="manifesto-inner reveal">
+      <hr class="manifesto-rule" />
+      <p class="manifesto-since">Sensation Group — Desde 2020</p>
+      <blockquote class="manifesto-text" id="manifesto-text">
+        "Não produzimos eventos. Criamos experiências que ficam na memória de quem as vive."
+      </blockquote>
+      <hr class="manifesto-rule-below" />
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO — 01
+  ============================================================ -->
+  <section class="intro" id="intro" aria-labelledby="intro-title">
+    <span class="section-num-bg" aria-hidden="true">01</span>
+    <div class="intro-inner">
+      <div class="intro-left reveal">
+        <div class="section-label-row">
+          <span class="section-label-num">01</span>
+          <span class="section-label">Quem Somos</span>
+        </div>
+        <h2 class="intro-title" id="intro-title">
+          Um grupo construído para criar o extraordinário.
+        </h2>
+      </div>
+      <div class="intro-right reveal reveal-delay-2">
+        <p class="intro-text">
+          A <strong>Sensation Group</strong> é uma empresa de produção de eventos premium com presença em <strong>Portugal e nos EUA</strong>. Reunimos três marcas especializadas — Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation — para oferecer uma produção completa e integrada.
+        </p>
+        <p class="intro-text">
+          Cada evento é tratado como uma obra única. Da infraestrutura técnica ao detalhe de decoração, do som e luzes à experiência global do convidado — controlamos cada variável para garantir resultados que superam expectativas.
+        </p>
+        <a href="#marcas" class="text-link">Conhecer as marcas <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BRANDS — 02 — EDITORIAL LIST
+  ============================================================ -->
+  <section class="brands" id="marcas" aria-labelledby="brands-title">
+    <div class="brands-top">
+      <div class="section-label-row reveal">
+        <span class="section-label-num">02</span>
+        <span class="section-label">As Nossas Marcas</span>
+      </div>
+      <h2 class="brands-title reveal reveal-delay-1" id="brands-title">Três marcas. Uma visão.</h2>
+    </div>
+
+    <!-- Desktop editorial split -->
+    <div class="brands-split" id="brands-split">
+      <div class="brands-list" role="list" aria-label="Lista de marcas">
+        <!-- Brand 01 -->
+        <div class="brand-row active" data-index="0" role="listitem" tabindex="0"
+          aria-label="Floor Sensation — Infraestrutura e Pisos">
+          <span class="brand-row-num" aria-hidden="true">01</span>
+          <div class="brand-row-body">
+            <h3 class="brand-row-name">Floor Sensation</h3>
+            <p class="brand-row-sub">Infraestrutura &amp; Pisos</p>
+          </div>
+          <a href="#" class="brand-row-link" tabindex="-1" aria-hidden="true">Descobrir →</a>
+        </div>
+
+        <!-- Brand 02 -->
+        <div class="brand-row" data-index="1" role="listitem" tabindex="0"
+          aria-label="Sensation Sound & Lights — Som, Luz e Produção Técnica">
+          <span class="brand-row-num" aria-hidden="true">02</span>
+          <div class="brand-row-body">
+            <h3 class="brand-row-name">Sensation Sound &amp; Lights</h3>
+            <p class="brand-row-sub">Som, Luz &amp; Produção Técnica</p>
+          </div>
+          <a href="#" class="brand-row-link" tabindex="-1" aria-hidden="true">Descobrir →</a>
+        </div>
+
+        <!-- Brand 03 -->
+        <div class="brand-row" data-index="2" role="listitem" tabindex="0"
+          aria-label="Premium Sensation — Eventos e Experiências de Luxo">
+          <span class="brand-row-num" aria-hidden="true">03</span>
+          <div class="brand-row-body">
+            <h3 class="brand-row-name">Premium Sensation</h3>
+            <p class="brand-row-sub">Eventos &amp; Experiências de Luxo</p>
+          </div>
+          <a href="#" class="brand-row-link" tabindex="-1" aria-hidden="true">Descobrir →</a>
+        </div>
+      </div>
+
+      <!-- Preview images -->
+      <div class="brands-preview" aria-hidden="true">
+        <div class="brand-preview-img active" data-index="0"
+          style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80')">
+        </div>
+        <div class="brand-preview-img" data-index="1"
+          style="background-image:url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80')">
+        </div>
+        <div class="brand-preview-img" data-index="2"
+          style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80')">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile stacked cards -->
+    <div class="brands-mobile-cards" aria-label="Marcas">
+      <div class="brand-mobile-card">
+        <div class="brand-mobile-card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80')"
+          role="img" aria-label="Floor Sensation"></div>
+        <div class="brand-mobile-card-overlay" aria-hidden="true"></div>
+        <div class="brand-mobile-card-body">
+          <p class="brand-mobile-card-num">01</p>
+          <h3 class="brand-mobile-card-name">Floor Sensation</h3>
+          <p class="brand-mobile-card-sub">Infraestrutura &amp; Pisos</p>
+        </div>
+      </div>
+      <div class="brand-mobile-card">
+        <div class="brand-mobile-card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80')"
+          role="img" aria-label="Sensation Sound & Lights"></div>
+        <div class="brand-mobile-card-overlay" aria-hidden="true"></div>
+        <div class="brand-mobile-card-body">
+          <p class="brand-mobile-card-num">02</p>
+          <h3 class="brand-mobile-card-name">Sensation Sound &amp; Lights</h3>
+          <p class="brand-mobile-card-sub">Som, Luz &amp; Produção Técnica</p>
+        </div>
+      </div>
+      <div class="brand-mobile-card">
+        <div class="brand-mobile-card-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80')"
+          role="img" aria-label="Premium Sensation"></div>
+        <div class="brand-mobile-card-overlay" aria-hidden="true"></div>
+        <div class="brand-mobile-card-body">
+          <p class="brand-mobile-card-num">03</p>
+          <h3 class="brand-mobile-card-name">Premium Sensation</h3>
+          <p class="brand-mobile-card-sub">Eventos &amp; Experiências de Luxo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AREAS — 03
+  ============================================================ -->
+  <section class="areas" id="areas" aria-labelledby="areas-title">
+    <div class="areas-header">
+      <div class="reveal">
+        <div class="section-label-row">
+          <span class="section-label-num">03</span>
+          <span class="section-label">Áreas de Actuação</span>
+        </div>
+        <h2 class="areas-title" id="areas-title">O que fazemos.</h2>
+      </div>
+    </div>
+    <div class="areas-grid" role="list">
+      <div class="area-card reveal" role="listitem">
+        <div class="area-icon" aria-hidden="true">◈</div>
+        <h3 class="area-name">Infraestrutura de Pisos</h3>
+        <p class="area-desc">Pisos modulares e estruturais para palcos, tendas e espaços de evento. Instalação profissional com equipa especializada.</p>
+      </div>
+      <div class="area-card reveal reveal-delay-1" role="listitem">
+        <div class="area-icon" aria-hidden="true">◉</div>
+        <h3 class="area-name">Som &amp; Acústica</h3>
+        <p class="area-desc">Sistemas de som de alta fidelidade, desde pequenas salas a grandes arenas. Engenharia de som profissional em cada evento.</p>
+      </div>
+      <div class="area-card reveal reveal-delay-2" role="listitem">
+        <div class="area-icon" aria-hidden="true">◑</div>
+        <h3 class="area-name">Iluminação</h3>
+        <p class="area-desc">Design de luz criativo e técnico. Iluminação architectural, cénica e de efeitos para qualquer escala de evento.</p>
+      </div>
+      <div class="area-card reveal reveal-delay-3" role="listitem">
+        <div class="area-icon" aria-hidden="true">◐</div>
+        <h3 class="area-name">Eventos Premium</h3>
+        <p class="area-desc">Concepção e gestão de eventos de luxo — casamentos, galas, lançamentos e eventos corporativos de excelência.</p>
+      </div>
+      <div class="area-card reveal reveal-delay-4" role="listitem">
+        <div class="area-icon" aria-hidden="true">◫</div>
+        <h3 class="area-name">Produção Integral</h3>
+        <p class="area-desc">Coordenação completa da produção: logística, fornecedores, segurança e operações — um único ponto de contacto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS — 04
+  ============================================================ -->
+  <section class="stats" id="stats" aria-labelledby="stats-heading">
+    <div class="stats-header">
+      <span class="stats-label" id="stats-heading">04 — Números</span>
+      <span class="stats-label" aria-hidden="true">04</span>
+    </div>
+    <hr class="stats-rule" />
+    <div class="stats-grid" role="list">
+      <div class="stat-item reveal" role="listitem">
+        <span class="stat-num" aria-label="Mais de 200 eventos realizados">200<span class="stat-plus" aria-hidden="true">+</span></span>
+        <p class="stat-label">Eventos Realizados</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-2" role="listitem">
+        <span class="stat-num" aria-label="2 países de operação">2</span>
+        <p class="stat-label">Países de Operação</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-3" role="listitem">
+        <span class="stat-num" aria-label="Mais de 50 000 convidados impactados">50K<span class="stat-plus" aria-hidden="true">+</span></span>
+        <p class="stat-label">Convidados Impactados</p>
+      </div>
+    </div>
+    <p class="stats-statement reveal">
+      Desde 2020, construímos uma referência sólida na produção de eventos premium — com equipas dedicadas, tecnologia de ponta e uma obsessão genuína pelo detalhe.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO — 05
+  ============================================================ -->
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="portfolio-header">
+      <div class="reveal">
+        <div class="section-label-row">
+          <span class="section-label-num">05</span>
+          <span class="section-label">Portfolio</span>
+        </div>
+        <h2 class="portfolio-title" id="portfolio-title">Trabalho seleccionado.</h2>
+      </div>
+      <a href="#" class="text-link reveal reveal-delay-2" aria-label="Ver todos os projectos do portfolio">
+        Ver todos os projectos <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="portfolio-grid" role="list">
+      <!-- Item 1 — tall -->
+      <article class="portfolio-item reveal" role="listitem" tabindex="0"
+        aria-label="Gala Corporativa, Lisboa 2024">
+        <div class="portfolio-item-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80')"
+          role="img" aria-label="Gala Corporativa Lisboa 2024"></div>
+        <div class="portfolio-item-overlay" aria-hidden="true"></div>
+        <div class="portfolio-item-label">
+          <div>
+            <p class="portfolio-item-cat">Gala Corporativa</p>
+            <p class="portfolio-item-title">Lisboa, 2024</p>
+          </div>
+          <span class="portfolio-item-arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="portfolio-item reveal reveal-delay-1" role="listitem" tabindex="0"
+        aria-label="Casamento de Luxo, Alentejo 2024">
+        <div class="portfolio-item-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80')"
+          role="img" aria-label="Casamento de Luxo Alentejo 2024"></div>
+        <div class="portfolio-item-overlay" aria-hidden="true"></div>
+        <div class="portfolio-item-label">
+          <div>
+            <p class="portfolio-item-cat">Casamento de Luxo</p>
+            <p class="portfolio-item-title">Alentejo, 2024</p>
+          </div>
+          <span class="portfolio-item-arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="portfolio-item reveal reveal-delay-2" role="listitem" tabindex="0"
+        aria-label="Evento Privado, Miami 2023">
+        <div class="portfolio-item-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80')"
+          role="img" aria-label="Evento Privado Miami 2023"></div>
+        <div class="portfolio-item-overlay" aria-hidden="true"></div>
+        <div class="portfolio-item-label">
+          <div>
+            <p class="portfolio-item-cat">Evento Privado</p>
+            <p class="portfolio-item-title">Miami, 2023</p>
+          </div>
+          <span class="portfolio-item-arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="portfolio-item reveal reveal-delay-1" role="listitem" tabindex="0"
+        aria-label="Produção Técnica, NOS Alive 2024">
+        <div class="portfolio-item-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80')"
+          role="img" aria-label="NOS Alive 2024"></div>
+        <div class="portfolio-item-overlay" aria-hidden="true"></div>
+        <div class="portfolio-item-label">
+          <div>
+            <p class="portfolio-item-cat">Produção Técnica</p>
+            <p class="portfolio-item-title">NOS Alive, 2024</p>
+          </div>
+          <span class="portfolio-item-arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="portfolio-item reveal reveal-delay-2" role="listitem" tabindex="0"
+        aria-label="Summit Empresarial, Porto 2024">
+        <div class="portfolio-item-bg"
+          style="background-image:url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&q=80')"
+          role="img" aria-label="Summit Empresarial Porto 2024"></div>
+        <div class="portfolio-item-overlay" aria-hidden="true"></div>
+        <div class="portfolio-item-label">
+          <div>
+            <p class="portfolio-item-cat">Summit Empresarial</p>
+            <p class="portfolio-item-title">Porto, 2024</p>
+          </div>
+          <span class="portfolio-item-arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DIFFERENTIALS — 06
+  ============================================================ -->
+  <section class="differentials" id="diferenciais" aria-labelledby="diff-title">
+    <div class="differentials-header">
+      <div class="reveal">
+        <div class="section-label-row">
+          <span class="section-label-num">06</span>
+          <span class="section-label">Diferenciais</span>
+        </div>
+        <h2 class="differentials-title" id="diff-title">Porque é que somos diferentes.</h2>
+      </div>
+    </div>
+
+    <div class="diff-table" role="list">
+      <div class="diff-row reveal" role="listitem">
+        <span class="diff-row-num" aria-hidden="true">01</span>
+        <span class="diff-row-title">Grupo Integrado</span>
+        <p class="diff-row-desc">As três marcas trabalham em conjunto sob uma coordenação única — menos fricção, mais coerência criativa e operacional em cada evento.</p>
+      </div>
+      <div class="diff-row reveal reveal-delay-1" role="listitem">
+        <span class="diff-row-num" aria-hidden="true">02</span>
+        <span class="diff-row-title">Presença Internacional</span>
+        <p class="diff-row-desc">Equipa e operações em Portugal e nos EUA. Capacidade de gerir eventos transatlânticos com a mesma qualidade em ambos os mercados.</p>
+      </div>
+      <div class="diff-row reveal reveal-delay-2" role="listitem">
+        <span class="diff-row-num" aria-hidden="true">03</span>
+        <span class="diff-row-title">Tecnologia de Ponta</span>
+        <p class="diff-row-desc">Investimento contínuo em equipamento técnico de última geração — som, luz, estrutura — para resultados que impressionam e surpreendem.</p>
+      </div>
+      <div class="diff-row reveal reveal-delay-3" role="listitem">
+        <span class="diff-row-num" aria-hidden="true">04</span>
+        <span class="diff-row-title">Obsessão pelo Detalhe</span>
+        <p class="diff-row-desc">Cada evento é único. Não usamos fórmulas. Construímos cada experiência do zero, com atenção ao detalhe que distingue o bom do extraordinário.</p>
+      </div>
+      <div class="diff-row reveal" role="listitem">
+        <span class="diff-row-num" aria-hidden="true">05</span>
+        <span class="diff-row-title">Equipa Dedicada</span>
+        <p class="diff-row-desc">Profissionais com experiência em eventos de grande escala, comprometidos com a excelência em cada etapa do processo de produção.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EVENTS — 07
+  ============================================================ -->
+  <section class="events" id="eventos" aria-labelledby="events-title">
+    <div class="events-header">
+      <div class="reveal">
+        <div class="section-label-row">
+          <span class="section-label-num" style="color:rgba(255,255,255,0.2)">07</span>
+          <span class="section-label" style="color:rgba(255,255,255,0.28)">Próximos Eventos</span>
+        </div>
+        <h2 class="events-title" id="events-title">Agenda.</h2>
+      </div>
+      <a href="#contacto" class="text-link reveal reveal-delay-2"
+        style="color:rgba(255,255,255,0.45); border-color:rgba(255,255,255,0.2)"
+        aria-label="Ver agenda completa de eventos">
+        Ver agenda completa <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <hr class="events-rule" />
+
+    <div role="list" aria-label="Lista de próximos eventos">
+      <div class="event-row reveal" role="listitem">
+        <div class="event-row-left">
+          <span class="event-date"><time datetime="2025-06">Jun 2025</time></span>
+          <span class="event-name">Gala Anual Fundação EDP</span>
+        </div>
+        <div class="event-row-right">
+          <span class="event-location">Lisboa, Portugal</span>
+          <span class="event-tag">Gala</span>
+        </div>
+      </div>
+
+      <div class="event-row reveal reveal-delay-1" role="listitem">
+        <div class="event-row-left">
+          <span class="event-date"><time datetime="2025-07">Jul 2025</time></span>
+          <span class="event-name">Casamento Privado — Quinta do Lago</span>
+        </div>
+        <div class="event-row-right">
+          <span class="event-location">Algarve, Portugal</span>
+          <span class="event-tag">Wedding</span>
+        </div>
+      </div>
+
+      <div class="event-row reveal reveal-delay-2" role="listitem">
+        <div class="event-row-left">
+          <span class="event-date"><time datetime="2025-09">Set 2025</time></span>
+          <span class="event-name">Luxury Brand Summit Miami</span>
+        </div>
+        <div class="event-row-right">
+          <span class="event-location">Miami, USA</span>
+          <span class="event-tag">Summit</span>
+        </div>
+      </div>
+
+      <div class="event-row reveal reveal-delay-3" role="listitem">
+        <div class="event-row-left">
+          <span class="event-date"><time datetime="2025-10">Out 2025</time></span>
+          <span class="event-name">Lançamento de Produto — Porto</span>
+        </div>
+        <div class="event-row-right">
+          <span class="event-location">Porto, Portugal</span>
+          <span class="event-tag">Corporate</span>
+        </div>
+      </div>
+
+      <div class="event-row reveal" role="listitem">
+        <div class="event-row-left">
+          <span class="event-date"><time datetime="2025-11">Nov 2025</time></span>
+          <span class="event-name">Gala de Beneficência — Nova Iorque</span>
+        </div>
+        <div class="event-row-right">
+          <span class="event-location">New York, USA</span>
+          <span class="event-tag">Gala</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA — 08
+  ============================================================ -->
+  <section class="cta-section" id="contacto" aria-label="Secção de contacto e call-to-action">
+    <div class="cta-card cta-card--dark reveal">
+      <div class="cta-label-row">
+        <span class="cta-card-num">08a</span>
+        <span class="cta-label">Vamos trabalhar juntos</span>
+      </div>
+      <h2 class="cta-title">Tem um evento<br>em mente?</h2>
+      <p class="cta-desc">
+        Partilhe connosco a sua visão. A nossa equipa responde em 24 horas com uma proposta personalizada e sem compromisso.
+      </p>
+      <a href="mailto:hello@sensationgroup.com" class="cta-btn">Pedir Proposta <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cta-card cta-card--light reveal reveal-delay-2">
+      <div class="cta-label-row">
+        <span class="cta-card-num">08b</span>
+        <span class="cta-label">Portfolio completo</span>
+      </div>
+      <h2 class="cta-title">Conheça o<br>nosso trabalho.</h2>
+      <p class="cta-desc">
+        Explore os nossos projectos mais recentes e descubra como transformamos cada evento numa experiência verdadeiramente única.
+      </p>
+      <a href="#portfolio" class="cta-btn">Ver Portfolio <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">
+          Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.
+        </p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Marcas do grupo">
+        <p class="footer-col-title" data-i18n="footer.brands">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Links da empresa">
+        <p class="footer-col-title" data-i18n="footer.company">Empresa</p>
+        <ul>
+          <li><a href="sobre.html" data-i18n="nav.about">Quem Somos</a></li>
+          <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+          <li><a href="parcerias.html" data-i18n="nav.partnerships">Parcerias</a></li>
+          <li><a href="careers.html" data-i18n="nav.careers">Carreiras</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col" aria-label="Informações de contacto">
+        <p class="footer-col-title" data-i18n="footer.contact">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal" aria-label="Links legais">
+        <a href="privacidade.html" data-i18n="footer.privacy">Privacidade</a>
+        <a href="termos.html" data-i18n="footer.terms">Termos</a>
+        <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      </nav>
+      <nav class="footer-socials" aria-label="Redes sociais">
+        <a href="#" aria-label="Instagram do Sensation Group">Instagram</a>
+        <a href="#" aria-label="LinkedIn do Sensation Group">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------
+         1. NAV — scroll behaviour
+      ---------------------------------------------------------- */
+      var nav = document.getElementById('nav');
+
+      function handleNavScroll() {
+        if (window.scrollY > 40) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', handleNavScroll, { passive: true });
+      handleNavScroll(); // run on init
+
+      /* ----------------------------------------------------------
+         2. HAMBURGER / MOBILE MENU
+      ---------------------------------------------------------- */
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobile-menu');
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        hamburger.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Fechar menu');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Abrir menu');
+        document.body.style.overflow = '';
+      }
+
+      function toggleMenu() {
+        if (mobileMenu.classList.contains('open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+
+      // Close on any mobile menu link click
+      mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      /* ----------------------------------------------------------
+         3. HERO BG — subtle scale-in on load
+      ---------------------------------------------------------- */
+      var heroBg = document.getElementById('hero-bg');
+      if (heroBg) {
+        requestAnimationFrame(function () {
+          // small delay so transition fires after initial paint
+          setTimeout(function () {
+            heroBg.classList.add('loaded');
+          }, 80);
+        });
+      }
+
+      /* ----------------------------------------------------------
+         4. BRANDS — editorial list hover / preview crossfade
+      ---------------------------------------------------------- */
+      var brandRows = document.querySelectorAll('.brand-row');
+      var previewImgs = document.querySelectorAll('.brand-preview-img');
+
+      function activateBrand(index) {
+        brandRows.forEach(function (row) {
+          var active = Number(row.dataset.index) === index;
+          row.classList.toggle('active', active);
+        });
+        previewImgs.forEach(function (img) {
+          var active = Number(img.dataset.index) === index;
+          img.classList.toggle('active', active);
+        });
+      }
+
+      brandRows.forEach(function (row) {
+        row.addEventListener('mouseenter', function () {
+          activateBrand(Number(row.dataset.index));
+        });
+        row.addEventListener('focus', function () {
+          activateBrand(Number(row.dataset.index));
+        });
+        row.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            activateBrand(Number(row.dataset.index));
+          }
+        });
+      });
+
+      /* ----------------------------------------------------------
+         5. REVEAL ON SCROLL — IntersectionObserver
+      ---------------------------------------------------------- */
+      var revealEls = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -36px 0px'
+        });
+
+        revealEls.forEach(function (el) {
+          io.observe(el);
+        });
+      } else {
+        // Fallback: reveal everything immediately
+        revealEls.forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+      /* ----------------------------------------------------------
+         6. SMOOTH SCROLL for anchor links
+      ---------------------------------------------------------- */
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var href = this.getAttribute('href');
+          if (!href || href === '#') return;
+          var target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          var navH = parseInt(
+            getComputedStyle(document.documentElement).getPropertyValue('--nav-height'),
+            10
+          ) || 72;
+          var top = target.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+      });
+
+    }());
+  </script>
+
+  <!-- Shared JS: i18n system (load before main so lang state is available) -->
+  <script src="assets/js/i18n.js"></script>
+  <!-- Shared JS: main interactions (nav, hamburger, reveal, smooth scroll, etc.) -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

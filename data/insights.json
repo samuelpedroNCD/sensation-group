@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "tendencias-eventos-2025",
+      "category": "trends",
+      "featured": true,
+      "date": "2025-04-10",
+      "readTime": 6,
+      "author": { "name": "Equipa Sensation", "role": "Editorial" },
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+      "title": { "pt": "As 5 Tendências que Vão Definir os Eventos em 2025", "en": "The 5 Trends That Will Define Events in 2025", "fr": "Les 5 Tendances qui Définiront les Événements en 2025", "es": "Las 5 Tendencias que Definirán los Eventos en 2025" },
+      "excerpt": { "pt": "Da experiência imersiva à sustentabilidade, os eventos de 2025 estão a redefinir o que significa criar um momento memorável.", "en": "From immersive experience to sustainability, events in 2025 are redefining what it means to create a memorable moment.", "fr": "De l'expérience immersive à la durabilité, les événements de 2025 redéfinissent ce que signifie créer un moment mémorable.", "es": "Desde la experiencia inmersiva hasta la sostenibilidad, los eventos de 2025 están redefiniendo qué significa crear un momento memorable." },
+      "body": { "pt": "<h2>Introdução</h2><p>O setor de eventos está em constante evolução. Em 2025, vemos cinco tendências principais emergir que estão a transformar a forma como pensamos e executamos eventos de alto nível.</p><h2>1. Experiências Imersivas</h2><p>Os clientes já não querem assistir a um evento — querem viver a experiência. A realidade aumentada, cenografias interativas e tecnologia haptic estão a criar novos patamares de engagement.</p><h2>2. Sustentabilidade como Standard</h2><p>A neutralidade carbónica deixou de ser um diferencial e tornou-se uma exigência. Eventos zero-waste, materiais reutilizáveis e compensação de emissões são agora a norma nos eventos premium.</p><h2>3. Personalização Extrema</h2><p>Cada convidado quer sentir que o evento foi pensado especialmente para si. A personalização de experiências ao nível individual é o novo luxo.</p><h2>4. Tecnologia de Som e Luz</h2><p>Os avanços em LED, projeção mapeada e sistemas de som imersivo estão a criar possibilidades que antes eram impossíveis.</p><h2>5. Hibridismo Digital-Físico</h2><p>Os eventos híbridos consolidaram-se como formato de referência, permitindo alcançar audiências globais sem perder a qualidade da experiência presencial.</p>", "en": "<h2>Introduction</h2><p>The events sector is constantly evolving. In 2025, we see five main trends emerging that are transforming how we think about and execute high-level events.</p><h2>1. Immersive Experiences</h2><p>Clients no longer want to attend an event — they want to live the experience.</p><h2>2. Sustainability as Standard</h2><p>Carbon neutrality is no longer a differentiator but a requirement.</p><h2>3. Extreme Personalisation</h2><p>Each guest wants to feel the event was designed especially for them.</p><h2>4. Sound & Light Technology</h2><p>Advances in LED, projection mapping and immersive sound systems are creating previously impossible possibilities.</p><h2>5. Digital-Physical Hybridism</h2><p>Hybrid events have consolidated as the reference format.</p>" }
+    },
+    {
+      "id": "bastidores-gala-lisboa",
+      "category": "behind-the-scenes",
+      "featured": false,
+      "date": "2025-03-18",
+      "readTime": 4,
+      "author": { "name": "Direção de Produção", "role": "Sensation Group" },
+      "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "title": { "pt": "Bastidores: Como Organizámos a Gala do Ano em 72 Horas", "en": "Behind the Scenes: How We Organised the Gala of the Year in 72 Hours", "fr": "Dans les Coulisses : Comment Nous Avons Organisé le Gala de l'Année en 72 Heures", "es": "Bastidores: Cómo Organizamos la Gala del Año en 72 Horas" },
+      "excerpt": { "pt": "Quando o cliente nos ligou com apenas 72 horas de antecedência, dissemos que sim. Este é o relato do que aconteceu a seguir.", "en": "When the client called with only 72 hours' notice, we said yes. This is the account of what happened next.", "fr": "Quand le client a appelé avec seulement 72 heures de préavis, nous avons dit oui.", "es": "Cuando el cliente llamó con solo 72 horas de antelación, dijimos que sí." },
+      "body": { "pt": "<h2>A Chamada</h2><p>Era uma sexta-feira à tarde quando recebemos a chamada. Um cliente de longa data precisava de uma gala de luxo na próxima segunda-feira para 200 convidados. Sem hesitar, dissemos que sim.</p><h2>As Primeiras 24 Horas</h2><p>A equipa mobilizou-se imediatamente. Espaço confirmado em 2 horas, catering acordado em 4 horas, cenografia concebida overnight.</p><h2>O Resultado</h2><p>Na noite da gala, ninguém imaginou que tudo tinha sido organizado em 72 horas. Esse é o nosso trabalho.</p>", "en": "<h2>The Call</h2><p>It was a Friday afternoon when we received the call. A long-standing client needed a luxury gala the following Monday for 200 guests. Without hesitation, we said yes.</p><h2>The First 24 Hours</h2><p>The team mobilised immediately.</p><h2>The Result</h2><p>On the night of the gala, no one imagined everything had been organised in 72 hours.</p>" }
+    },
+    {
+      "id": "expansao-eua-2025",
+      "category": "expansion",
+      "featured": false,
+      "date": "2025-02-05",
+      "readTime": 5,
+      "author": { "name": "Direção Geral", "role": "Sensation Group" },
+      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+      "title": { "pt": "Sensation Group Chega aos Estados Unidos em 2025", "en": "Sensation Group Arrives in the United States in 2025", "fr": "Sensation Group Arrive aux États-Unis en 2025", "es": "Sensation Group Llega a Estados Unidos en 2025" },
+      "excerpt": { "pt": "A nossa expansão para os EUA representa um marco histórico para o grupo e para a indústria de eventos portuguesa.", "en": "Our expansion to the US represents a historic milestone for the group and for the Portuguese events industry.", "fr": "Notre expansion aux États-Unis représente une étape historique.", "es": "Nuestra expansión a EE.UU. representa un hito histórico." },
+      "body": { "pt": "<h2>Um Novo Capítulo</h2><p>Depois de anos a construir a nossa reputação em Portugal, chegou o momento de levar a excelência portuguesa ao mercado norte-americano.</p><h2>Porquê Nova Iorque?</h2><p>Nova Iorque é o epicentro global dos eventos de alto nível. É onde os melhores se encontram, onde os padrões são mais exigentes e onde queremos estar.</p><h2>O Que Trazemos</h2><p>Levamos para os EUA a mesma obsessão pelo detalhe, a mesma dedicação e a mesma excelência técnica que nos tornou referência em Portugal.</p>", "en": "<h2>A New Chapter</h2><p>After years building our reputation in Portugal, the time has come to bring Portuguese excellence to the North American market.</p><h2>Why New York?</h2><p>New York is the global epicentre of high-level events.</p><h2>What We Bring</h2><p>We bring to the US the same obsession with detail and technical excellence that made us a reference in Portugal.</p>" }
+    }
+  ]
+}

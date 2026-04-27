@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Sensation Group</title>
+  <meta name="description" content="Artigos, tendências e bastidores do mundo dos eventos premium. O conhecimento do Sensation Group ao seu dispor." />
+  <link rel="canonical" href="https://sensationgroup.com/insight-item.html" />
+
+  <!-- Open Graph — updated dynamically by JS -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sensationgroup.com/insight-item.html" />
+  <meta property="og:title" content="Insights — Sensation Group" />
+  <meta property="og:description" content="Artigos, tendências e bastidores do mundo dos eventos premium." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-insights.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD: BlogPosting — populated by JS -->
+  <script type="application/ld+json" id="ld-blogposting">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sensation Group",
+      "url": "https://sensationgroup.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sensationgroup.com/assets/img/logo.svg"
+      }
+    },
+    "inLanguage": "pt-PT"
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Page-specific styles: Insight Item ── */
+
+    /* Breadcrumb */
+    .breadcrumb-wrap {
+      padding-top: calc(var(--nav-height, 72px) + 48px);
+      padding-bottom: 32px;
+      padding-left: 48px;
+      padding-right: 48px;
+      background: var(--off-white);
+    }
+
+    /* Article Header */
+    .article-header {
+      padding: 56px 48px 64px;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--gray-200);
+      max-width: 840px;
+    }
+    .article-cat-tag {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 28px;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-400);
+      flex-wrap: wrap;
+    }
+    .article-meta-bar .meta-sep {
+      color: var(--gray-200);
+    }
+    .article-meta-bar span {
+      font-weight: 500;
+      color: var(--gray-600);
+    }
+    .article-meta-bar .meta-readtime {
+      color: var(--gray-400);
+      font-weight: 400;
+    }
+
+    /* Hero Image */
+    .article-hero-image {
+      width: 100%;
+      height: 55vh;
+      background-size: cover;
+      background-position: center;
+      display: block;
+    }
+
+    /* Article Body */
+    .article-body-wrap {
+      padding: 72px 48px;
+      background: var(--white);
+    }
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--gray-600);
+    }
+    .article-body h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--black);
+      margin: 40px 0 16px;
+      line-height: 1.3;
+    }
+    .article-body p {
+      margin-bottom: 20px;
+    }
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+    .article-body strong {
+      color: var(--black);
+      font-weight: 500;
+    }
+    .article-body blockquote {
+      border-left: 2px solid var(--black);
+      margin: 32px 0;
+      padding: 4px 0 4px 28px;
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--black);
+      font-style: normal;
+    }
+    .article-body ul,
+    .article-body ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+    .article-body li {
+      margin-bottom: 8px;
+    }
+
+    /* Author Block */
+    .author-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gray-200);
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .author-info {}
+    .author-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gray-400);
+      margin-bottom: 4px;
+    }
+    .author-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+    .author-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-400);
+    }
+
+    /* Related Articles */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3rem;
+    }
+    .related-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s ease;
+    }
+    .related-card:hover {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+    .related-card-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    .related-card-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .related-card-cat {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gray-400);
+      margin-bottom: 10px;
+    }
+    .related-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--black);
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .related-card-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--gray-400);
+      margin-top: auto;
+    }
+
+    /* Not found state */
+    .article-not-found {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 6rem 24px;
+    }
+    .article-not-found h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .article-not-found p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .breadcrumb-wrap {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: calc(var(--nav-height, 72px) + 28px);
+      }
+      .article-header {
+        padding: 32px 24px 48px;
+      }
+      .article-body-wrap {
+        padding: 48px 24px;
+      }
+      .article-hero-image {
+        height: 40vh;
+      }
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .article-meta-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .article-meta-bar .meta-sep {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html" aria-current="page">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── 1. BREADCRUMB ── -->
+    <div class="breadcrumb-wrap">
+      <nav class="breadcrumb" aria-label="Localização na página">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="insights.html">Insights</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span id="item-category">Artigo</span>
+      </nav>
+    </div>
+
+    <!-- ── 2. ARTICLE HEADER ── -->
+    <div class="article-header">
+      <span id="item-category-tag" class="article-cat-tag">Insights</span>
+      <h1 id="item-title" class="article-main-title">A carregar artigo&hellip;</h1>
+      <div class="article-meta-bar" aria-label="Informações do artigo">
+        <span id="item-date">—</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span id="item-author">Sensation Group</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span id="item-readtime" class="meta-readtime">— leitura</span>
+      </div>
+    </div>
+
+    <!-- ── 3. HERO IMAGE ── -->
+    <div
+      id="item-hero-img"
+      class="article-hero-image"
+      role="img"
+      aria-label="Imagem de destaque do artigo"
+      style="background-image:url('https://images.unsplash.com/photo-1434030216411-0b793f4b6f73?w=1600&q=80')"
+    ></div>
+
+    <!-- ── 4. ARTICLE BODY ── -->
+    <div class="article-body-wrap section-wrap--white">
+      <div id="item-body" class="article-body" role="article" aria-labelledby="item-title">
+        <!-- JS populates this from insights.json -->
+        <!-- Static placeholder shown while loading -->
+        <p style="color:var(--gray-200);font-style:italic;">A carregar conteúdo&hellip;</p>
+      </div>
+    </div>
+
+    <!-- ── 5. AUTHOR BLOCK ── -->
+    <section class="section-wrap section-wrap--off" aria-labelledby="author-heading">
+      <p id="author-heading" style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray-400);margin-bottom:2rem;">Sobre o Autor</p>
+      <div id="item-author-block" class="author-block">
+        <div
+          class="author-avatar"
+          id="item-author-avatar"
+          role="img"
+          aria-label="Fotografia do autor"
+          style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80')"
+        ></div>
+        <div class="author-info">
+          <p class="author-label">Escrito por</p>
+          <p id="item-author-name" class="author-name">Sensation Group</p>
+          <p id="item-author-role" class="author-role">Equipa Editorial</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. RELATED ARTICLES ── -->
+    <section class="section-wrap section-wrap--white reveal" aria-labelledby="related-title">
+      <div class="section-header">
+        <span class="section-num">→</span>
+        <div>
+          <h2 class="section-title" id="related-title">Artigos Relacionados</h2>
+        </div>
+      </div>
+
+      <div id="item-related" class="related-grid" role="list">
+        <!-- Static fallback — replaced by ContentLoader if available -->
+        <a href="insight-item.html?id=bastidores-gala-lisboa" class="related-card reveal" role="listitem" aria-label="Ler artigo: Os Bastidores de uma Gala com 500 Convidados">
+          <div class="related-card-img" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80')" role="img" aria-label="Gala de evento de luxo"></div>
+          <div class="related-card-body">
+            <p class="related-card-cat">Bastidores</p>
+            <h3 class="related-card-title">Os Bastidores de uma Gala com 500 Convidados</h3>
+            <span class="related-card-meta">28 Mar 2025 · 6 min</span>
+          </div>
+        </a>
+        <a href="insight-item.html?id=expansao-eua-2025" class="related-card reveal" role="listitem" aria-label="Ler artigo: Sensation Group Chega aos EUA em 2025">
+          <div class="related-card-img" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80')" role="img" aria-label="Vista aérea de cidade americana"></div>
+          <div class="related-card-body">
+            <p class="related-card-cat">Expansão</p>
+            <h3 class="related-card-title">Sensation Group Chega aos EUA em 2025</h3>
+            <span class="related-card-meta">5 Fev 2025 · 5 min</span>
+          </div>
+        </a>
+        <a href="insight-item.html?id=som-imersivo-futuro" class="related-card reveal" role="listitem" aria-label="Ler artigo: O Futuro do Som Imersivo em Eventos">
+          <div class="related-card-img" style="background-image:url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80')" role="img" aria-label="Console de som profissional"></div>
+          <div class="related-card-body">
+            <p class="related-card-cat">Tendências</p>
+            <h3 class="related-card-title">O Futuro do Som Imersivo em Eventos</h3>
+            <span class="related-card-meta">12 Jan 2025 · 7 min</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 7. CTA ── -->
+    <section class="cta-section reveal" aria-label="Chamada para ação">
+      <div class="cta-card cta-card--dark">
+        <p class="section-num section-num--dark" aria-hidden="true">→</p>
+        <h2>Quer saber mais sobre o grupo?</h2>
+        <p>Conheça a nossa história, visão e as três marcas que compõem o Sensation Group.</p>
+        <a href="sobre.html" class="btn btn--outline-white">Sobre Nós</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <p class="section-num" aria-hidden="true">→</p>
+        <h2>Veja os nossos projectos.</h2>
+        <p>Uma seleção dos nossos eventos mais recentes e ambiciosos, de Portugal aos Estados Unidos.</p>
+        <a href="portfolio.html" class="btn btn--dark">Ver Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col"><p class="footer-col-title">Marcas</p><ul><li><a href="marcas.html#floor-sensation">Floor Sensation</a></li><li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li><li><a href="marcas.html#premium">Premium Sensation</a></li></ul></nav>
+      <nav class="footer-col"><p class="footer-col-title">Empresa</p><ul><li><a href="sobre.html">Quem Somos</a></li><li><a href="areas.html">Áreas</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="careers.html">Carreiras</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Contacto</p><ul><li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li><li><a href="tel:+351910000000">+351 910 000 000</a></li><li><a href="#">Lisboa, Portugal</a></li><li><a href="#">New York, USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="cookies.html">Cookies</a></nav>
+      <nav class="footer-socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="LinkedIn">LinkedIn</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.ContentLoader) {
+        ContentLoader.fetchData('insights').then(function(data) {
+          if (data) ContentLoader.renderInsightItem(data);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

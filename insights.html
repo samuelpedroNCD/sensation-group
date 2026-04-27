@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Sensation Group</title>
+  <meta name="description" content="Artigos, tendências e bastidores do mundo dos eventos premium. O conhecimento do Sensation Group ao seu dispor." />
+  <link rel="canonical" href="https://sensationgroup.com/insights.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sensationgroup.com/insights.html" />
+  <meta property="og:title" content="Insights — Sensation Group" />
+  <meta property="og:description" content="Artigos, tendências e bastidores do mundo dos eventos premium. O conhecimento do Sensation Group ao seu dispor." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-insights.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Insights — Sensation Group",
+    "url": "https://sensationgroup.com/insights.html",
+    "description": "Artigos, tendências e bastidores do mundo dos eventos premium.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sensation Group",
+      "url": "https://sensationgroup.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sensationgroup.com/assets/img/logo.svg"
+      }
+    },
+    "inLanguage": "pt-PT"
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Page-specific styles: Insights ── */
+
+    /* Featured Article */
+    .insight-featured-link {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      transition: box-shadow 0.2s ease;
+    }
+    .insight-featured-link:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+    .insight-featured-img {
+      height: 480px;
+      min-height: 40vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .insight-featured-body {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .insight-cat {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .insight-featured-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 20px;
+    }
+    .insight-excerpt {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+    .insight-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--gray-400);
+    }
+
+    /* Category Filter Bar */
+    .insights-filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 48px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .insights-filter-bar::-webkit-scrollbar { display: none; }
+
+    /* Article Grid */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .insight-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s ease;
+    }
+    .insight-card:hover {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+    .insight-card-img {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    .insight-card-body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    .insight-card-body .insight-excerpt {
+      font-size: 13px;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .insight-card-body .insight-meta {
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .insight-featured-link {
+        grid-template-columns: 1fr;
+      }
+      .insight-featured-img {
+        height: 300px;
+        min-height: unset;
+      }
+      .insight-featured-body {
+        padding: 32px 24px;
+      }
+      .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html" aria-current="page">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="page-hero" aria-label="Cabeçalho da página Insights">
+      <div class="page-hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1434030216411-0b793f4b6f73?w=1600&q=80"
+          alt="Mesa de trabalho com caderno e café"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Localização na página">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb-sep" aria-hidden="true">—</span>
+          <span aria-current="page">Insights</span>
+        </nav>
+        <p class="page-hero-label">Insights</p>
+        <h1 class="page-hero-title">Conhecimento e tendências.</h1>
+        <p class="page-hero-desc">Artigos sobre produção de eventos, tendências da indústria e bastidores das nossas produções.</p>
+      </div>
+    </section>
+
+    <!-- ── 2. FEATURED ARTICLE ── -->
+    <section class="section-wrap section-wrap--off reveal" id="insights-featured-section" aria-labelledby="featured-title">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.5rem;">Em Destaque</p>
+          <h2 class="section-title" id="featured-title">Artigo em destaque.</h2>
+        </div>
+      </div>
+
+      <div id="insights-featured">
+        <!-- Static fallback — replaced by ContentLoader if available -->
+        <a href="insight-item.html?id=tendencias-eventos-2025" class="insight-featured-link" aria-label="Ler artigo: Tendências em Eventos Corporativos para 2025">
+          <div class="insight-featured-img" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80')" role="img" aria-label="Sala de conferências moderna"></div>
+          <div class="insight-featured-body">
+            <p class="insight-cat">Tendências</p>
+            <h2 class="insight-featured-title">Tendências em Eventos Corporativos para 2025</h2>
+            <p class="insight-excerpt">O que esperar do mercado de eventos premium em 2025? Analisamos as principais tendências que irão definir a indústria.</p>
+            <span class="insight-meta">15 Abr 2025 · 8 min</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 3. CATEGORY FILTER + ARTICLE GRID ── -->
+    <section class="section-wrap section-wrap--white reveal" id="all-insights" aria-labelledby="grid-title">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.5rem;">Artigos</p>
+          <h2 class="section-title" id="grid-title">Todos os artigos.</h2>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="insights-filter-bar" role="group" aria-label="Filtrar artigos por categoria">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="trends">Tendências</button>
+        <button class="filter-btn" data-filter="behind-the-scenes">Bastidores</button>
+        <button class="filter-btn" data-filter="expansion">Expansão</button>
+      </div>
+
+      <!-- Article Grid -->
+      <div id="insights-grid" class="insights-grid" role="list">
+        <!-- Static fallback articles -->
+        <a href="insight-item.html?id=bastidores-gala-lisboa" class="insight-card reveal" data-category="behind-the-scenes" role="listitem" aria-label="Ler artigo: Os Bastidores de uma Gala com 500 Convidados">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80')" role="img" aria-label="Gala de evento de luxo"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Bastidores</p>
+            <h3 class="insight-card-title">Os Bastidores de uma Gala com 500 Convidados</h3>
+            <p class="insight-excerpt">Como coordenamos produção, catering, entretenimento e logística num único evento de grande escala.</p>
+            <span class="insight-meta">28 Mar 2025 · 6 min</span>
+          </div>
+        </a>
+
+        <a href="insight-item.html?id=expansao-eua-2025" class="insight-card reveal" data-category="expansion" role="listitem" aria-label="Ler artigo: Sensation Group Chega aos EUA em 2025">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80')" role="img" aria-label="Vista aérea de cidade americana"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Expansão</p>
+            <h3 class="insight-card-title">Sensation Group Chega aos EUA em 2025</h3>
+            <p class="insight-excerpt">A expansão transatlântica que posiciona o Sensation Group no mercado norte-americano de eventos premium.</p>
+            <span class="insight-meta">5 Fev 2025 · 5 min</span>
+          </div>
+        </a>
+
+        <a href="insight-item.html?id=som-imersivo-futuro" class="insight-card reveal" data-category="trends" role="listitem" aria-label="Ler artigo: O Futuro do Som Imersivo em Eventos">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80')" role="img" aria-label="Console de som profissional"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Tendências</p>
+            <h3 class="insight-card-title">O Futuro do Som Imersivo em Eventos</h3>
+            <p class="insight-excerpt">Spatial audio, Dolby Atmos e sistemas de som tridimensional estão a redefinir a experiência sonora em eventos ao vivo.</p>
+            <span class="insight-meta">12 Jan 2025 · 7 min</span>
+          </div>
+        </a>
+
+        <a href="insight-item.html?id=iluminacao-led-2024" class="insight-card reveal" data-category="trends" role="listitem" aria-label="Ler artigo: LED de Nova Geração: A Revolução Silenciosa">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80')" role="img" aria-label="Palco com iluminação LED colorida"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Tendências</p>
+            <h3 class="insight-card-title">LED de Nova Geração: A Revolução Silenciosa</h3>
+            <p class="insight-excerpt">Como as novas tecnologias de iluminação LED estão a transformar a produção técnica de eventos — em qualidade, versatilidade e consumo energético.</p>
+            <span class="insight-meta">3 Dez 2024 · 5 min</span>
+          </div>
+        </a>
+
+        <a href="insight-item.html?id=bastidores-casamento-sintra" class="insight-card reveal" data-category="behind-the-scenes" role="listitem" aria-label="Ler artigo: Casamento de Luxo em Sintra — Bastidores">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80')" role="img" aria-label="Decoração de casamento de luxo"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Bastidores</p>
+            <h3 class="insight-card-title">Casamento de Luxo em Sintra — Bastidores</h3>
+            <p class="insight-excerpt">Do briefing à última dança: como transformámos um palácio histórico em Sintra no cenário de um casamento inesquecível.</p>
+            <span class="insight-meta">18 Nov 2024 · 9 min</span>
+          </div>
+        </a>
+
+        <a href="insight-item.html?id=sustentabilidade-eventos" class="insight-card reveal" data-category="trends" role="listitem" aria-label="Ler artigo: Sustentabilidade na Produção de Eventos">
+          <div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1521791055366-0d553872952f?w=600&q=80')" role="img" aria-label="Espaço de evento com luz natural"></div>
+          <div class="insight-card-body">
+            <p class="insight-cat">Tendências</p>
+            <h3 class="insight-card-title">Sustentabilidade na Produção de Eventos</h3>
+            <p class="insight-excerpt">O mercado premium exige cada vez mais responsabilidade ambiental. Como o Sensation Group está a liderar essa transformação.</p>
+            <span class="insight-meta">29 Out 2024 · 6 min</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 4. CTA ── -->
+    <section class="cta-section reveal" aria-label="Chamada para ação">
+      <div class="cta-card cta-card--dark">
+        <p class="section-num section-num--dark" aria-hidden="true">→</p>
+        <h2>Quer saber mais sobre o grupo?</h2>
+        <p>Conheça a nossa história, visão e as três marcas que compõem o Sensation Group.</p>
+        <a href="sobre.html" class="btn btn--outline-white">Sobre Nós</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <p class="section-num" aria-hidden="true">→</p>
+        <h2>Veja os nossos projectos.</h2>
+        <p>Uma seleção dos nossos eventos mais recentes e ambiciosos, de Portugal aos Estados Unidos.</p>
+        <a href="portfolio.html" class="btn btn--dark">Ver Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col"><p class="footer-col-title">Marcas</p><ul><li><a href="marcas.html#floor-sensation">Floor Sensation</a></li><li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li><li><a href="marcas.html#premium">Premium Sensation</a></li></ul></nav>
+      <nav class="footer-col"><p class="footer-col-title">Empresa</p><ul><li><a href="sobre.html">Quem Somos</a></li><li><a href="areas.html">Áreas</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="careers.html">Carreiras</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Contacto</p><ul><li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li><li><a href="tel:+351910000000">+351 910 000 000</a></li><li><a href="#">Lisboa, Portugal</a></li><li><a href="#">New York, USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="cookies.html">Cookies</a></nav>
+      <nav class="footer-socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="LinkedIn">LinkedIn</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.ContentLoader) {
+        ContentLoader.renderInsightsList('insights-featured', 'insights-grid');
+      }
+      // Category filter
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var filter = btn.dataset.filter || 'all';
+          document.querySelectorAll('.insight-card').forEach(function(card) {
+            if (filter === 'all') { card.style.display = ''; }
+            else { card.style.display = card.dataset.category === filter ? '' : 'none'; }
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

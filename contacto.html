@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Sensation Group</title>
+  <meta name="description" content="Entre em contacto com o Sensation Group. Eventos corporativos, casamentos de luxo, parcerias e expansão EUA." />
+  <meta property="og:title" content="Contacto — Sensation Group" />
+  <meta property="og:description" content="Entre em contacto com o Sensation Group. Eventos corporativos, casamentos de luxo, parcerias e expansão EUA." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Sensation Group",
+        "description": "Produção de eventos premium em Portugal e nos Estados Unidos.",
+        "url": "https://sensationgroup.com",
+        "email": "hello@sensationgroup.com",
+        "telephone": "+351910000000",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua do Quelhas",
+            "addressLocality": "Lisboa",
+            "postalCode": "1200-781",
+            "addressCountry": "PT"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "350 Fifth Avenue",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10118",
+            "addressCountry": "US"
+          }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Contacto — Sensation Group",
+        "url": "https://sensationgroup.com/contacto.html",
+        "description": "Entre em contacto com o Sensation Group para eventos corporativos, casamentos de luxo, parcerias e expansão EUA."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── SECTION WRAPPERS ─── */
+    .section-wrap {
+      padding: 96px 0;
+    }
+    .section-wrap--off { background: var(--off-white); }
+    .section-wrap--white { background: var(--white); }
+    .section-wrap--dark { background: var(--black); color: var(--white); }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+    }
+    .section-wrap--dark .section-label { color: var(--gray-400); }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      position: relative;
+      height: 580px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .page-hero__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      transform: scale(1.04);
+      transition: transform 8s ease;
+    }
+    .page-hero:hover .page-hero__bg { transform: scale(1.0); }
+    .page-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 0 40px 72px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .page-hero__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 18px;
+    }
+    .page-hero__title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .page-hero__desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* ─── CONTACT TYPE CARDS ─── */
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 40px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    }
+    .contact-card__number {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--gray-400);
+      margin-bottom: 28px;
+    }
+    .contact-card__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .contact-card__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .contact-card__email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-card__email:hover {
+      color: var(--gray-600);
+      border-color: var(--gray-400);
+    }
+
+    /* ─── FORM ─── */
+    .form-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-grid--full { grid-column: 1 / -1; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+    }
+    .form-input,
+    .form-textarea,
+    .form-select {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+      width: 100%;
+    }
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      border-color: var(--black);
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%235A5A56' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+    .btn--dark {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 16px 40px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn--dark:hover {
+      background: var(--gray-600);
+      transform: translateY(-2px);
+    }
+    .form-success {
+      display: none;
+      background: var(--off-white);
+      border: 1px solid var(--gray-200);
+      padding: 32px 40px;
+      margin-top: 24px;
+      text-align: center;
+    }
+    .form-success__title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .form-success__text {
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+
+    /* ─── OFFICES ─── */
+    .offices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .offices-header {
+      margin-bottom: 64px;
+    }
+    .offices-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .office-card {
+      border-top: 1px solid var(--gray-200);
+      padding-top: 32px;
+    }
+    .office-card__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+    }
+    .office-card__city {
+      font-family: 'Syne', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .office-card__address {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .office-card__phone {
+      font-size: 14px;
+      color: var(--black);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .office-card__map {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .office-card__map:hover { color: var(--gray-600); }
+
+    /* ─── FAQ ─── */
+    .faq-header {
+      margin-bottom: 56px;
+    }
+    .faq-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .faq-list { border-top: 1px solid var(--gray-200); }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--black);
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gray-600); }
+    .faq-question__icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+    .faq-item.open .faq-question__icon {
+      transform: rotate(45deg);
+      background: var(--black);
+      border-color: var(--black);
+    }
+    .faq-question__icon svg { transition: stroke 0.3s; }
+    .faq-item.open .faq-question__icon svg { stroke: var(--white); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 28px; }
+    .faq-answer p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      max-width: 700px;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .contact-cards-grid { gap: 16px; }
+      .offices-grid { gap: 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .section-wrap { padding: 72px 0; }
+      .container { padding: 0 24px; }
+      .page-hero { height: 480px; }
+      .page-hero__content { padding: 0 24px 56px; }
+      .contact-cards-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .offices-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .section-wrap { padding: 56px 0; }
+      .container { padding: 0 20px; }
+      .page-hero { height: 420px; }
+      .contact-card { padding: 28px 24px; }
+      .form-title { margin-bottom: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- 1. PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80');"></div>
+      <div class="page-hero__content container">
+        <p class="page-hero__label">Contacto</p>
+        <h1 class="page-hero__title">Vamos trabalhar<br>juntos.</h1>
+        <p class="page-hero__desc">A nossa equipa responde em menos de 24 horas. Conte-nos a sua visão.</p>
+      </div>
+    </section>
+
+    <!-- 2. CONTACT TYPE CARDS -->
+    <section class="section-wrap section-wrap--off reveal">
+      <div class="container">
+        <p class="section-label">Como podemos ajudar</p>
+        <div class="contact-cards-grid">
+
+          <article class="contact-card">
+            <p class="contact-card__number">01</p>
+            <h2 class="contact-card__title">Contacto Geral</h2>
+            <p class="contact-card__desc">Para questões gerais, informações sobre o grupo ou os nossos serviços.</p>
+            <a href="mailto:hello@sensationgroup.com" class="contact-card__email">hello@sensationgroup.com</a>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-card__number">02</p>
+            <h2 class="contact-card__title">Eventos Corporativos</h2>
+            <p class="contact-card__desc">Galas, conferências, team building e eventos de empresa de alto nível.</p>
+            <a href="mailto:corporate@sensationgroup.com" class="contact-card__email">corporate@sensationgroup.com</a>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-card__number">03</p>
+            <h2 class="contact-card__title">Parcerias</h2>
+            <p class="contact-card__desc">Parcerias estratégicas, colaborações de espaço e fornecedores.</p>
+            <a href="mailto:partnerships@sensationgroup.com" class="contact-card__email">partnerships@sensationgroup.com</a>
+          </article>
+
+          <article class="contact-card">
+            <p class="contact-card__number">04</p>
+            <h2 class="contact-card__title">Expansão EUA</h2>
+            <p class="contact-card__desc">Informação sobre as nossas operações nos Estados Unidos.</p>
+            <a href="mailto:usa@sensationgroup.com" class="contact-card__email">usa@sensationgroup.com</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MAIN CONTACT FORM -->
+    <section class="section-wrap section-wrap--white reveal">
+      <div class="container">
+        <h2 class="form-title">Envie-nos uma mensagem.</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+
+            <!-- Row 1: Name + Email -->
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Nome</label>
+              <input class="form-input" type="text" id="cf-name" name="name" placeholder="O seu nome completo" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email</label>
+              <input class="form-input" type="email" id="cf-email" name="email" placeholder="email@exemplo.com" required />
+            </div>
+
+            <!-- Row 2: Phone + Event Type -->
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">Telefone</label>
+              <input class="form-input" type="tel" id="cf-phone" name="phone" placeholder="+351 9XX XXX XXX" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-type">Tipo de Evento</label>
+              <select class="form-select" id="cf-type" name="event_type">
+                <option value="" disabled selected>Seleccione uma opção</option>
+                <option value="corporativo">Corporativo</option>
+                <option value="casamento">Casamento</option>
+                <option value="privado">Privado</option>
+                <option value="producao">Produção Técnica</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <!-- Row 3: Date -->
+            <div class="form-group form-grid--full">
+              <label class="form-label" for="cf-date">Data do Evento (aproximada)</label>
+              <input class="form-input" type="date" id="cf-date" name="event_date" />
+            </div>
+
+            <!-- Row 4: Message -->
+            <div class="form-group form-grid--full">
+              <label class="form-label" for="cf-message">Mensagem</label>
+              <textarea class="form-textarea" id="cf-message" name="message" placeholder="Descreva o seu evento ou a sua questão..." required></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-grid--full">
+              <button type="submit" class="btn--dark">Enviar Pedido</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="form-success" id="form-success" role="alert">
+          <p class="form-success__title">Mensagem enviada com sucesso.</p>
+          <p class="form-success__text">A nossa equipa irá entrar em contacto consigo em menos de 24 horas.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. OFFICES -->
+    <section class="section-wrap section-wrap--off reveal">
+      <div class="container">
+        <div class="offices-header">
+          <p class="section-label">Localização</p>
+          <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.02em;">Os nossos escritórios.</h2>
+        </div>
+        <div class="offices-grid">
+
+          <div class="office-card">
+            <p class="office-card__label">Sede Europeia</p>
+            <p class="office-card__city">Lisboa, Portugal</p>
+            <p class="office-card__address">Rua do Quelhas<br>1200-781 Lisboa</p>
+            <a href="tel:+351910000000" class="office-card__phone">+351 910 000 000</a>
+            <a href="https://maps.google.com/?q=Rua+do+Quelhas+Lisboa" target="_blank" rel="noopener noreferrer" class="office-card__map">Ver no Google Maps →</a>
+          </div>
+
+          <div class="office-card">
+            <p class="office-card__label">Escritório EUA</p>
+            <p class="office-card__city">New York, USA</p>
+            <p class="office-card__address">350 Fifth Avenue<br>New York, NY 10118</p>
+            <a href="tel:+12120000000" class="office-card__phone">+1 (212) 000 0000</a>
+            <a href="https://maps.google.com/?q=350+Fifth+Avenue+New+York" target="_blank" rel="noopener noreferrer" class="office-card__map">Ver no Google Maps →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAQ -->
+    <section class="section-wrap section-wrap--white reveal">
+      <div class="container">
+        <div class="faq-header">
+          <p class="section-label">Perguntas Frequentes</p>
+          <h2>Perguntas Frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Qual é o tempo mínimo para planeamento de um evento?
+              <span class="faq-question__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                  <path d="M7 1v12M1 7h12"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Recomendamos um mínimo de 3 meses para eventos de média dimensão e 6 a 12 meses para eventos de grande escala, como galas e casamentos de luxo. No entanto, analisamos cada caso individualmente e fazemos o possível para acomodar pedidos com prazos mais curtos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Trabalham com eventos internacionais?
+              <span class="faq-question__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                  <path d="M7 1v12M1 7h12"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. O Sensation Group opera em Portugal e nos Estados Unidos, com presença em Lisboa e Nova Iorque. Temos experiência na organização de eventos internacionais em múltiplas geografias europeias e norte-americanas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Como funciona o processo de orçamentação?
+              <span class="faq-question__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                  <path d="M7 1v12M1 7h12"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Após o contacto inicial, a nossa equipa agenda uma reunião de briefing para compreender os seus objectivos, dimensão e expectativas. Com base nessa informação, preparamos uma proposta detalhada com opções e estimativa de custos, normalmente em 5 a 7 dias úteis.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quais os tipos de eventos que produzem?
+              <span class="faq-question__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                  <path d="M7 1v12M1 7h12"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Produzimos uma vasta gama de eventos: galas corporativas, conferências, lançamentos de produto, casamentos de luxo, festas privadas, concertos, instalações audiovisuais e muito mais. As nossas três marcas — Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation — cobrem todas as vertentes da produção de eventos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Têm disponibilidade para eventos de última hora?
+              <span class="faq-question__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                  <path d="M7 1v12M1 7h12"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Avaliamos cada pedido de urgência de forma individual. Dependendo da disponibilidade da nossa equipa e dos recursos necessários, podemos garantir produções com prazos reduzidos. Entre em contacto directamente por telefone para situações urgentes.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col"><p class="footer-col-title">Marcas</p><ul><li><a href="marcas.html#floor-sensation">Floor Sensation</a></li><li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li><li><a href="marcas.html#premium">Premium Sensation</a></li></ul></nav>
+      <nav class="footer-col"><p class="footer-col-title">Empresa</p><ul><li><a href="sobre.html">Quem Somos</a></li><li><a href="areas.html">Áreas</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="careers.html">Carreiras</a></li></ul></nav>
+      <div class="footer-col"><p class="footer-col-title">Contacto</p><ul><li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li><li><a href="tel:+351910000000">+351 910 000 000</a></li><li><a href="#">Lisboa, Portugal</a></li><li><a href="#">New York, USA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a><a href="cookies.html">Cookies</a></nav>
+      <nav class="footer-socials"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="LinkedIn">LinkedIn</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Reveal on scroll
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function(el) { el.classList.add('visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // FAQ accordion
+    (function() {
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function(item) {
+        var btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', function() {
+          var isOpen = item.classList.contains('open');
+          items.forEach(function(i) {
+            i.classList.remove('open');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
+    // Contact form submit
+    (function() {
+      var form = document.getElementById('contact-form');
+      var success = document.getElementById('form-success');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        success.style.display = 'block';
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Sensation Group</title>
+  <meta name="description" content="Explore o portfolio de eventos premium produzidos pelo Sensation Group — corporativos, casamentos, eventos privados e produção técnica." />
+  <link rel="canonical" href="https://sensationgroup.com/portfolio.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Sensation Group" />
+  <meta property="og:description" content="Explore o portfolio de eventos premium produzidos pelo Sensation Group — corporativos, casamentos, eventos privados e produção técnica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sensationgroup.com/portfolio.html" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio — Sensation Group",
+    "description": "Explore o portfolio de eventos premium produzidos pelo Sensation Group — corporativos, casamentos, eventos privados e produção técnica.",
+    "url": "https://sensationgroup.com/portfolio.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sensation Group",
+      "url": "https://sensationgroup.com"
+    }
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Portfolio Filter Bar ── */
+    .portfolio-filter-bar {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin-bottom: 48px;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .portfolio-filter-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      border: 1px solid #DDDDD9;
+      padding: 8px 16px;
+      background: #FFFFFF;
+      color: #0A0A0A;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .filter-btn:hover {
+      border-color: #0A0A0A;
+    }
+    .filter-btn.active {
+      background: #0A0A0A;
+      color: #FFFFFF;
+      border-color: #0A0A0A;
+    }
+
+    /* ── Portfolio Grid ── */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    @media (max-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Portfolio Card ── */
+    .portfolio-card {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .portfolio-card[style*="display: none"],
+    .portfolio-card.hidden {
+      display: none !important;
+    }
+
+    .portfolio-card-inner {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    .portfolio-card-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.7s ease;
+    }
+    .portfolio-card:hover .portfolio-card-img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 10, 10, 0.85) 0%, transparent 60%);
+    }
+
+    .portfolio-card-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      z-index: 2;
+    }
+
+    .portfolio-card-cat {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 6px;
+    }
+
+    .portfolio-card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    /* ── Page Hero ── */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 72vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background-color: #0A0A0A;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.55;
+    }
+    .page-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 48px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .page-hero-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+    }
+    .page-hero-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(48px, 7vw, 96px);
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    .page-hero-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* ── Dual CTA Cards ── */
+    .dual-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .dual-cta-card {
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .dual-cta-card--dark {
+      background: #0A0A0A;
+    }
+    .dual-cta-card--light {
+      background: #F7F6F3;
+    }
+    .dual-cta-card-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .dual-cta-card--dark .dual-cta-card-label {
+      color: rgba(255,255,255,0.4);
+    }
+    .dual-cta-card--light .dual-cta-card-label {
+      color: #9A9A96;
+    }
+    .dual-cta-card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.15;
+    }
+    .dual-cta-card--dark .dual-cta-card-title {
+      color: #FFFFFF;
+    }
+    .dual-cta-card--light .dual-cta-card-title {
+      color: #0A0A0A;
+    }
+    .dual-cta-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 14px 28px;
+      transition: opacity 0.2s;
+      width: fit-content;
+    }
+    .dual-cta-card--dark .dual-cta-card-link {
+      background: #FFFFFF;
+      color: #0A0A0A;
+    }
+    .dual-cta-card--light .dual-cta-card-link {
+      background: #0A0A0A;
+      color: #FFFFFF;
+    }
+    .dual-cta-card-link:hover {
+      opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      .dual-cta {
+        grid-template-columns: 1fr;
+      }
+      .dual-cta-card {
+        padding: 64px 32px;
+      }
+      .page-hero-content {
+        padding: 0 24px 64px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── SECTION 1: Page Hero ── -->
+    <section class="page-hero" aria-label="Portfolio Hero">
+      <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80');" role="img" aria-label="Evento premium"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="page-hero-label">Portfolio</p>
+        <h1 class="page-hero-title">Trabalho<br>seleccionado.</h1>
+        <p class="page-hero-desc">Cada projecto é a história de um momento tornando-se memória.</p>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: Filter Bar + Portfolio Grid ── -->
+    <section class="section-wrap--off" aria-label="Portfolio de projectos">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 80px 48px;">
+
+        <div class="portfolio-filter-bar" role="toolbar" aria-label="Filtrar por categoria">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="corporate">Corporativo</button>
+          <button class="filter-btn" data-filter="wedding">Casamentos</button>
+          <button class="filter-btn" data-filter="private">Privados</button>
+          <button class="filter-btn" data-filter="production">Produção Técnica</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Loaded by content.js but pre-populated with 3 static cards as fallback -->
+          <article class="portfolio-card" data-category="corporate">
+            <a href="portfolio-item.html?id=gala-multinacional-lisboa" class="portfolio-card-inner">
+              <div class="portfolio-card-img" style="background-image:url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=800&q=80')"></div>
+              <div class="portfolio-card-overlay"></div>
+              <div class="portfolio-card-label">
+                <p class="portfolio-card-cat">Corporativo</p>
+                <h3 class="portfolio-card-title">Gala Multinacional Lisboa</h3>
+              </div>
+            </a>
+          </article>
+          <article class="portfolio-card" data-category="wedding">
+            <a href="portfolio-item.html?id=wedding-sintra" class="portfolio-card-inner">
+              <div class="portfolio-card-img" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80')"></div>
+              <div class="portfolio-card-overlay"></div>
+              <div class="portfolio-card-label">
+                <p class="portfolio-card-cat">Casamento</p>
+                <h3 class="portfolio-card-title">Casamento em Sintra</h3>
+              </div>
+            </a>
+          </article>
+          <article class="portfolio-card" data-category="production">
+            <a href="portfolio-item.html?id=festival-som-luzes" class="portfolio-card-inner">
+              <div class="portfolio-card-img" style="background-image:url('https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=800&q=80')"></div>
+              <div class="portfolio-card-overlay"></div>
+              <div class="portfolio-card-label">
+                <p class="portfolio-card-cat">Produção Técnica</p>
+                <h3 class="portfolio-card-title">Festival Som &amp; Luzes</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: Dual CTA ── -->
+    <section class="dual-cta" aria-label="Próximos passos">
+      <div class="dual-cta-card dual-cta-card--dark">
+        <p class="dual-cta-card-label">Vamos trabalhar juntos</p>
+        <h2 class="dual-cta-card-title">Tem um projecto em mente?</h2>
+        <a href="contacto.html" class="dual-cta-card-link">Pedir Proposta →</a>
+      </div>
+      <div class="dual-cta-card dual-cta-card--light">
+        <p class="dual-cta-card-label">O que fazemos</p>
+        <h2 class="dual-cta-card-title">Conheça as nossas áreas.</h2>
+        <a href="areas.html" class="dual-cta-card-link">Ver Áreas →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-col-title">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-col-title">Empresa</p>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="areas.html">Áreas</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
+          <li><a href="careers.html">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-col-title">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+      <nav class="footer-socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Portfolio filter logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Filter behaviour
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var portfolioGrid = document.getElementById('portfolio-grid');
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = btn.getAttribute('data-filter');
+
+          // Update active state
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          // Show/hide cards
+          var cards = portfolioGrid.querySelectorAll('.portfolio-card');
+          cards.forEach(function (card) {
+            var cat = card.getAttribute('data-category');
+            if (filter === 'todos' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Load from content.js if available
+      if (window.ContentLoader) {
+        ContentLoader.fetchData('portfolio').then(function (data) {
+          if (data) ContentLoader.renderPortfolioGrid('portfolio-grid');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Áreas de Especialização — Sensation Group</title>
+  <meta name="description" content="Infraestrutura, som, iluminação, eventos premium e produção integral. Conheça todas as áreas de especialização do Sensation Group." />
+  <link rel="canonical" href="https://sensationgroup.com/areas.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Áreas de Especialização — Sensation Group" />
+  <meta property="og:description" content="Infraestrutura, som, iluminação, eventos premium e produção integral. Conheça todas as áreas de especialização do Sensation Group." />
+  <meta property="og:url" content="https://sensationgroup.com/areas.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sensation Group",
+    "url": "https://sensationgroup.com",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Áreas de Especialização",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "position": 1,
+          "name": "Infraestrutura de Pisos",
+          "description": "Pisos modulares e estruturais para palcos, tendas e espaços de evento. Desde pisos de dança a superfícies técnicas para grandes produções.",
+          "provider": { "@type": "Organization", "name": "Floor Sensation" }
+        },
+        {
+          "@type": "Service",
+          "position": 2,
+          "name": "Som & Acústica",
+          "description": "Sistemas de som de alta fidelidade para qualquer escala de evento. Da sala de reuniões ao festival.",
+          "provider": { "@type": "Organization", "name": "Sensation Sound & Lights" }
+        },
+        {
+          "@type": "Service",
+          "position": 3,
+          "name": "Design de Iluminação",
+          "description": "Iluminação que cria atmosferas. Architectural, cénica, de efeitos, LED e inteligente.",
+          "provider": { "@type": "Organization", "name": "Sensation Sound & Lights" }
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Eventos Premium",
+          "description": "Da concepção à execução — casamentos de luxo, galas corporativas, eventos privados e lançamentos de produto.",
+          "provider": { "@type": "Organization", "name": "Premium Sensation" }
+        },
+        {
+          "@type": "Service",
+          "position": 5,
+          "name": "Produção Integral",
+          "description": "Coordenação completa da produção: logística, fornecedores, segurança e operações. Um único ponto de contacto.",
+          "provider": { "@type": "Organization", "name": "Sensation Group" }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Page-specific variables ── */
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+    }
+
+    /* ── Area section layout ── */
+    .area-section {
+      padding: 6rem 0;
+    }
+
+    .area-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .area-left {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .area-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(5rem, 10vw, 9rem);
+      line-height: 1;
+      color: var(--gray-200);
+      display: block;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .area-num--dark {
+      color: rgba(255,255,255,0.08);
+    }
+
+    .area-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--black);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .area-title--white {
+      color: var(--white);
+    }
+
+    .area-brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2rem;
+      margin-top: 1rem;
+    }
+
+    .area-brand-tag--dark {
+      color: var(--gray-400);
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .area-right {}
+
+    .area-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--gray-600);
+      margin-bottom: 2.5rem;
+    }
+
+    .area-desc--white {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .area-approach-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.25rem;
+    }
+
+    .area-approach-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .area-approach-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1.55;
+    }
+
+    .area-approach-list--white li {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .area-approach-list li::before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gray-400);
+      margin-top: 0.5rem;
+    }
+
+    .area-approach-list--white li::before {
+      background: rgba(255,255,255,0.4);
+    }
+
+    .area-divider {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 4rem 2rem;
+    }
+
+    .stats-bar-item {
+      flex: 1;
+      max-width: 280px;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .stats-bar-item + .stats-bar-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .stats-bar-value {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .stats-bar-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .area-inner {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 3rem;
+      }
+
+      .area-left {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .area-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .area-section {
+        padding: 4rem 0;
+      }
+
+      .area-num {
+        font-size: 5rem;
+      }
+
+      .stats-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 2.5rem 1rem;
+      }
+
+      .stats-bar-item + .stats-bar-item::before {
+        display: none;
+      }
+
+      .stats-bar-item {
+        border-top: 1px solid rgba(255,255,255,0.08);
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .stats-bar-item:first-child {
+        border-top: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .area-inner {
+        padding: 0 1.25rem;
+      }
+
+      .area-num {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
+        <li><a href="marcas.html" data-i18n="nav.brands">Marcas</a></li>
+        <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher" aria-label="Selecionar idioma">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="page-hero-label">03 — Áreas de Especialização</p>
+        <h1 class="page-hero-title">O que fazemos —<br>e como o fazemos.</h1>
+        <p class="page-hero-desc">Cinco áreas de especialização, três marcas, uma missão: criar eventos que deixam marca.</p>
+      </div>
+    </section>
+
+    <!-- ── 2A. AREA 01 — Infraestrutura de Pisos ── -->
+    <section class="section-wrap section-wrap--off area-section reveal" id="area-01">
+      <div class="area-inner">
+        <div class="area-left">
+          <span class="area-num">01</span>
+          <h2 class="area-title">Infraestrutura de Pisos</h2>
+          <span class="area-brand-tag">Floor Sensation</span>
+        </div>
+        <div class="area-right">
+          <p class="area-desc">Pisos modulares e estruturais para palcos, tendas e espaços de evento. Desde pisos de dança a superfícies técnicas para grandes produções — cada projeto recebe a base certa para acontecer com segurança e elegância.</p>
+          <p class="area-approach-title">A nossa abordagem</p>
+          <ul class="area-approach-list">
+            <li>Avaliação técnica do espaço e definição das cargas estruturais antes de qualquer instalação, garantindo segurança total.</li>
+            <li>Soluções modulares adaptáveis a qualquer dimensão: de pequenos salões a grandes palcos para dezenas de milhares de pessoas.</li>
+            <li>Equipa especializada presente desde o planeamento até ao desmontagem, assegurando rigor em cada fase do projeto.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2B. AREA 02 — Som & Acústica ── -->
+    <section class="section-wrap section-wrap--white area-section reveal" id="area-02">
+      <div class="area-inner">
+        <div class="area-left">
+          <span class="area-num">02</span>
+          <h2 class="area-title">Som & Acústica</h2>
+          <span class="area-brand-tag">Sensation Sound &amp; Lights</span>
+        </div>
+        <div class="area-right">
+          <p class="area-desc">Sistemas de som de alta fidelidade para qualquer escala de evento. Da sala de reuniões ao festival — projetamos e operamos soluções acústicas que garantem que cada palavra e cada nota chegam com clareza e impacto.</p>
+          <p class="area-approach-title">A nossa abordagem</p>
+          <ul class="area-approach-list">
+            <li>Modelação acústica digital do espaço antes da instalação, para cobertura sonora sem pontos mortos ou distorção.</li>
+            <li>Equipamento de última geração das principais marcas profissionais da indústria — L-Acoustics, d&amp;b audiotechnik, Shure.</li>
+            <li>Técnicos de som certificados em direto para cada evento, assegurando ajustes em tempo real.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2C. AREA 03 — Design de Iluminação ── -->
+    <section class="section-wrap section-wrap--off area-section reveal" id="area-03">
+      <div class="area-inner">
+        <div class="area-left">
+          <span class="area-num">03</span>
+          <h2 class="area-title">Design de Iluminação</h2>
+          <span class="area-brand-tag">Sensation Sound &amp; Lights</span>
+        </div>
+        <div class="area-right">
+          <p class="area-desc">Iluminação que cria atmosferas. Architectural, cénica, de efeitos, LED e inteligente — transformamos qualquer espaço numa experiência visual única, adaptada à identidade de cada evento e de cada cliente.</p>
+          <p class="area-approach-title">A nossa abordagem</p>
+          <ul class="area-approach-list">
+            <li>Design conceptual desenvolvido em parceria com o cliente, com simulações 3D do resultado final antes da instalação.</li>
+            <li>Programação de luz inteligente e automatizada, sincronizada com o programa do evento e com a música.</li>
+            <li>Portfolio diversificado: de cerimónias íntimas a grandes espetáculos com moving heads, lasers e mapeamento de projeção.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2D. AREA 04 — Eventos Premium ── -->
+    <section class="section-wrap section-wrap--white area-section reveal" id="area-04">
+      <div class="area-inner">
+        <div class="area-left">
+          <span class="area-num">04</span>
+          <h2 class="area-title">Eventos Premium</h2>
+          <span class="area-brand-tag">Premium Sensation</span>
+        </div>
+        <div class="area-right">
+          <p class="area-desc">Da concepção à execução — casamentos de luxo, galas corporativas, eventos privados e lançamentos de produto. Cada detalhe é pensado para que o cliente experiencie o evento, não a sua logística.</p>
+          <p class="area-approach-title">A nossa abordagem</p>
+          <ul class="area-approach-list">
+            <li>Processo criativo colaborativo: cada evento começa com uma sessão de briefing profunda para compreender a visão e os objetivos do cliente.</li>
+            <li>Curadoria de fornecedores exclusivos — catering, florística, entretenimento e décor — com padrões de qualidade rigorosamente verificados.</li>
+            <li>Gestão on-site dedicada: um diretor de evento presente em cada momento, garantindo que nada falha e que o cliente apenas usufrui.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2E. AREA 05 — Produção Integral ── -->
+    <section class="section-wrap section-wrap--off area-section reveal" id="area-05">
+      <div class="area-inner">
+        <div class="area-left">
+          <span class="area-num">05</span>
+          <h2 class="area-title">Produção Integral</h2>
+          <span class="area-brand-tag">Sensation Group</span>
+        </div>
+        <div class="area-right">
+          <p class="area-desc">Coordenação completa da produção: logística, fornecedores, segurança e operações. Um único ponto de contacto para projetos de maior escala que exigem a sinergia de todas as nossas marcas e competências.</p>
+          <p class="area-approach-title">A nossa abordagem</p>
+          <ul class="area-approach-list">
+            <li>Integração total das três marcas do grupo — Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation — numa cadeia de produção unificada.</li>
+            <li>Planeamento de contingência e gestão de risco incluídos em todos os projetos de produção integral, para resposta ágil a imprevistos.</li>
+            <li>Relatório pós-evento detalhado com métricas operacionais, aprendizagens e recomendações para edições futuras.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. STATS BAR ── -->
+    <section class="section-wrap section-wrap--dark reveal" aria-label="Números do Sensation Group">
+      <div class="stats-bar">
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">200+</span>
+          <span class="stats-bar-label">Eventos Realizados</span>
+        </div>
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">5</span>
+          <span class="stats-bar-label">Áreas de Especialização</span>
+        </div>
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">2</span>
+          <span class="stats-bar-label">Países de Operação</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. CTA DUAL-CARD ── -->
+    <section class="cta-section reveal" aria-label="Próximos passos">
+      <div class="cta-card cta-card--dark">
+        <div>
+          <p class="section-num section-num--dark">Próximo passo</p>
+          <h2 class="section-title section-title--dark">Pronto para começar?</h2>
+          <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2rem;">Fale connosco e diga-nos o que tem em mente. Desenvolvemos uma proposta à medida do seu projeto.</p>
+        </div>
+        <a href="contacto.html" class="btn btn--outline-white">Pedir Proposta</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <div>
+          <p class="section-num">Inspiração</p>
+          <h2 class="section-title">Veja os nossos projectos.</h2>
+          <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:300;color:var(--gray-600);line-height:1.7;margin-bottom:2rem;">Explore o portfolio de eventos que produzimos em Portugal e nos Estados Unidos.</p>
+        </div>
+        <a href="portfolio.html" class="btn btn--outline">Ver Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-col-title">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-col-title">Empresa</p>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="areas.html">Áreas</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
+          <li><a href="careers.html">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-col-title">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+      <nav class="footer-socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Reveal on scroll (inline fallback if main.js doesn't handle it) -->
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>

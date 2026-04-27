@@ -1,0 +1,25 @@
+{
+  "venues": [
+    { "name": "Palácio Nacional de Queluz", "logo": null },
+    { "name": "Convento do Beato", "logo": null },
+    { "name": "Museu Nacional do Azulejo", "logo": null },
+    { "name": "Casa da Música, Porto", "logo": null },
+    { "name": "The Pavilion, New York", "logo": null }
+  ],
+  "strategic": [
+    { "name": "Catering Excellence PT", "logo": null },
+    { "name": "Floral Design Studio", "logo": null },
+    { "name": "AV Solutions Pro", "logo": null },
+    { "name": "Luxury Transport PT", "logo": null }
+  ],
+  "international": [
+    { "name": "Events Alliance USA", "logo": null },
+    { "name": "European Event Network", "logo": null },
+    { "name": "IBTM Global Partners", "logo": null }
+  ],
+  "sector": [
+    { "name": "APECATE", "logo": null },
+    { "name": "Turismo de Portugal", "logo": null },
+    { "name": "MICE Portugal", "logo": null }
+  ]
+}

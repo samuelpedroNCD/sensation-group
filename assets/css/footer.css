@@ -1,0 +1,244 @@
+/* ============================================================
+   FOOTER.CSS — Sensation Group
+   Depends on: base.css (custom properties)
+============================================================ */
+
+/* ============================================================
+   FOOTER SHELL
+============================================================ */
+.footer {
+  background: var(--black);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 72px 48px 40px;
+}
+
+/* ============================================================
+   FOOTER TOP — four-column grid
+============================================================ */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+/* ============================================================
+   FOOTER LOGO
+============================================================ */
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-logo span {
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+/* ============================================================
+   FOOTER TAGLINE & LOCATIONS
+============================================================ */
+.footer-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 260px;
+}
+
+.footer-locations {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+/* ============================================================
+   FOOTER COLUMNS
+============================================================ */
+.footer-col-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.22);
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col ul li {
+  /* block-level list item — inherits flex layout from ul */
+}
+
+.footer-col ul a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--gray-600);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-col ul a:hover {
+  color: var(--white);
+}
+
+/* ============================================================
+   FOOTER BOTTOM
+============================================================ */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FOOTER SOCIALS
+============================================================ */
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-socials a:hover {
+  color: var(--white);
+}
+
+/* ============================================================
+   FOOTER LEGAL — privacy / terms / cookies nav
+   Usage: <nav class="footer-legal">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/cookies">Cookies</a>
+          </nav>
+============================================================ */
+.footer-legal {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================
+   FOOTER BUILT — "Built by No-Code District" credit
+   Usage: <p class="footer-built">Built by <a href="…">No-Code District</a></p>
+============================================================ */
+.footer-built {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.04em;
+}
+
+.footer-built a {
+  color: rgba(255, 255, 255, 0.2);
+  transition: color 0.2s;
+}
+
+.footer-built a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================
+   RESPONSIVE — 1024px
+============================================================ */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 32px 32px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px
+============================================================ */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 24px 28px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-tagline {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-legal {
+    gap: 14px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px
+============================================================ */
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .footer-socials {
+    gap: 14px;
+  }
+
+  .footer-legal {
+    gap: 10px;
+  }
+}

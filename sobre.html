@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós — Sensation Group</title>
+  <meta name="description" content="Conheça a história, visão e valores do Sensation Group — grupo premium de produção de eventos em Portugal e nos EUA." />
+  <link rel="canonical" href="https://sensationgroup.com/sobre.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sensationgroup.com/sobre.html" />
+  <meta property="og:title" content="Sobre Nós — Sensation Group" />
+  <meta property="og:description" content="Conheça a história, visão e valores do Sensation Group — grupo premium de produção de eventos em Portugal e nos EUA." />
+  <meta property="og:image" content="https://sensationgroup.com/assets/img/og-sobre.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sensation Group",
+    "url": "https://sensationgroup.com",
+    "logo": "https://sensationgroup.com/assets/img/logo.svg",
+    "foundingDate": "2020",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": 45 },
+    "description": "Grupo premium de produção de eventos em Portugal e nos Estados Unidos.",
+    "address": [
+      { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" },
+      { "@type": "PostalAddress", "addressLocality": "New York", "addressCountry": "US" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@sensationgroup.com",
+      "telephone": "+351910000000",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.instagram.com/sensationgroup",
+      "https://www.linkedin.com/company/sensationgroup"
+    ]
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <style>
+    /* ── Page-specific styles ── */
+
+    /* Historia two-col */
+    .historia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      padding-top: 3rem;
+    }
+    .historia-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+    .historia-text p:last-child { margin-bottom: 0; }
+    .historia-quote {
+      position: sticky;
+      top: 8rem;
+      padding-left: 3rem;
+      border-left: 1px solid var(--gray-200);
+    }
+    .historia-quote blockquote {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--black);
+      margin: 0 0 1.5rem;
+    }
+    .historia-quote cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      font-style: normal;
+    }
+
+    /* Visão 3 anos */
+    .vision-statement {
+      text-align: center;
+      max-width: 820px;
+      margin: 3rem auto 5rem;
+    }
+    .vision-statement p {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.625rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--white);
+    }
+    .vision-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .vision-pillar {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .vision-pillar:last-child { border-right: none; }
+    .vision-pillar-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1rem;
+    }
+    .vision-pillar-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .vision-pillar-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Valores cards */
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .valor-card {
+      border: 1px solid var(--gray-200);
+      padding: 2rem 1.75rem;
+      background: var(--white);
+      transition: border-color 0.25s ease;
+    }
+    .valor-card:hover { border-color: var(--black); }
+    .valor-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.25rem;
+    }
+    .valor-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.875rem;
+    }
+    .valor-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--gray-600);
+    }
+
+    /* Modelo de trabalho */
+    .steps-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step-item {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--gray-200);
+      align-items: start;
+    }
+    .step-item:first-child { border-top: 1px solid var(--gray-200); }
+    .step-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gray-100);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .step-content {}
+    .step-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+    .step-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--gray-600);
+    }
+
+    /* Expansão Internacional */
+    .expansion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0;
+      align-items: start;
+      margin-top: 4rem;
+    }
+    .expansion-divider {
+      background: rgba(255,255,255,0.1);
+      align-self: stretch;
+    }
+    .expansion-col {
+      padding: 0 4rem;
+    }
+    .expansion-col:first-child { padding-left: 0; }
+    .expansion-col:last-child { padding-right: 0; }
+    .expansion-country-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1.5rem;
+    }
+    .expansion-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+    }
+    .expansion-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+    }
+    .expansion-stat {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .expansion-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.375rem;
+    }
+    .expansion-stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.825rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .historia-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .historia-quote { position: static; padding-left: 0; border-left: none; border-top: 1px solid var(--gray-200); padding-top: 2rem; }
+      .valores-grid { grid-template-columns: repeat(2, 1fr); }
+      .vision-pillars { grid-template-columns: 1fr; }
+      .vision-pillar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+      .vision-pillar:last-child { border-bottom: none; }
+      .expansion-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .expansion-divider { display: none; }
+      .expansion-col { padding: 0; }
+      .expansion-col:first-child { padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    }
+    @media (max-width: 768px) {
+      .valores-grid { grid-template-columns: 1fr; }
+      .step-item { grid-template-columns: 4.5rem 1fr; gap: 1.25rem; }
+      .step-number { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
+        <li><a href="marcas.html" data-i18n="nav.brands">Marcas</a></li>
+        <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher" aria-label="Selecionar idioma">
+        <button data-lang-btn="pt" class="active" aria-label="Português">PT</button>
+        <button data-lang-btn="en" aria-label="English">EN</button>
+        <button data-lang-btn="fr" aria-label="Français">FR</button>
+        <button data-lang-btn="es" aria-label="Español">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <a href="sobre.html" class="mobile-link" data-i18n="nav.about">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link" data-i18n="nav.brands">Marcas</a>
+    <a href="areas.html" class="mobile-link" data-i18n="nav.areas">Áreas</a>
+    <a href="portfolio.html" class="mobile-link" data-i18n="nav.portfolio">Portfolio</a>
+    <a href="eventos.html" class="mobile-link" data-i18n="nav.events">Eventos</a>
+    <a href="insights.html" class="mobile-link" data-i18n="nav.insights">Insights</a>
+    <a href="contacto.html" class="mobile-link" data-i18n="nav.contact">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta" data-i18n="nav.cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="page-hero" aria-label="Cabeçalho da página Sobre Nós">
+      <div class="page-hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1600&q=80"
+          alt="Evento de produção premium"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Localização na página">
+          <a href="index.html">Início</a>
+          <span class="breadcrumb-sep" aria-hidden="true">—</span>
+          <span aria-current="page">Sobre Nós</span>
+        </nav>
+        <p class="page-hero-label" data-i18n="sobre.label">01 — Sobre o Grupo</p>
+        <h1 class="page-hero-title" data-i18n="sobre.headline">A história por detrás<br>da excelência.</h1>
+        <p class="page-hero-desc" data-i18n="sobre.desc">Nascemos da ambição de transformar a produção de eventos em Portugal. Hoje somos referência em dois continentes.</p>
+      </div>
+    </section>
+
+    <!-- ── 2. HISTÓRIA ── -->
+    <section class="section-wrap section-wrap--off reveal" id="historia" aria-labelledby="historia-title">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <div>
+          <h2 class="section-title" id="historia-title" data-i18n="sobre.history.title">A Nossa História</h2>
+        </div>
+      </div>
+
+      <div class="historia-grid">
+        <div class="historia-text">
+          <p data-i18n="sobre.history.p1">O Sensation Group nasceu em 2020, num momento em que a indústria de eventos enfrentava o seu maior desafio. Em vez de recuar, apostámos na construção de uma estrutura sólida, versátil e preparada para o futuro. A visão era clara: reunir as melhores competências técnicas e criativas sob um único tecto, criando um grupo capaz de responder a qualquer escala de produção com a mesma atenção ao detalhe.</p>
+          <p data-i18n="sobre.history.p2">Em apenas quatro anos, passámos de uma equipa de cinco pessoas a um grupo com três marcas especializadas, operações activas em Portugal e nos Estados Unidos, e um portefólio que inclui desde grandes festivais a casamentos de luxo, passando por eventos corporativos de topo. A nossa trajetória é marcada pela recusa do compromisso — cada projeto é tratado como se fosse o único.</p>
+          <p data-i18n="sobre.history.p3">Hoje, o Sensation Group é reconhecido como um dos grupos de produção de eventos mais exigentes do mercado ibérico. Não pelo volume de projetos que executamos, mas pela consistência com que ultrapassamos as expectativas. Essa reputação foi construída a cada evento, a cada decisão, a cada detalhe que a maioria não repara — mas que todos sentem.</p>
+        </div>
+        <div class="historia-quote" aria-label="Citação editorial">
+          <blockquote data-i18n="sobre.history.quote">
+            "Cada evento que criamos é uma oportunidade de superar o impossível."
+          </blockquote>
+          <cite data-i18n="sobre.history.cite">Fundadores, Sensation Group · 2020</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. VISÃO A 3 ANOS ── -->
+    <section class="section-wrap section-wrap--dark reveal" id="visao" aria-labelledby="visao-title">
+      <div class="section-header">
+        <span class="section-num section-num--dark">02</span>
+        <div>
+          <p class="page-hero-label" style="color:rgba(255,255,255,0.4); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; font-family:'Inter',sans-serif; font-weight:500; margin-bottom:0.5rem;" data-i18n="sobre.vision.label">Visão</p>
+          <h2 class="section-title section-title--dark" id="visao-title" data-i18n="sobre.vision.title">Visão a 3 Anos</h2>
+        </div>
+      </div>
+
+      <div class="vision-statement">
+        <p data-i18n="sobre.vision.statement">Ser a referência de produção de eventos premium no espaço lusófono e nos EUA até 2027.</p>
+      </div>
+
+      <div class="h-rule h-rule--dark" role="separator" aria-hidden="true"></div>
+
+      <div class="vision-pillars" role="list">
+        <div class="vision-pillar reveal" role="listitem">
+          <p class="vision-pillar-num">01</p>
+          <p class="vision-pillar-name" data-i18n="sobre.vision.pillar1.name">Escala Internacional</p>
+          <p class="vision-pillar-desc" data-i18n="sobre.vision.pillar1.desc">Expandir a nossa presença operacional para mais três mercados europeus e consolidar a posição nos Estados Unidos com um escritório permanente em Miami.</p>
+        </div>
+        <div class="vision-pillar reveal" role="listitem">
+          <p class="vision-pillar-num">02</p>
+          <p class="vision-pillar-name" data-i18n="sobre.vision.pillar2.name">Inovação Técnica</p>
+          <p class="vision-pillar-desc" data-i18n="sobre.vision.pillar2.desc">Investir continuamente nas tecnologias de produção mais avançadas — desde sistemas de som imersivo a cenografia digital e soluções de iluminação LED de nova geração.</p>
+        </div>
+        <div class="vision-pillar reveal" role="listitem">
+          <p class="vision-pillar-num">03</p>
+          <p class="vision-pillar-name" data-i18n="sobre.vision.pillar3.name">Excelência Criativa</p>
+          <p class="vision-pillar-desc" data-i18n="sobre.vision.pillar3.desc">Atrair e reter os melhores talentos criativos do mercado, garantindo que cada conceito que desenvolvemos seja verdadeiramente único e memorável.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. MISSÃO & VALORES ── -->
+    <section class="section-wrap section-wrap--white reveal" id="valores" aria-labelledby="valores-title">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.5rem;" data-i18n="sobre.values.label">Missão &amp; Valores</p>
+          <h2 class="section-title" id="valores-title" data-i18n="sobre.values.title">O que nos guia.</h2>
+        </div>
+      </div>
+
+      <div class="valores-grid" role="list">
+        <article class="valor-card reveal" role="listitem">
+          <p class="valor-num">01</p>
+          <h3 class="valor-name" data-i18n="sobre.values.v1.name">Excelência</h3>
+          <p class="valor-desc" data-i18n="sobre.values.v1.desc">Não aceitamos o suficientemente bom. Cada detalhe, por mais pequeno que seja, é trabalhado com o mesmo cuidado que o conjunto. A excelência não é um objetivo — é o padrão mínimo.</p>
+        </article>
+        <article class="valor-card reveal" role="listitem">
+          <p class="valor-num">02</p>
+          <h3 class="valor-name" data-i18n="sobre.values.v2.name">Inovação</h3>
+          <p class="valor-desc" data-i18n="sobre.values.v2.desc">Procuramos constantemente novas formas de fazer melhor. A inovação no Sensation Group não é uma palavra de ordem — é uma prática diária que nos distingue da concorrência.</p>
+        </article>
+        <article class="valor-card reveal" role="listitem">
+          <p class="valor-num">03</p>
+          <h3 class="valor-name" data-i18n="sobre.values.v3.name">Integridade</h3>
+          <p class="valor-desc" data-i18n="sobre.values.v3.desc">As nossas relações com clientes, parceiros e colaboradores assentam na transparência e na honestidade. A confiança é o nosso ativo mais valioso e o mais difícil de recuperar.</p>
+        </article>
+        <article class="valor-card reveal" role="listitem">
+          <p class="valor-num">04</p>
+          <h3 class="valor-name" data-i18n="sobre.values.v4.name">Impacto</h3>
+          <p class="valor-desc" data-i18n="sobre.values.v4.desc">Criamos eventos que deixam marcas. No público, nos clientes, nas comunidades onde operamos. O impacto positivo que geramos é a medida real do nosso trabalho.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── 5. MODELO DE TRABALHO ── -->
+    <section class="section-wrap section-wrap--off reveal" id="modelo" aria-labelledby="modelo-title">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.5rem;" data-i18n="sobre.process.label">Como Trabalhamos</p>
+          <h2 class="section-title" id="modelo-title" data-i18n="sobre.process.title">O nosso processo.</h2>
+        </div>
+      </div>
+
+      <div class="steps-list" role="list">
+        <div class="step-item reveal" role="listitem">
+          <span class="step-number" aria-hidden="true">01</span>
+          <div class="step-content">
+            <h3 class="step-name" data-i18n="sobre.process.s1.name">Briefing</h3>
+            <p class="step-desc" data-i18n="sobre.process.s1.desc">Começamos por ouvir. Cada projeto inicia-se com uma conversa profunda sobre objetivos, público, orçamento e visão. Sem pressupostos, sem templates — o briefing é o alicerce de tudo.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" role="listitem">
+          <span class="step-number" aria-hidden="true">02</span>
+          <div class="step-content">
+            <h3 class="step-name" data-i18n="sobre.process.s2.name">Conceito</h3>
+            <p class="step-desc" data-i18n="sobre.process.s2.desc">A nossa equipa criativa desenvolve uma proposta conceptual completa — desde o design de espaço ao alinhamento técnico. Apresentamos ideias que surpreendem sem perder de vista a viabilidade.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" role="listitem">
+          <span class="step-number" aria-hidden="true">03</span>
+          <div class="step-content">
+            <h3 class="step-name" data-i18n="sobre.process.s3.name">Produção</h3>
+            <p class="step-desc" data-i18n="sobre.process.s3.desc">Gerimos cada fase da produção com rigor milimétrico. Coordenamos fornecedores, equipas técnicas e logística com um único propósito: executar o conceito sem margem para falha.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" role="listitem">
+          <span class="step-number" aria-hidden="true">04</span>
+          <div class="step-content">
+            <h3 class="step-name" data-i18n="sobre.process.s4.name">Entrega</h3>
+            <p class="step-desc" data-i18n="sobre.process.s4.desc">O evento acontece. E depois? Fazemos sempre uma análise pós-evento detalhada, partilhada com o cliente. Aprendemos com cada projeto e usamos esse conhecimento para superar no próximo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. EXPANSÃO INTERNACIONAL ── -->
+    <section class="section-wrap section-wrap--dark reveal" id="expansao" aria-labelledby="expansao-title">
+      <div class="section-header">
+        <span class="section-num section-num--dark">05</span>
+        <div>
+          <h2 class="section-title section-title--dark" id="expansao-title" data-i18n="sobre.expansion.title">Expansão Internacional</h2>
+        </div>
+      </div>
+
+      <div class="expansion-grid">
+        <div class="expansion-col">
+          <p class="expansion-country-label" data-i18n="sobre.expansion.pt.label">🇵🇹 Portugal — Base de Operações</p>
+          <h3 class="expansion-headline" data-i18n="sobre.expansion.pt.headline">Onde tudo começou. Onde a excelência foi definida.</h3>
+          <p class="expansion-desc" data-i18n="sobre.expansion.pt.desc">Lisboa é o coração do Sensation Group. Foi aqui que desenvolvemos os nossos processos, formámos a nossa equipa e estabelecemos os padrões que hoje aplicamos em qualquer latitude. Portugal não é apenas a nossa base — é a nossa identidade.</p>
+          <div class="expansion-stat">
+            <p class="expansion-stat-num">+200</p>
+            <p class="expansion-stat-label" data-i18n="sobre.expansion.pt.stat">Eventos produzidos em Portugal</p>
+          </div>
+        </div>
+
+        <div class="expansion-divider" role="separator" aria-hidden="true"></div>
+
+        <div class="expansion-col">
+          <p class="expansion-country-label" data-i18n="sobre.expansion.us.label">🇺🇸 Estados Unidos — Mercado de Crescimento</p>
+          <h3 class="expansion-headline" data-i18n="sobre.expansion.us.headline">New York. Uma presença que se tornou operação.</h3>
+          <p class="expansion-desc" data-i18n="sobre.expansion.us.desc">A nossa entrada nos Estados Unidos não foi um acidente — foi o resultado de anos de trabalho com clientes internacionais que viram no Sensation Group um parceiro capaz de operar a qualquer escala. Hoje, a nossa equipa americana é responsável por um portefólio crescente de eventos premium na costa este.</p>
+          <div class="expansion-stat">
+            <p class="expansion-stat-num">+40</p>
+            <p class="expansion-stat-label" data-i18n="sobre.expansion.us.stat">Eventos produzidos nos EUA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. CTA ── -->
+    <section class="cta-section reveal" aria-label="Chamada para ação">
+      <div class="cta-card cta-card--dark">
+        <p class="section-num section-num--dark" aria-hidden="true">→</p>
+        <h2 data-i18n="sobre.cta1.title">Tem um evento em mente?</h2>
+        <p data-i18n="sobre.cta1.desc">Fale connosco e descubra como podemos transformar a sua visão em realidade.</p>
+        <a href="contacto.html" class="btn btn--outline-white" data-i18n="sobre.cta1.btn">Pedir Proposta</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <p class="section-num" aria-hidden="true">→</p>
+        <h2 data-i18n="sobre.cta2.title">Conheça o nosso portfolio.</h2>
+        <p data-i18n="sobre.cta2.desc">Veja uma seleção dos nossos projetos mais recentes e ambiciosos.</p>
+        <a href="portfolio.html" class="btn btn--dark" data-i18n="sobre.cta2.btn">Ver Portfolio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col" aria-label="Marcas do grupo">
+        <p class="footer-col-title" data-i18n="footer.brands">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Links da empresa">
+        <p class="footer-col-title" data-i18n="footer.company">Empresa</p>
+        <ul>
+          <li><a href="sobre.html" data-i18n="nav.about">Quem Somos</a></li>
+          <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+          <li><a href="parcerias.html" data-i18n="nav.partnerships">Parcerias</a></li>
+          <li><a href="careers.html" data-i18n="nav.careers">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col" aria-label="Informações de contacto">
+        <p class="footer-col-title" data-i18n="footer.contact">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal" aria-label="Links legais">
+        <a href="privacidade.html" data-i18n="footer.privacy">Privacidade</a>
+        <a href="termos.html" data-i18n="footer.terms">Termos</a>
+        <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      </nav>
+      <nav class="footer-socials" aria-label="Redes sociais">
+        <a href="#" aria-label="Instagram do Sensation Group">Instagram</a>
+        <a href="#" aria-label="LinkedIn do Sensation Group">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

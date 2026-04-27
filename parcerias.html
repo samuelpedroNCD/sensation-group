@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcerias — Sensation Group</title>
+  <meta name="description" content="Uma rede de excelência. Conheça os parceiros do Sensation Group em espaços, produção, rede internacional e associações do setor." />
+  <link rel="canonical" href="https://sensationgroup.com/parcerias.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Parcerias — Sensation Group" />
+  <meta property="og:description" content="Uma rede de excelência. Conheça os parceiros do Sensation Group em espaços, produção, rede internacional e associações do setor." />
+  <meta property="og:url" content="https://sensationgroup.com/parcerias.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sensation Group",
+    "url": "https://sensationgroup.com",
+    "description": "O Sensation Group mantém uma rede de parceiros estratégicos em Portugal e nos Estados Unidos — espaços de prestígio, fornecedores especializados, redes internacionais e associações do setor — selecionados pelos valores partilhados de excelência, fiabilidade e profissionalismo.",
+    "member": [
+      { "@type": "Organization", "name": "Palácio Nacional de Queluz" },
+      { "@type": "Organization", "name": "Convento do Beato" },
+      { "@type": "Organization", "name": "Casa da Música, Porto" },
+      { "@type": "Organization", "name": "The Pavilion, New York" },
+      { "@type": "Organization", "name": "Events Alliance USA" },
+      { "@type": "Organization", "name": "European Event Network" },
+      { "@type": "Organization", "name": "APECATE" },
+      { "@type": "Organization", "name": "Turismo de Portugal" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Page-specific variables ── */
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #F7F6F3;
+      --gray-100: #EFEFEC;
+      --gray-200: #DDDDD9;
+      --gray-400: #9A9A96;
+      --gray-600: #5A5A56;
+    }
+
+    /* ── Intro section ── */
+    .intro-section {
+      padding: 5rem 0;
+    }
+
+    .intro-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .intro-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .intro-heading {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--black);
+      line-height: 1.25;
+    }
+
+    .intro-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--gray-600);
+    }
+
+    .intro-body p + p {
+      margin-top: 1.25rem;
+    }
+
+    .intro-values {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .value-chip {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 0.35rem 0.85rem;
+      border-radius: 2rem;
+    }
+
+    /* ── Partners grid section ── */
+    .partners-section {
+      padding: 5rem 0;
+    }
+
+    .partners-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .partners-header {
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .partners-header-left {}
+
+    .partners-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-top: 0.5rem;
+    }
+
+    /* ── Partner card grid (4-col → 2-col → 1-col) ── */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-200);
+    }
+
+    .partner-card {
+      background: var(--white);
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: background 0.2s ease;
+      cursor: default;
+    }
+
+    .partner-card:hover {
+      background: var(--off-white);
+    }
+
+    .partner-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--black);
+      line-height: 1.3;
+    }
+
+    .partner-location {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--gray-400);
+      letter-spacing: 0.03em;
+    }
+
+    /* Off-white variant card */
+    .partner-card--off {
+      background: var(--off-white);
+    }
+
+    .partner-card--off:hover {
+      background: var(--gray-100);
+    }
+
+    /* Dark section grid card variant */
+    .partner-grid--gray {
+      background: var(--gray-200);
+    }
+
+    .partner-card--gray {
+      background: var(--gray-100);
+    }
+
+    .partner-card--gray:hover {
+      background: var(--gray-200);
+    }
+
+    /* ── Partnership Enquiry CTA ── */
+    .enquiry-section {
+      padding: 6rem 2rem;
+      background: var(--black);
+      text-align: center;
+    }
+
+    .enquiry-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .enquiry-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .enquiry-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .enquiry-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .partner-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .intro-inner {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-section,
+      .partners-section {
+        padding: 3.5rem 0;
+      }
+
+      .enquiry-section {
+        padding: 4rem 1.25rem;
+      }
+
+      .partners-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .partner-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partners-inner {
+        padding: 0 1.25rem;
+      }
+
+      .intro-inner {
+        padding: 0 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sensation <span>Group</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
+        <li><a href="marcas.html" data-i18n="nav.brands">Marcas</a></li>
+        <li><a href="areas.html" data-i18n="nav.areas">Áreas</a></li>
+        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="eventos.html" data-i18n="nav.events">Eventos</a></li>
+        <li><a href="insights.html" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang-switcher" aria-label="Selecionar idioma">
+        <button data-lang-btn="pt" class="active">PT</button>
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+        <button data-lang-btn="es">ES</button>
+      </div>
+      <a href="contacto.html" class="nav-cta" data-i18n="nav.cta">Pedir Proposta</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="sobre.html" class="mobile-link">Sobre Nós</a>
+    <a href="marcas.html" class="mobile-link">Marcas</a>
+    <a href="areas.html" class="mobile-link">Áreas</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="eventos.html" class="mobile-link">Eventos</a>
+    <a href="insights.html" class="mobile-link">Insights</a>
+    <a href="contacto.html" class="mobile-link">Contacto</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang-btn="pt" class="active">PT</button>
+      <button data-lang-btn="en">EN</button>
+      <button data-lang-btn="fr">FR</button>
+      <button data-lang-btn="es">ES</button>
+    </div>
+    <a href="contacto.html" class="mobile-cta">Pedir Proposta →</a>
+  </div>
+
+  <main>
+
+    <!-- ── 1. PAGE HERO ── -->
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=80');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="page-hero-label">Parcerias</p>
+        <h1 class="page-hero-title">Uma rede construída<br>para a excelência.</h1>
+        <p class="page-hero-desc">Trabalhamos com os melhores — espaços, fornecedores, parceiros estratégicos e redes internacionais.</p>
+      </div>
+    </section>
+
+    <!-- ── 2. INTRO ── -->
+    <section class="section-wrap section-wrap--off intro-section reveal" aria-labelledby="intro-heading">
+      <div class="intro-inner">
+        <div>
+          <span class="intro-label">A nossa filosofia</span>
+          <h2 class="intro-heading" id="intro-heading">Parcerias fundadas em valores partilhados.</h2>
+        </div>
+        <div>
+          <div class="intro-body">
+            <p>No Sensation Group, acreditamos que a qualidade de um evento começa muito antes do dia em si. Começa na escolha das pessoas e das organizações com quem trabalhamos — e essa escolha nunca é casual.</p>
+            <p>Cada parceiro que integra a nossa rede é selecionado com base em três critérios inegociáveis: excelência no seu domínio, fiabilidade nos compromissos assumidos e profissionalismo em cada interação. São estas qualidades que nos permitem entregar, evento após evento, resultados que superam as expectativas.</p>
+            <p>A nossa rede cresce de forma orgânica — por recomendação, por experiência partilhada, por projetos que demonstraram o que é possível quando as equipas certas trabalham juntas. Não procuramos volume; procuramos alinhamento.</p>
+          </div>
+          <div class="intro-values">
+            <span class="value-chip">Excelência</span>
+            <span class="value-chip">Fiabilidade</span>
+            <span class="value-chip">Profissionalismo</span>
+            <span class="value-chip">Alinhamento de Valores</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. ESPAÇOS PARCEIROS ── -->
+    <section class="section-wrap section-wrap--white partners-section reveal" aria-labelledby="venues-title">
+      <div class="partners-inner">
+        <div class="partners-header">
+          <div class="partners-header-left">
+            <div class="section-header">
+              <span class="section-num">01</span>
+              <h2 class="section-title" id="venues-title">Espaços Parceiros</h2>
+            </div>
+            <p class="partners-count">Locais de eleição em Portugal e nos EUA</p>
+          </div>
+        </div>
+        <div class="partner-grid" id="partners-venues" aria-label="Espaços parceiros">
+          <div class="partner-card">
+            <span class="partner-name">Palácio Nacional de Queluz</span>
+            <span class="partner-location">Queluz, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Convento do Beato</span>
+            <span class="partner-location">Lisboa, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Museu Nacional do Azulejo</span>
+            <span class="partner-location">Lisboa, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Casa da Música</span>
+            <span class="partner-location">Porto, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">The Pavilion</span>
+            <span class="partner-location">New York, USA</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Palácio de Mafra</span>
+            <span class="partner-location">Mafra, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Herdade da Malhadinha</span>
+            <span class="partner-location">Alentejo, Portugal</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Quinta da Regaleira</span>
+            <span class="partner-location">Sintra, Portugal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. PARCEIROS ESTRATÉGICOS ── -->
+    <section class="section-wrap section-wrap--off partners-section reveal" aria-labelledby="strategic-title">
+      <div class="partners-inner">
+        <div class="partners-header">
+          <div class="partners-header-left">
+            <div class="section-header">
+              <span class="section-num">02</span>
+              <h2 class="section-title" id="strategic-title">Parceiros Estratégicos</h2>
+            </div>
+            <p class="partners-count">Fornecedores de referência em cada especialidade</p>
+          </div>
+        </div>
+        <div class="partner-grid partner-grid--off" id="partners-strategic" aria-label="Parceiros estratégicos">
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Catering Excellence PT</span>
+            <span class="partner-location">Gastronomia & Serviço</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Floral Design Studio</span>
+            <span class="partner-location">Décor Floral</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">AV Solutions Pro</span>
+            <span class="partner-location">Audiovisual</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Luxury Transport PT</span>
+            <span class="partner-location">Transporte VIP</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Atelier de Protocolo</span>
+            <span class="partner-location">Protocolo & Cerimonial</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Studio Lumière</span>
+            <span class="partner-location">Fotografia & Vídeo</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">Security First PT</span>
+            <span class="partner-location">Segurança Privada</span>
+          </div>
+          <div class="partner-card partner-card--off">
+            <span class="partner-name">EventTech Lisboa</span>
+            <span class="partner-location">Tecnologia de Eventos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. REDE INTERNACIONAL ── -->
+    <section class="section-wrap section-wrap--white partners-section reveal" aria-labelledby="international-title">
+      <div class="partners-inner">
+        <div class="partners-header">
+          <div class="partners-header-left">
+            <div class="section-header">
+              <span class="section-num">03</span>
+              <h2 class="section-title" id="international-title">Rede Internacional</h2>
+            </div>
+            <p class="partners-count">Alianças globais para projetos sem fronteiras</p>
+          </div>
+        </div>
+        <div class="partner-grid" id="partners-international" aria-label="Rede internacional">
+          <div class="partner-card">
+            <span class="partner-name">Events Alliance USA</span>
+            <span class="partner-location">Estados Unidos</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">European Event Network</span>
+            <span class="partner-location">Europa</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">IBTM Global Partners</span>
+            <span class="partner-location">Internacional</span>
+          </div>
+          <div class="partner-card">
+            <span class="partner-name">Latam Events Hub</span>
+            <span class="partner-location">América Latina</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. ASSOCIAÇÕES DO SETOR ── -->
+    <section class="section-wrap section-wrap--gray partners-section reveal" aria-labelledby="sector-title">
+      <div class="partners-inner">
+        <div class="partners-header">
+          <div class="partners-header-left">
+            <div class="section-header">
+              <span class="section-num">04</span>
+              <h2 class="section-title" id="sector-title">Associações do Setor</h2>
+            </div>
+            <p class="partners-count">Membro ativo da indústria de eventos em Portugal</p>
+          </div>
+        </div>
+        <div class="partner-grid partner-grid--gray" id="partners-sector" aria-label="Associações do setor">
+          <div class="partner-card partner-card--gray">
+            <span class="partner-name">APECATE</span>
+            <span class="partner-location">Associação de Empresas de Congressos, Animação Turística e Eventos</span>
+          </div>
+          <div class="partner-card partner-card--gray">
+            <span class="partner-name">Turismo de Portugal</span>
+            <span class="partner-location">Organismo Nacional de Turismo</span>
+          </div>
+          <div class="partner-card partner-card--gray">
+            <span class="partner-name">MICE Portugal</span>
+            <span class="partner-location">Meetings, Incentives, Conferences &amp; Events</span>
+          </div>
+          <div class="partner-card partner-card--gray">
+            <span class="partner-name">Portugal Events</span>
+            <span class="partner-location">Rede Nacional de Eventos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. PARTNERSHIP ENQUIRY ── -->
+    <section class="enquiry-section reveal" aria-labelledby="enquiry-title">
+      <div class="enquiry-inner">
+        <span class="enquiry-label">Trabalhe connosco</span>
+        <h2 class="enquiry-title" id="enquiry-title">Interessado em colaborar connosco?</h2>
+        <p class="enquiry-desc">Estamos sempre abertos a novas parcerias que partilhem os nossos valores de excelência e profissionalismo. Se acredita que a sua organização e o Sensation Group podem criar valor juntos, queremos ouvi-lo.</p>
+        <a href="contacto.html" class="btn btn--outline-white">Contactar Equipa</a>
+      </div>
+    </section>
+
+    <!-- ── 8. CTA DUAL-CARD ── -->
+    <section class="cta-section reveal" aria-label="Próximos passos">
+      <div class="cta-card cta-card--dark">
+        <div>
+          <p class="section-num section-num--dark">Pronto a avançar?</p>
+          <h2 class="section-title section-title--dark">Vamos criar algo extraordinário.</h2>
+          <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2rem;">Fale connosco sobre o seu próximo evento ou projeto de parceria.</p>
+        </div>
+        <a href="contacto.html" class="btn btn--outline-white">Pedir Proposta</a>
+      </div>
+      <div class="cta-card cta-card--light">
+        <div>
+          <p class="section-num">Conheça-nos melhor</p>
+          <h2 class="section-title">Descubra as nossas áreas.</h2>
+          <p style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:300;color:var(--gray-600);line-height:1.7;margin-bottom:2rem;">Explore as cinco áreas de especialização do Sensation Group e saiba como trabalhamos.</p>
+        </div>
+        <a href="areas.html" class="btn btn--outline">Ver Áreas</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Sensation <span>Group</span></p>
+        <p class="footer-tagline">Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.</p>
+        <p class="footer-locations">PT · EUA</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-col-title">Marcas</p>
+        <ul>
+          <li><a href="marcas.html#floor-sensation">Floor Sensation</a></li>
+          <li><a href="marcas.html#sound-lights">Sensation Sound &amp; Lights</a></li>
+          <li><a href="marcas.html#premium">Premium Sensation</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-col-title">Empresa</p>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="areas.html">Áreas</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
+          <li><a href="careers.html">Carreiras</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-col-title">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@sensationgroup.com">hello@sensationgroup.com</a></li>
+          <li><a href="tel:+351910000000">+351 910 000 000</a></li>
+          <li><a href="#">Lisboa, Portugal</a></li>
+          <li><a href="#">New York, USA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Built by <a href="https://nocodedistrict.com" target="_blank" rel="noopener noreferrer">No-Code District</a> &middot; Copyright &copy; 2026 Sensation Group. All Rights Reserved.</p>
+      <nav class="footer-legal">
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+      <nav class="footer-socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.ContentLoader) {
+        window.ContentLoader.renderPartnerships();
+      }
+    });
+  </script>
+
+  <!-- Reveal on scroll (inline fallback if main.js doesn't handle it) -->
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>
