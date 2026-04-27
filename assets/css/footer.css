@@ -26,18 +26,10 @@
    FOOTER LOGO
 ============================================================ */
 .footer-logo {
-  font-family: 'Syne', sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  height: 28px;
+  width: auto;
+  display: block;
   margin-bottom: 16px;
-}
-
-.footer-logo span {
-  font-weight: 400;
-  opacity: 0.4;
 }
 
 /* ============================================================

@@ -180,17 +180,15 @@
     }
 
     .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
     }
 
-    .nav-logo span {
-      font-weight: 400;
-      opacity: 0.5;
+    .nav-logo .logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -1517,18 +1515,10 @@
     }
 
     .footer-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      height: 28px;
+      width: auto;
+      display: block;
       margin-bottom: 16px;
-    }
-
-    .footer-logo span {
-      font-weight: 400;
-      opacity: 0.4;
     }
 
     .footer-tagline {
@@ -1974,7 +1964,7 @@
   ============================================================ -->
   <nav class="nav" id="nav" role="navigation" aria-label="Principal">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">Sensation <span>Group</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/img/SG_Logo_white0.png" alt="Sensation Group" class="logo-img"></a>
 
       <ul class="nav-links" role="list">
         <li><a href="sobre.html" data-i18n="nav.about">Sobre Nós</a></li>
@@ -2559,7 +2549,7 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-top">
       <div>
-        <p class="footer-logo">Sensation <span>Group</span></p>
+        <img src="assets/img/SG_Logo_white0.png" alt="Sensation Group" class="logo-img footer-logo">
         <p class="footer-tagline">
           Produção de eventos premium em Portugal e nos Estados Unidos. Três marcas. Uma excelência.
         </p>
