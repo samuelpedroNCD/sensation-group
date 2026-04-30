@@ -19,7 +19,7 @@
   --gray-600:     #58534C;
   --accent:       #8C7B6B;
   --font-heading: 'Cormorant Garamond', 'Georgia', serif;
-  --nav-height: 72px;
+  --nav-height: 80px;
 }
 
 /* ============================================================
@@ -73,18 +73,41 @@ img {
   font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gray-400);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Thin accent dash to the left of every section label */
+.section-label::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Dark-background variant */
+.section-label--dark {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.section-label--dark::before {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 /* ============================================================
-   REVEAL ON SCROLL
+   REVEAL ON SCROLL — slow, elegant drift
 ============================================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transform: translateY(20px);
+  transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.visible {
@@ -92,7 +115,7 @@ img {
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.18s; }
+.reveal-delay-3 { transition-delay: 0.28s; }
+.reveal-delay-4 { transition-delay: 0.38s; }

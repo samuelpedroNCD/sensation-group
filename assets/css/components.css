@@ -50,11 +50,11 @@
 
 .page-hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(48px, 8vw, 108px);
-  font-weight: 600;
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 500;
   color: var(--white);
-  line-height: 0.92;
-  letter-spacing: -0.01em;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
 }
 
 .page-hero-desc {
@@ -97,7 +97,7 @@
    SECTION WRAPPER
 ============================================================ */
 .section-wrap {
-  padding: 100px 48px;
+  padding: 128px 48px;
 }
 
 .section-wrap--dark {
@@ -120,7 +120,7 @@
    SECTION HEADER
 ============================================================ */
 .section-header {
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 .section-header--row {
@@ -147,10 +147,10 @@
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(38px, 5vw, 64px);
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.01em;
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
 }
 
 .section-title--dark {
@@ -167,25 +167,26 @@
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 10px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--black);
-  border-bottom: 1px solid var(--gray-200);
-  padding-bottom: 2px;
-  transition: border-color 0.2s, gap 0.2s;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+  transition: border-color 0.35s ease, gap 0.35s ease, color 0.35s ease;
   white-space: nowrap;
 }
 
 .text-link:hover {
   border-color: var(--black);
-  gap: 14px;
+  gap: 18px;
 }
 
 .text-link--white {
   color: var(--white);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .text-link--white:hover {
@@ -200,17 +201,17 @@
   align-items: center;
   gap: 10px;
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 14px 28px;
+  padding: 15px 32px;
   cursor: pointer;
-  transition: gap 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+  transition: gap 0.35s ease, background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
 .btn:hover {
-  gap: 16px;
+  gap: 18px;
 }
 
 .btn--dark {
@@ -281,7 +282,8 @@
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
-  border-color: var(--black);
+  border-color: var(--accent);
+  outline: none;
 }
 
 .form-textarea {
@@ -332,7 +334,7 @@
 }
 
 .cta-card {
-  padding: 80px 60px;
+  padding: 96px 72px;
   position: relative;
   overflow: hidden;
 }
@@ -422,15 +424,19 @@
 .cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 16px 28px;
+  padding: 17px 36px;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.35s ease, gap 0.35s ease;
+}
+
+.cta-btn:hover {
+  gap: 22px;
 }
 
 .cta-card--dark .cta-btn {
@@ -456,11 +462,11 @@
 ============================================================ */
 @media (max-width: 1024px) {
   .section-wrap {
-    padding: 80px 32px;
+    padding: 100px 32px;
   }
 
   .page-hero {
-    padding: 140px 32px 72px;
+    padding: 150px 32px 80px;
   }
 
   .card-grid-3 {
@@ -486,11 +492,11 @@
 ============================================================ */
 @media (max-width: 768px) {
   .section-wrap {
-    padding: 64px 24px;
+    padding: 80px 24px;
   }
 
   .page-hero {
-    padding: 120px 24px 60px;
+    padding: 130px 24px 64px;
   }
 
   .breadcrumb {
@@ -521,14 +527,14 @@
 ============================================================ */
 @media (max-width: 480px) {
   .section-wrap {
-    padding: 56px 20px;
+    padding: 64px 20px;
   }
 
   .page-hero {
-    padding: 110px 20px 52px;
+    padding: 120px 20px 56px;
   }
 
   .cta-card {
-    padding: 48px 20px;
+    padding: 56px 24px;
   }
 }
