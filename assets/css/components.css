@@ -49,12 +49,12 @@
 }
 
 .page-hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(40px, 7vw, 96px);
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 8vw, 108px);
+  font-weight: 600;
   color: var(--white);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
 }
 
 .page-hero-desc {
@@ -132,9 +132,9 @@
 }
 
 .section-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.2em;
   color: var(--gray-200);
   text-transform: uppercase;
@@ -146,11 +146,11 @@
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(32px, 4.5vw, 56px);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
 }
 
 .section-title--dark {
@@ -158,7 +158,7 @@
 }
 
 .section-title--lg {
-  font-size: clamp(36px, 5.5vw, 72px);
+  font-size: clamp(42px, 6vw, 80px);
 }
 
 /* ============================================================
@@ -356,9 +356,9 @@
 }
 
 .cta-card-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.15em;
 }
 
@@ -387,11 +387,11 @@
 }
 
 .cta-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(32px, 3.5vw, 56px);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 4vw, 62px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
 

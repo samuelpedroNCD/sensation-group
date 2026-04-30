@@ -50,7 +50,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/nav.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
@@ -58,13 +58,13 @@
 
   <style>
     :root {
-      --black: #0A0A0A;
+      --black: #0C0B09;
       --white: #FFFFFF;
-      --off-white: #F7F6F3;
-      --gray-100: #EFEFEC;
-      --gray-200: #DDDDD9;
-      --gray-400: #9A9A96;
-      --gray-600: #5A5A56;
+      --off-white: #F5F2EC;
+      --gray-100: #EEEAE3;
+      --gray-200: #DAD6CE;
+      --gray-400: #968E82;
+      --gray-600: #58534C;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -152,9 +152,9 @@
       margin-bottom: 18px;
     }
     .page-hero__title {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: clamp(40px, 6vw, 72px);
-      font-weight: 800;
+      font-weight: 600;
       color: var(--white);
       line-height: 1.08;
       margin-bottom: 20px;
@@ -186,7 +186,7 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.08);
     }
     .contact-card__number {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -194,7 +194,7 @@
       margin-bottom: 28px;
     }
     .contact-card__title {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: 20px;
       font-weight: 700;
       color: var(--black);
@@ -226,9 +226,9 @@
 
     /* ─── FORM ─── */
     .form-title {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
+      font-weight: 600;
       letter-spacing: -0.02em;
       margin-bottom: 48px;
     }
@@ -311,7 +311,7 @@
       text-align: center;
     }
     .form-success__title {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 8px;
@@ -331,9 +331,9 @@
       margin-bottom: 64px;
     }
     .offices-header h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
+      font-weight: 600;
       letter-spacing: -0.02em;
     }
     .office-card {
@@ -350,7 +350,7 @@
       margin-bottom: 20px;
     }
     .office-card__city {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 16px;
@@ -387,9 +387,9 @@
       margin-bottom: 56px;
     }
     .faq-header h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
+      font-weight: 600;
       letter-spacing: -0.02em;
     }
     .faq-list { border-top: 1px solid var(--gray-200); }
@@ -407,7 +407,7 @@
       gap: 24px;
       cursor: pointer;
       text-align: left;
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
       font-size: 17px;
       font-weight: 600;
       color: var(--black);
@@ -631,7 +631,7 @@
       <div class="container">
         <div class="offices-header">
           <p class="section-label">Localização</p>
-          <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.02em;">Os nossos escritórios.</h2>
+          <h2 style="font-family:var(--font-heading);font-size:clamp(32px,4.5vw,52px);font-weight:600;letter-spacing:-0.01em;">Os nossos escritórios.</h2>
         </div>
         <div class="offices-grid">
 
@@ -669,7 +669,7 @@
             <button class="faq-question" aria-expanded="false">
               Qual é o tempo mínimo para planeamento de um evento?
               <span class="faq-question__icon" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
                 </svg>
               </span>
@@ -683,7 +683,7 @@
             <button class="faq-question" aria-expanded="false">
               Trabalham com eventos internacionais?
               <span class="faq-question__icon" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
                 </svg>
               </span>
@@ -697,7 +697,7 @@
             <button class="faq-question" aria-expanded="false">
               Como funciona o processo de orçamentação?
               <span class="faq-question__icon" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
                 </svg>
               </span>
@@ -711,7 +711,7 @@
             <button class="faq-question" aria-expanded="false">
               Quais os tipos de eventos que produzem?
               <span class="faq-question__icon" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
                 </svg>
               </span>
@@ -725,7 +725,7 @@
             <button class="faq-question" aria-expanded="false">
               Têm disponibilidade para eventos de última hora?
               <span class="faq-question__icon" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0A0A0A" stroke-width="1.8">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
                 </svg>
               </span>

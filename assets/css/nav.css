@@ -185,9 +185,9 @@
 }
 
 .nav-mobile-menu a {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(28px, 6vw, 40px);
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 7vw, 48px);
+  font-weight: 500;
   color: var(--white);
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
