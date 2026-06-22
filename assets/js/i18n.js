@@ -47,7 +47,6 @@ class I18n {
       if (!res.ok) throw new Error('not found');
       this.translations[lang] = await res.json();
     } catch {
-      console.warn(`[i18n] Could not load translations for "${lang}"`);
       this.translations[lang] = {};
     }
   }

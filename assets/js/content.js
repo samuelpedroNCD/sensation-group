@@ -58,7 +58,7 @@ const ContentLoader = {
       if (!res.ok) throw new Error(`Failed to fetch ${file}.json`);
       return await res.json();
     } catch (e) {
-      console.error(e);
+      
       return null;
     }
   },
