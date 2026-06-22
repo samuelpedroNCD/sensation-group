@@ -5,50 +5,125 @@
       "type": "corporate",
       "status": "upcoming",
       "date": "2025-06-15",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-      "title": { "pt": "Corporate Innovation Summit", "en": "Corporate Innovation Summit", "fr": "Corporate Innovation Summit", "es": "Corporate Innovation Summit" },
-      "location": { "pt": "Lisboa, Portugal", "en": "Lisbon, Portugal", "fr": "Lisbonne, Portugal", "es": "Lisboa, Portugal" },
-      "description": { "pt": "Um summit de inovação para líderes empresariais, reunindo 400 executivos para dois dias de conferências, workshops e networking de alto nível.", "en": "An innovation summit for business leaders, bringing together 400 executives for two days of conferences, workshops and high-level networking.", "fr": "Un sommet d'innovation pour les dirigeants d'entreprise.", "es": "Una cumbre de innovación para líderes empresariales." }
+      "image": "assets/img/wedding/26.jpg",
+      "title": {
+        "pt": "Corporate Innovation Summit",
+        "en": "Corporate Innovation Summit",
+        "fr": "Corporate Innovation Summit",
+        "es": "Corporate Innovation Summit"
+      },
+      "location": {
+        "pt": "Lisboa, Portugal",
+        "en": "Lisbon, Portugal",
+        "fr": "Lisbonne, Portugal",
+        "es": "Lisboa, Portugal"
+      },
+      "description": {
+        "pt": "Um summit de inovação para líderes empresariais, reunindo 400 executivos para dois dias de conferências, workshops e networking de alto nível.",
+        "en": "An innovation summit for business leaders, bringing together 400 executives for two days of conferences, workshops and high-level networking.",
+        "fr": "Un sommet d'innovation pour les dirigeants d'entreprise.",
+        "es": "Una cumbre de innovación para líderes empresariales."
+      }
     },
     {
       "id": "wedding-showcase-2025",
       "type": "wedding",
       "status": "upcoming",
       "date": "2025-07-05",
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
-      "title": { "pt": "Wedding Showcase — Premium Edition", "en": "Wedding Showcase — Premium Edition", "fr": "Wedding Showcase — Premium Edition", "es": "Wedding Showcase — Premium Edition" },
-      "location": { "pt": "Cascais, Portugal", "en": "Cascais, Portugal", "fr": "Cascais, Portugal", "es": "Cascais, Portugal" },
-      "description": { "pt": "Uma exposição dos nossos casamentos mais exclusivos, para casais que procuram o melhor para o seu grande dia.", "en": "A showcase of our most exclusive weddings, for couples seeking the best for their big day.", "fr": "Une exposition de nos mariages les plus exclusifs.", "es": "Una exposición de nuestras bodas más exclusivas." }
+      "image": "assets/img/wedding/27.jpg",
+      "title": {
+        "pt": "Wedding Showcase — Premium Edition",
+        "en": "Wedding Showcase — Premium Edition",
+        "fr": "Wedding Showcase — Premium Edition",
+        "es": "Wedding Showcase — Premium Edition"
+      },
+      "location": {
+        "pt": "Cascais, Portugal",
+        "en": "Cascais, Portugal",
+        "fr": "Cascais, Portugal",
+        "es": "Cascais, Portugal"
+      },
+      "description": {
+        "pt": "Uma exposição dos nossos casamentos mais exclusivos, para casais que procuram o melhor para o seu grande dia.",
+        "en": "A showcase of our most exclusive weddings, for couples seeking the best for their big day.",
+        "fr": "Une exposition de nos mariages les plus exclusifs.",
+        "es": "Una exposición de nuestras bodas más exclusivas."
+      }
     },
     {
       "id": "festival-verao-2025",
       "type": "production",
       "status": "upcoming",
       "date": "2025-07-20",
-      "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
-      "title": { "pt": "Festival de Verão — Produção Técnica", "en": "Summer Festival — Technical Production", "fr": "Festival d'Été — Production Technique", "es": "Festival de Verano — Producción Técnica" },
-      "location": { "pt": "Algarve, Portugal", "en": "Algarve, Portugal", "fr": "Algarve, Portugal", "es": "Algarve, Portugal" },
-      "description": { "pt": "A Sensation Sound & Lights garante toda a produção técnica do maior festival de verão do Algarve.", "en": "Sensation Sound & Lights handles all technical production for the largest summer festival in the Algarve.", "fr": "Sensation Sound & Lights assure toute la production technique.", "es": "Sensation Sound & Lights garantiza toda la producción técnica." }
+      "image": "assets/img/wedding/28.jpg",
+      "title": {
+        "pt": "Festival de Verão — Produção Técnica",
+        "en": "Summer Festival — Technical Production",
+        "fr": "Festival d'Été — Production Technique",
+        "es": "Festival de Verano — Producción Técnica"
+      },
+      "location": {
+        "pt": "Algarve, Portugal",
+        "en": "Algarve, Portugal",
+        "fr": "Algarve, Portugal",
+        "es": "Algarve, Portugal"
+      },
+      "description": {
+        "pt": "A Sensation Sound & Lights garante toda a produção técnica do maior festival de verão do Algarve.",
+        "en": "Sensation Sound & Lights handles all technical production for the largest summer festival in the Algarve.",
+        "fr": "Sensation Sound & Lights assure toute la production technique.",
+        "es": "Sensation Sound & Lights garantiza toda la producción técnica."
+      }
     },
     {
       "id": "gala-new-york-2025",
       "type": "corporate",
       "status": "upcoming",
       "date": "2025-09-12",
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
-      "title": { "pt": "Gala de Lançamento — Nova Iorque", "en": "Launch Gala — New York", "fr": "Gala de Lancement — New York", "es": "Gala de Lanzamiento — Nueva York" },
-      "location": { "pt": "Nova Iorque, EUA", "en": "New York, USA", "fr": "New York, États-Unis", "es": "Nueva York, EE.UU." },
-      "description": { "pt": "O lançamento oficial da Sensation Group nos Estados Unidos, com uma gala de luxo em Nova Iorque para parceiros e clientes internacionais.", "en": "The official launch of Sensation Group in the United States, with a luxury gala in New York for international partners and clients.", "fr": "Le lancement officiel de Sensation Group aux États-Unis.", "es": "El lanzamiento oficial de Sensation Group en Estados Unidos." }
+      "image": "assets/img/wedding/29.jpg",
+      "title": {
+        "pt": "Gala de Lançamento — Nova Iorque",
+        "en": "Launch Gala — New York",
+        "fr": "Gala de Lancement — New York",
+        "es": "Gala de Lanzamiento — Nueva York"
+      },
+      "location": {
+        "pt": "Nova Iorque, EUA",
+        "en": "New York, USA",
+        "fr": "New York, États-Unis",
+        "es": "Nueva York, EE.UU."
+      },
+      "description": {
+        "pt": "O lançamento oficial da Sensation Group nos Estados Unidos, com uma gala de luxo em Nova Iorque para parceiros e clientes internacionais.",
+        "en": "The official launch of Sensation Group in the United States, with a luxury gala in New York for international partners and clients.",
+        "fr": "Le lancement officiel de Sensation Group aux États-Unis.",
+        "es": "El lanzamiento oficial de Sensation Group en Estados Unidos."
+      }
     },
     {
       "id": "gala-multinacional-2024",
       "type": "corporate",
       "status": "past",
       "date": "2024-11-15",
-      "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
-      "title": { "pt": "Gala Anual — Multinacional Lisboa", "en": "Annual Gala — Lisboa Multinational", "fr": "Gala Annuel — Multinationale Lisbonne", "es": "Gala Anual — Multinacional Lisboa" },
-      "location": { "pt": "Lisboa, Portugal", "en": "Lisbon, Portugal", "fr": "Lisbonne, Portugal", "es": "Lisboa, Portugal" },
-      "description": { "pt": "300 convidados, uma noite inesquecível.", "en": "300 guests, an unforgettable evening.", "fr": "300 invités, une soirée inoubliable.", "es": "300 invitados, una noche inolvidable." }
+      "image": "assets/img/wedding/30.jpg",
+      "title": {
+        "pt": "Gala Anual — Multinacional Lisboa",
+        "en": "Annual Gala — Lisboa Multinational",
+        "fr": "Gala Annuel — Multinationale Lisbonne",
+        "es": "Gala Anual — Multinacional Lisboa"
+      },
+      "location": {
+        "pt": "Lisboa, Portugal",
+        "en": "Lisbon, Portugal",
+        "fr": "Lisbonne, Portugal",
+        "es": "Lisboa, Portugal"
+      },
+      "description": {
+        "pt": "300 convidados, uma noite inesquecível.",
+        "en": "300 guests, an unforgettable evening.",
+        "fr": "300 invités, une soirée inoubliable.",
+        "es": "300 invitados, una noche inolvidable."
+      }
     }
   ]
 }

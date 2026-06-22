@@ -3,80 +3,176 @@
     {
       "id": "gala-multinacional-lisboa",
       "category": "corporate",
-      "categoryLabel": { "pt": "Corporativo", "en": "Corporate", "fr": "Corporate", "es": "Corporativo" },
+      "categoryLabel": {
+        "pt": "Corporativo",
+        "en": "Corporate",
+        "fr": "Corporate",
+        "es": "Corporativo"
+      },
       "featured": true,
       "client": "Multinacional Lisboa",
       "date": "2024-11",
-      "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "image": "assets/img/wedding/14.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
+        "assets/img/wedding/15.jpg",
+        "assets/img/wedding/16.jpg",
+        "assets/img/wedding/17.jpg"
       ],
-      "title": { "pt": "Gala Anual — Multinacional Lisboa", "en": "Annual Gala — Lisboa Multinational", "fr": "Gala Annuel — Multinationale Lisbonne", "es": "Gala Anual — Multinacional Lisboa" },
-      "description": { "pt": "Uma noite de gala inesquecível para mais de 300 convidados no coração de Lisboa. Desde a cenografia ao som, cada detalhe foi pensado para criar uma experiência que ficou na memória de todos os presentes.", "en": "An unforgettable gala evening for over 300 guests in the heart of Lisbon. From the set design to the sound, every detail was crafted to create an experience that stayed with all who attended.", "fr": "Une soirée de gala inoubliable pour plus de 300 invités au cœur de Lisbonne.", "es": "Una noche de gala inolvidable para más de 300 invitados en el corazón de Lisboa." },
-      "testimonial": { "text": { "pt": "A Sensation Group superou todas as nossas expectativas. Um trabalho absolutamente impecável do início ao fim.", "en": "Sensation Group exceeded all our expectations. An absolutely impeccable job from start to finish." }, "author": "Ana Rodrigues", "company": "CEO, Empresa X" },
+      "title": {
+        "pt": "Gala Anual — Multinacional Lisboa",
+        "en": "Annual Gala — Lisboa Multinational",
+        "fr": "Gala Annuel — Multinationale Lisbonne",
+        "es": "Gala Anual — Multinacional Lisboa"
+      },
+      "description": {
+        "pt": "Uma noite de gala inesquecível para mais de 300 convidados no coração de Lisboa. Desde a cenografia ao som, cada detalhe foi pensado para criar uma experiência que ficou na memória de todos os presentes.",
+        "en": "An unforgettable gala evening for over 300 guests in the heart of Lisbon. From the set design to the sound, every detail was crafted to create an experience that stayed with all who attended.",
+        "fr": "Une soirée de gala inoubliable pour plus de 300 invités au cœur de Lisbonne.",
+        "es": "Una noche de gala inolvidable para más de 300 invitados en el corazón de Lisboa."
+      },
+      "testimonial": {
+        "text": {
+          "pt": "A Sensation Group superou todas as nossas expectativas. Um trabalho absolutamente impecável do início ao fim.",
+          "en": "Sensation Group exceeded all our expectations. An absolutely impeccable job from start to finish."
+        },
+        "author": "Ana Rodrigues",
+        "company": "CEO, Empresa X"
+      },
       "brand": "premium-sensation"
     },
     {
       "id": "wedding-sintra",
       "category": "wedding",
-      "categoryLabel": { "pt": "Casamento", "en": "Wedding", "fr": "Mariage", "es": "Boda" },
+      "categoryLabel": {
+        "pt": "Casamento",
+        "en": "Wedding",
+        "fr": "Mariage",
+        "es": "Boda"
+      },
       "featured": false,
       "client": "Família Silva",
       "date": "2024-09",
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+      "image": "assets/img/wedding/18.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
-        "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80"
+        "assets/img/wedding/19.jpg",
+        "assets/img/wedding/20.jpg"
       ],
-      "title": { "pt": "Wedding Experience — Sintra", "en": "Wedding Experience — Sintra", "fr": "Wedding Experience — Sintra", "es": "Wedding Experience — Sintra" },
-      "description": { "pt": "Um casamento de sonho nas colinas de Sintra, com produção integral da Premium Sensation. Decoração, catering, som e iluminação coordenados em perfeita harmonia.", "en": "A dream wedding in the hills of Sintra, with full production by Premium Sensation. Decoration, catering, sound and lighting coordinated in perfect harmony.", "fr": "Un mariage de rêve dans les collines de Sintra.", "es": "Una boda de ensueño en las colinas de Sintra." },
-      "testimonial": { "text": { "pt": "O dia mais feliz das nossas vidas, tornado ainda mais especial pela equipa incrível da Sensation.", "en": "The happiest day of our lives, made even more special by the incredible Sensation team." }, "author": "Maria & João Silva", "company": "" },
+      "title": {
+        "pt": "Wedding Experience — Sintra",
+        "en": "Wedding Experience — Sintra",
+        "fr": "Wedding Experience — Sintra",
+        "es": "Wedding Experience — Sintra"
+      },
+      "description": {
+        "pt": "Um casamento de sonho nas colinas de Sintra, com produção integral da Premium Sensation. Decoração, catering, som e iluminação coordenados em perfeita harmonia.",
+        "en": "A dream wedding in the hills of Sintra, with full production by Premium Sensation. Decoration, catering, sound and lighting coordinated in perfect harmony.",
+        "fr": "Un mariage de rêve dans les collines de Sintra.",
+        "es": "Una boda de ensueño en las colinas de Sintra."
+      },
+      "testimonial": {
+        "text": {
+          "pt": "O dia mais feliz das nossas vidas, tornado ainda mais especial pela equipa incrível da Sensation.",
+          "en": "The happiest day of our lives, made even more special by the incredible Sensation team."
+        },
+        "author": "Maria & João Silva",
+        "company": ""
+      },
       "brand": "premium-sensation"
     },
     {
       "id": "celebracao-privada-porto",
       "category": "private",
-      "categoryLabel": { "pt": "Evento Privado", "en": "Private Event", "fr": "Événement Privé", "es": "Evento Privado" },
+      "categoryLabel": {
+        "pt": "Evento Privado",
+        "en": "Private Event",
+        "fr": "Événement Privé",
+        "es": "Evento Privado"
+      },
       "featured": false,
       "client": "Cliente Confidencial",
       "date": "2024-07",
-      "image": "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80",
+      "image": "assets/img/wedding/21.jpg",
       "gallery": [],
-      "title": { "pt": "Celebração Exclusiva — Porto", "en": "Exclusive Celebration — Porto", "fr": "Célébration Exclusive — Porto", "es": "Celebración Exclusiva — Oporto" },
-      "description": { "pt": "Uma celebração privada de altíssimo nível para um cliente de referência no Porto. Espaço exclusivo, experiência gastronómica curada e entretenimento à medida.", "en": "A high-level private celebration for a reference client in Porto. Exclusive venue, curated gastronomic experience and bespoke entertainment.", "fr": "Une célébration privée de haut niveau à Porto.", "es": "Una celebración privada de alto nivel en Oporto." },
+      "title": {
+        "pt": "Celebração Exclusiva — Porto",
+        "en": "Exclusive Celebration — Porto",
+        "fr": "Célébration Exclusive — Porto",
+        "es": "Celebración Exclusiva — Oporto"
+      },
+      "description": {
+        "pt": "Uma celebração privada de altíssimo nível para um cliente de referência no Porto. Espaço exclusivo, experiência gastronómica curada e entretenimento à medida.",
+        "en": "A high-level private celebration for a reference client in Porto. Exclusive venue, curated gastronomic experience and bespoke entertainment.",
+        "fr": "Une célébration privée de haut niveau à Porto.",
+        "es": "Una celebración privada de alto nivel en Oporto."
+      },
       "testimonial": null,
       "brand": "premium-sensation"
     },
     {
       "id": "festival-som-luzes",
       "category": "production",
-      "categoryLabel": { "pt": "Produção Técnica", "en": "Technical Production", "fr": "Production Technique", "es": "Producción Técnica" },
+      "categoryLabel": {
+        "pt": "Produção Técnica",
+        "en": "Technical Production",
+        "fr": "Production Technique",
+        "es": "Producción Técnica"
+      },
       "featured": false,
       "client": "Festival Verão PT",
       "date": "2024-08",
-      "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
+      "image": "assets/img/wedding/22.jpg",
       "gallery": [
-        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80"
+        "assets/img/wedding/23.jpg"
       ],
-      "title": { "pt": "Festival de Verão — Produção Técnica", "en": "Summer Festival — Technical Production", "fr": "Festival d'Été — Production Technique", "es": "Festival de Verano — Producción Técnica" },
-      "description": { "pt": "Produção técnica completa para um festival de verão com 8.000 pessoas. Sistema de som Line Array, iluminação de espetáculo e gestão de palco pela Sensation Sound & Lights.", "en": "Full technical production for a summer festival with 8,000 attendees. Line Array sound system, show lighting and stage management by Sensation Sound & Lights.", "fr": "Production technique complète pour un festival estival de 8 000 personnes.", "es": "Producción técnica completa para un festival de verano con 8.000 personas." },
+      "title": {
+        "pt": "Festival de Verão — Produção Técnica",
+        "en": "Summer Festival — Technical Production",
+        "fr": "Festival d'Été — Production Technique",
+        "es": "Festival de Verano — Producción Técnica"
+      },
+      "description": {
+        "pt": "Produção técnica completa para um festival de verão com 8.000 pessoas. Sistema de som Line Array, iluminação de espetáculo e gestão de palco pela Sensation Sound & Lights.",
+        "en": "Full technical production for a summer festival with 8,000 attendees. Line Array sound system, show lighting and stage management by Sensation Sound & Lights.",
+        "fr": "Production technique complète pour un festival estival de 8 000 personnes.",
+        "es": "Producción técnica completa para un festival de verano con 8.000 personas."
+      },
       "testimonial": null,
       "brand": "sensation-sound-lights"
     },
     {
       "id": "leadership-summit-lisboa",
       "category": "corporate",
-      "categoryLabel": { "pt": "Corporativo", "en": "Corporate", "fr": "Corporate", "es": "Corporativo" },
+      "categoryLabel": {
+        "pt": "Corporativo",
+        "en": "Corporate",
+        "fr": "Corporate",
+        "es": "Corporativo"
+      },
       "featured": false,
       "client": "Global Leaders Forum",
       "date": "2024-10",
-      "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+      "image": "assets/img/wedding/24.jpg",
       "gallery": [],
-      "title": { "pt": "Leadership Summit — Lisboa", "en": "Leadership Summit — Lisbon", "fr": "Leadership Summit — Lisbonne", "es": "Leadership Summit — Lisboa" },
-      "description": { "pt": "Conferência de liderança para 500 executivos de 20 países. Gestão integral de produção, tradução simultânea, transmissão ao vivo e networking dinner.", "en": "Leadership conference for 500 executives from 20 countries. Full production management, simultaneous translation, live streaming and networking dinner.", "fr": "Conférence de leadership pour 500 dirigeants de 20 pays.", "es": "Conferencia de liderazgo para 500 ejecutivos de 20 países." },
-      "testimonial": { "text": { "pt": "Organização irrepreensível. A Sensation Group garantiu que tudo correu na perfeição.", "en": "Impeccable organisation. Sensation Group ensured everything ran perfectly." }, "author": "Carlos Mendes", "company": "Director, Global Leaders Forum" },
+      "title": {
+        "pt": "Leadership Summit — Lisboa",
+        "en": "Leadership Summit — Lisbon",
+        "fr": "Leadership Summit — Lisbonne",
+        "es": "Leadership Summit — Lisboa"
+      },
+      "description": {
+        "pt": "Conferência de liderança para 500 executivos de 20 países. Gestão integral de produção, tradução simultânea, transmissão ao vivo e networking dinner.",
+        "en": "Leadership conference for 500 executives from 20 countries. Full production management, simultaneous translation, live streaming and networking dinner.",
+        "fr": "Conférence de leadership pour 500 dirigeants de 20 pays.",
+        "es": "Conferencia de liderazgo para 500 ejecutivos de 20 países."
+      },
+      "testimonial": {
+        "text": {
+          "pt": "Organização irrepreensível. A Sensation Group garantiu que tudo correu na perfeição.",
+          "en": "Impeccable organisation. Sensation Group ensured everything ran perfectly."
+        },
+        "author": "Carlos Mendes",
+        "company": "Director, Global Leaders Forum"
+      },
       "brand": "premium-sensation"
     }
   ]
