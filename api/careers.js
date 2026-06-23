@@ -2,7 +2,7 @@ import formidable from 'formidable';
 import fs from 'fs';
 
 export const config = {
-  runtime: 'nodejs20.x',
+  runtime: 'nodejs',
   api: { bodyParser: false },
 };
 
