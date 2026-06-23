@@ -548,6 +548,111 @@
       color: rgba(255,255,255,0.75);
     }
 
+    /* ─── HERO PLAY BUTTON ─── */
+    .hero-play {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      z-index: 3;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .hero-play__circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero-play:hover .hero-play__circle {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.75);
+      transform: scale(1.1);
+    }
+    .hero-play__circle svg {
+      width: 22px;
+      height: 22px;
+      fill: rgba(255,255,255,0.9);
+      margin-left: 4px;
+    }
+    .hero-play__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s ease;
+    }
+    .hero-play:hover .hero-play__label {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ─── VIDEO MODAL ─── */
+    .video-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.96);
+      align-items: center;
+      justify-content: center;
+    }
+    .video-modal.is-open {
+      display: flex;
+      animation: modalFadeIn 0.25s ease;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .video-modal__inner {
+      position: relative;
+      width: 90vw;
+      max-width: 1100px;
+    }
+    .video-modal__ratio {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-modal__ratio iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-modal__close {
+      position: absolute;
+      top: -46px;
+      right: 0;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 1;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s ease;
+    }
+    .video-modal__close:hover { color: #fff; }
+
     /* ============================================================
        TICKER
     ============================================================ */
@@ -2030,6 +2135,14 @@
   <section class="hero" id="home" aria-label="Hero — Sensation Group">
     <div class="hero-bg" id="hero-bg" role="img" aria-label="Evento premium"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
+
+    <button class="hero-play" id="hero-play-btn" aria-label="Ver showreel">
+      <span class="hero-play__circle" aria-hidden="true">
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon points="5,2 18,10 5,18"/></svg>
+      </span>
+      <span class="hero-play__label" data-i18n="hero.play">Ver Showreel</span>
+    </button>
+
     <div class="hero-rule-top" aria-hidden="true"></div>
     <div class="hero-rule-bottom" aria-hidden="true"></div>
 
@@ -2781,6 +2894,42 @@
   <script src="assets/js/i18n.js"></script>
   <!-- Shared JS: main interactions (nav, hamburger, reveal, smooth scroll, etc.) -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Video modal -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Showreel Sensation Group">
+    <div class="video-modal__inner">
+      <button class="video-modal__close" id="video-modal-close" aria-label="Fechar vídeo">✕</button>
+      <div class="video-modal__ratio">
+        <iframe id="video-modal-iframe" src="" title="Showreel Sensation Group" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btn    = document.getElementById('hero-play-btn');
+      var modal  = document.getElementById('video-modal');
+      var iframe = document.getElementById('video-modal-iframe');
+      var close  = document.getElementById('video-modal-close');
+      var SRC    = 'https://www.youtube-nocookie.com/embed/xHQZrfp03wM?autoplay=1&rel=0&modestbranding=1';
+
+      function openModal() {
+        iframe.src = SRC;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        modal.classList.remove('is-open');
+        iframe.src = '';
+        document.body.style.overflow = '';
+      }
+
+      btn.addEventListener('click', openModal);
+      close.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
 
 </body>
 </html>
