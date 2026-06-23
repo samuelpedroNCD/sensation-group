@@ -520,43 +520,43 @@
     <section class="page-hero">
       <div class="page-hero__bg" style="background-image: url('assets/img/wedding/43.jpg');"></div>
       <div class="page-hero__content container">
-        <p class="page-hero__label">Contacto</p>
-        <h1 class="page-hero__title">Vamos trabalhar<br>juntos.</h1>
-        <p class="page-hero__desc">A nossa equipa responde em menos de 24 horas. Conte-nos a sua visão.</p>
+        <p class="page-hero__label" data-i18n="contacto.hero.label">Contacto</p>
+        <h1 class="page-hero__title" data-i18n="contacto.hero.title">Vamos trabalhar<br>juntos.</h1>
+        <p class="page-hero__desc" data-i18n="contacto.hero.desc">A nossa equipa responde em menos de 24 horas. Conte-nos a sua visão.</p>
       </div>
     </section>
 
     <!-- 2. CONTACT TYPE CARDS -->
     <section class="section-wrap section-wrap--off reveal">
       <div class="container">
-        <p class="section-label">Como podemos ajudar</p>
+        <p class="section-label" data-i18n="contacto.cards.label">Como podemos ajudar</p>
         <div class="contact-cards-grid">
 
           <article class="contact-card">
             <p class="contact-card__number">01</p>
-            <h2 class="contact-card__title">Contacto Geral</h2>
-            <p class="contact-card__desc">Para questões gerais, informações sobre o grupo ou os nossos serviços.</p>
+            <h2 class="contact-card__title" data-i18n="contacto.cards.c1.title">Contacto Geral</h2>
+            <p class="contact-card__desc" data-i18n="contacto.cards.c1.desc">Para questões gerais, informações sobre o grupo ou os nossos serviços.</p>
             <a href="mailto:hello@sensationgroup.com" class="contact-card__email">hello@sensationgroup.com</a>
           </article>
 
           <article class="contact-card">
             <p class="contact-card__number">02</p>
-            <h2 class="contact-card__title">Eventos Corporativos</h2>
-            <p class="contact-card__desc">Galas, conferências, team building e eventos de empresa de alto nível.</p>
+            <h2 class="contact-card__title" data-i18n="contacto.cards.c2.title">Eventos Corporativos</h2>
+            <p class="contact-card__desc" data-i18n="contacto.cards.c2.desc">Galas, conferências, team building e eventos de empresa de alto nível.</p>
             <a href="mailto:corporate@sensationgroup.com" class="contact-card__email">corporate@sensationgroup.com</a>
           </article>
 
           <article class="contact-card">
             <p class="contact-card__number">03</p>
-            <h2 class="contact-card__title">Parcerias</h2>
-            <p class="contact-card__desc">Parcerias estratégicas, colaborações de espaço e fornecedores.</p>
+            <h2 class="contact-card__title" data-i18n="contacto.cards.c3.title">Parcerias</h2>
+            <p class="contact-card__desc" data-i18n="contacto.cards.c3.desc">Parcerias estratégicas, colaborações de espaço e fornecedores.</p>
             <a href="mailto:partnerships@sensationgroup.com" class="contact-card__email">partnerships@sensationgroup.com</a>
           </article>
 
           <article class="contact-card">
             <p class="contact-card__number">04</p>
-            <h2 class="contact-card__title">Expansão EUA</h2>
-            <p class="contact-card__desc">Informação sobre as nossas operações nos Estados Unidos.</p>
+            <h2 class="contact-card__title" data-i18n="contacto.cards.c4.title">Expansão EUA</h2>
+            <p class="contact-card__desc" data-i18n="contacto.cards.c4.desc">Informação sobre as nossas operações nos Estados Unidos.</p>
             <a href="mailto:usa@sensationgroup.com" class="contact-card__email">usa@sensationgroup.com</a>
           </article>
 
@@ -567,61 +567,61 @@
     <!-- 3. MAIN CONTACT FORM -->
     <section class="section-wrap section-wrap--white reveal">
       <div class="container">
-        <h2 class="form-title">Envie-nos uma mensagem.</h2>
+        <h2 class="form-title" data-i18n="contacto.form.title">Envie-nos uma mensagem.</h2>
 
         <form id="contact-form" novalidate>
           <div class="form-grid">
 
             <!-- Row 1: Name + Email -->
             <div class="form-group">
-              <label class="form-label" for="cf-name">Nome</label>
-              <input class="form-input" type="text" id="cf-name" name="name" placeholder="O seu nome completo" required />
+              <label class="form-label" for="cf-name" data-i18n="contacto.form.name">Nome</label>
+              <input class="form-input" type="text" id="cf-name" name="name" placeholder="O seu nome completo" data-i18n-attr="placeholder:contacto.form.name.ph" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="cf-email">Email</label>
+              <label class="form-label" for="cf-email" data-i18n="contacto.form.email">Email</label>
               <input class="form-input" type="email" id="cf-email" name="email" placeholder="email@exemplo.com" required />
             </div>
 
             <!-- Row 2: Phone + Event Type -->
             <div class="form-group">
-              <label class="form-label" for="cf-phone">Telefone</label>
+              <label class="form-label" for="cf-phone" data-i18n="contacto.form.phone">Telefone</label>
               <input class="form-input" type="tel" id="cf-phone" name="phone" placeholder="+351 9XX XXX XXX" />
             </div>
             <div class="form-group">
-              <label class="form-label" for="cf-type">Tipo de Evento</label>
+              <label class="form-label" for="cf-type" data-i18n="contacto.form.type">Tipo de Evento</label>
               <select class="form-select" id="cf-type" name="event_type">
-                <option value="" disabled selected>Seleccione uma opção</option>
-                <option value="corporativo">Corporativo</option>
-                <option value="casamento">Casamento</option>
-                <option value="privado">Privado</option>
-                <option value="producao">Produção Técnica</option>
-                <option value="outro">Outro</option>
+                <option value="" disabled selected data-i18n="contacto.form.type.ph">Seleccione uma opção</option>
+                <option value="corporativo" data-i18n="contacto.form.type.corp">Corporativo</option>
+                <option value="casamento" data-i18n="contacto.form.type.wed">Casamento</option>
+                <option value="privado" data-i18n="contacto.form.type.priv">Privado</option>
+                <option value="producao" data-i18n="contacto.form.type.prod">Produção Técnica</option>
+                <option value="outro" data-i18n="contacto.form.type.other">Outro</option>
               </select>
             </div>
 
             <!-- Row 3: Date -->
             <div class="form-group form-grid--full">
-              <label class="form-label" for="cf-date">Data do Evento (aproximada)</label>
+              <label class="form-label" for="cf-date" data-i18n="contacto.form.date">Data do Evento (aproximada)</label>
               <input class="form-input" type="date" id="cf-date" name="event_date" />
             </div>
 
             <!-- Row 4: Message -->
             <div class="form-group form-grid--full">
-              <label class="form-label" for="cf-message">Mensagem</label>
-              <textarea class="form-textarea" id="cf-message" name="message" placeholder="Descreva o seu evento ou a sua questão..." required></textarea>
+              <label class="form-label" for="cf-message" data-i18n="contacto.form.message">Mensagem</label>
+              <textarea class="form-textarea" id="cf-message" name="message" placeholder="Descreva o seu evento ou a sua questão..." data-i18n-attr="placeholder:contacto.form.message.ph" required></textarea>
             </div>
 
             <!-- Submit -->
             <div class="form-grid--full">
-              <button type="submit" class="btn--dark">Enviar Pedido</button>
+              <button type="submit" class="btn--dark" data-i18n="contacto.form.submit">Enviar Pedido</button>
             </div>
 
           </div>
         </form>
 
         <div class="form-success" id="form-success" role="alert">
-          <p class="form-success__title">Mensagem enviada com sucesso.</p>
-          <p class="form-success__text">A nossa equipa irá entrar em contacto consigo em menos de 24 horas.</p>
+          <p class="form-success__title" data-i18n="contacto.form.ok.title">Mensagem enviada com sucesso.</p>
+          <p class="form-success__text" data-i18n="contacto.form.ok.text">A nossa equipa irá entrar em contacto consigo em menos de 24 horas.</p>
         </div>
 
       </div>
@@ -631,25 +631,25 @@
     <section class="section-wrap section-wrap--off reveal">
       <div class="container">
         <div class="offices-header">
-          <p class="section-label">Localização</p>
-          <h2 style="font-family:var(--font-heading);font-size:clamp(32px,4.5vw,52px);font-weight:600;letter-spacing:-0.01em;">Os nossos escritórios.</h2>
+          <p class="section-label" data-i18n="contacto.offices.label">Localização</p>
+          <h2 style="font-family:var(--font-heading);font-size:clamp(32px,4.5vw,52px);font-weight:600;letter-spacing:-0.01em;" data-i18n="contacto.offices.title">Os nossos escritórios.</h2>
         </div>
         <div class="offices-grid">
 
           <div class="office-card">
-            <p class="office-card__label">Sede Europeia</p>
+            <p class="office-card__label" data-i18n="contacto.offices.pt.lbl">Sede Europeia</p>
             <p class="office-card__city">Lisboa, Portugal</p>
             <p class="office-card__address">Rua do Quelhas<br>1200-781 Lisboa</p>
-            <span class="office-card__phone">Em breve</span>
-            <a href="https://maps.google.com/?q=Rua+do+Quelhas+Lisboa" target="_blank" rel="noopener noreferrer" class="office-card__map">Ver no Google Maps →</a>
+            <span class="office-card__phone" data-i18n="contacto.offices.soon">Em breve</span>
+            <a href="https://maps.google.com/?q=Rua+do+Quelhas+Lisboa" target="_blank" rel="noopener noreferrer" class="office-card__map" data-i18n="contacto.offices.map">Ver no Google Maps →</a>
           </div>
 
           <div class="office-card">
-            <p class="office-card__label">Escritório EUA</p>
+            <p class="office-card__label" data-i18n="contacto.offices.us.lbl">Escritório EUA</p>
             <p class="office-card__city">New York, USA</p>
             <p class="office-card__address">350 Fifth Avenue<br>New York, NY 10118</p>
-            <span class="office-card__phone">Em breve</span>
-            <a href="https://maps.google.com/?q=350+Fifth+Avenue+New+York" target="_blank" rel="noopener noreferrer" class="office-card__map">Ver no Google Maps →</a>
+            <span class="office-card__phone" data-i18n="contacto.offices.soon">Em breve</span>
+            <a href="https://maps.google.com/?q=350+Fifth+Avenue+New+York" target="_blank" rel="noopener noreferrer" class="office-card__map" data-i18n="contacto.offices.map">Ver no Google Maps →</a>
           </div>
 
         </div>
@@ -660,15 +660,15 @@
     <section class="section-wrap section-wrap--white reveal">
       <div class="container">
         <div class="faq-header">
-          <p class="section-label">Perguntas Frequentes</p>
-          <h2>Perguntas Frequentes</h2>
+          <p class="section-label" data-i18n="contacto.faq.label">Perguntas Frequentes</p>
+          <h2 data-i18n="contacto.faq.title">Perguntas Frequentes</h2>
         </div>
 
         <div class="faq-list">
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Qual é o tempo mínimo para planeamento de um evento?
+              <span data-i18n="contacto.faq.q1">Qual é o tempo mínimo para planeamento de um evento?</span>
               <span class="faq-question__icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
@@ -676,13 +676,13 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Recomendamos um mínimo de 3 meses para eventos de média dimensão e 6 a 12 meses para eventos de grande escala, como galas e casamentos de luxo. No entanto, analisamos cada caso individualmente e fazemos o possível para acomodar pedidos com prazos mais curtos.</p>
+              <p data-i18n="contacto.faq.a1">Recomendamos um mínimo de 3 meses para eventos de média dimensão e 6 a 12 meses para eventos de grande escala, como galas e casamentos de luxo. No entanto, analisamos cada caso individualmente e fazemos o possível para acomodar pedidos com prazos mais curtos.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Trabalham com eventos internacionais?
+              <span data-i18n="contacto.faq.q2">Trabalham com eventos internacionais?</span>
               <span class="faq-question__icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
@@ -690,13 +690,13 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Sim. O Sensation Group opera em Portugal e nos Estados Unidos, com presença em Lisboa e Nova Iorque. Temos experiência na organização de eventos internacionais em múltiplas geografias europeias e norte-americanas.</p>
+              <p data-i18n="contacto.faq.a2">Sim. O Sensation Group opera em Portugal e nos Estados Unidos, com presença em Lisboa e Nova Iorque. Temos experiência na organização de eventos internacionais em múltiplas geografias europeias e norte-americanas.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Como funciona o processo de orçamentação?
+              <span data-i18n="contacto.faq.q3">Como funciona o processo de orçamentação?</span>
               <span class="faq-question__icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
@@ -704,13 +704,13 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Após o contacto inicial, a nossa equipa agenda uma reunião de briefing para compreender os seus objectivos, dimensão e expectativas. Com base nessa informação, preparamos uma proposta detalhada com opções e estimativa de custos, normalmente em 5 a 7 dias úteis.</p>
+              <p data-i18n="contacto.faq.a3">Após o contacto inicial, a nossa equipa agenda uma reunião de briefing para compreender os seus objectivos, dimensão e expectativas. Com base nessa informação, preparamos uma proposta detalhada com opções e estimativa de custos, normalmente em 5 a 7 dias úteis.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Quais os tipos de eventos que produzem?
+              <span data-i18n="contacto.faq.q4">Quais os tipos de eventos que produzem?</span>
               <span class="faq-question__icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
@@ -718,13 +718,13 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Produzimos uma vasta gama de eventos: galas corporativas, conferências, lançamentos de produto, casamentos de luxo, festas privadas, concertos, instalações audiovisuais e muito mais. As nossas três marcas — Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation — cobrem todas as vertentes da produção de eventos.</p>
+              <p data-i18n="contacto.faq.a4">Produzimos uma vasta gama de eventos: galas corporativas, conferências, lançamentos de produto, casamentos de luxo, festas privadas, concertos, instalações audiovisuais e muito mais. As nossas três marcas — Floor Sensation, Sensation Sound &amp; Lights e Premium Sensation — cobrem todas as vertentes da produção de eventos.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Têm disponibilidade para eventos de última hora?
+              <span data-i18n="contacto.faq.q5">Têm disponibilidade para eventos de última hora?</span>
               <span class="faq-question__icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#0C0B09" stroke-width="1.8">
                   <path d="M7 1v12M1 7h12"/>
@@ -732,7 +732,7 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Avaliamos cada pedido de urgência de forma individual. Dependendo da disponibilidade da nossa equipa e dos recursos necessários, podemos garantir produções com prazos reduzidos. Entre em contacto directamente por telefone para situações urgentes.</p>
+              <p data-i18n="contacto.faq.a5">Avaliamos cada pedido de urgência de forma individual. Dependendo da disponibilidade da nossa equipa e dos recursos necessários, podemos garantir produções com prazos reduzidos. Entre em contacto directamente por telefone para situações urgentes.</p>
             </div>
           </div>
 
