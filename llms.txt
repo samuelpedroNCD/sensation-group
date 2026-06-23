@@ -1,0 +1,28 @@
+# Sensation Group
+
+> Premium event production company based in Setúbal, Portugal, operating across Portugal and the USA through three specialist brands.
+
+Sensation Group produces high-end corporate events, weddings, galas, and entertainment experiences. The group operates through Floor Sensation (event flooring and staging), Sensation Sound & Lights (AV production), and Premium Sensation (full-service luxury events). The company serves clients in Portugal and the United States.
+
+## Pages
+
+- [Homepage](https://sensationgroup.com/): Group overview, brand showcase, featured events, and contact call-to-action.
+- [About](https://sensationgroup.com/sobre.html): Company history, mission, team, and values.
+- [Brands](https://sensationgroup.com/marcas.html): Detailed presentation of the three brands — Floor Sensation, Sensation Sound & Lights, and Premium Sensation.
+- [Service Areas](https://sensationgroup.com/areas.html): Geographic coverage and types of events produced (corporate, weddings, entertainment, galas).
+- [Portfolio](https://sensationgroup.com/portfolio.html): Gallery of past events and productions.
+- [Insights](https://sensationgroup.com/insights.html): Articles, trends, and editorial content about event production.
+- [Events](https://sensationgroup.com/eventos.html): Upcoming and past events calendar.
+- [Partnerships](https://sensationgroup.com/parcerias.html): Strategic partners and supplier network.
+- [Contact](https://sensationgroup.com/contacto.html): Office address (Setúbal, Portugal), phone (+351 961 681 052), email (geral@groupsensation.com), and contact form.
+- [Careers](https://sensationgroup.com/careers.html): Open positions within Sensation Group.
+- [Privacy Policy](https://sensationgroup.com/privacidade.html): GDPR-compliant privacy policy.
+- [Terms & Conditions](https://sensationgroup.com/termos.html): Terms of service.
+- [Cookie Policy](https://sensationgroup.com/cookies.html): Cookie usage and consent information.
+
+## Contact
+
+- Address: Rua das Mimosas, Nº 51, Urb. Quinta da Serralheira, 2910-283 Setúbal, Portugal
+- Phone: +351 961 681 052
+- Email: geral@groupsensation.com
+- LinkedIn: https://www.linkedin.com/company/group-sensation
