@@ -48,50 +48,64 @@ export default async function handler(req, res) {
     message,
   ].filter(l => l !== null).join('\n');
 
-  const payload = {
-    fields: {
-      TITLE: `Candidatura Web — ${name.trim()}`,
-      NAME: firstName,
-      LAST_NAME: lastName,
-      EMAIL: [{ VALUE: email, VALUE_TYPE: 'WORK' }],
-      PHONE: phone ? [{ VALUE: phone, VALUE_TYPE: 'WORK' }] : [],
-      STATUS_ID: 'NEW',
-      ASSIGNED_BY_ID: 0,
-      SOURCE_ID: 'WEB',
-      SOURCE_DESCRIPTION: 'sensationgroup.com',
-      COMMENTS: comments,
-    },
-  };
+  /* Step 1 — Create the lead */
+  let leadId;
+  try {
+    const bitrixRes = await fetch(`${webhookUrl}crm.lead.add.json`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: {
+          TITLE: `Candidatura Web — ${name.trim()}`,
+          NAME: firstName,
+          LAST_NAME: lastName,
+          EMAIL: [{ VALUE: email, VALUE_TYPE: 'WORK' }],
+          PHONE: phone ? [{ VALUE: phone, VALUE_TYPE: 'WORK' }] : [],
+          STATUS_ID: 'NEW',
+          ASSIGNED_BY_ID: 0,
+          SOURCE_ID: 'WEB',
+          SOURCE_DESCRIPTION: 'sensationgroup.com',
+          COMMENTS: comments,
+        },
+      }),
+    });
 
-  /* Attach CV if provided */
+    const data = await bitrixRes.json();
+    if (data.error) {
+      console.error('Bitrix24 lead error:', data.error, data.error_description);
+      return res.status(502).json({ error: 'CRM rejected the request' });
+    }
+    leadId = data.result;
+  } catch (err) {
+    console.error('CRM lead request failed:', err);
+    return res.status(502).json({ error: 'CRM unreachable' });
+  }
+
+  /* Step 2 — Attach CV as a timeline comment (if provided) */
   const cvFile = files.cv ? (Array.isArray(files.cv) ? files.cv[0] : files.cv) : null;
   if (cvFile && cvFile.filepath) {
     try {
       const fileBuffer = fs.readFileSync(cvFile.filepath);
       const base64 = fileBuffer.toString('base64');
       const originalName = cvFile.originalFilename || 'cv.pdf';
-      payload.fields.FILES = [[originalName, base64]];
+
+      await fetch(`${webhookUrl}crm.timeline.comment.add.json`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: {
+            ENTITY_TYPE: 'lead',
+            ENTITY_ID: leadId,
+            COMMENT: 'CV anexado pela candidatura web.',
+            FILES: [[originalName, base64]],
+          },
+        }),
+      });
     } catch (err) {
-      console.warn('CV read failed, attaching without file:', err.message);
+      /* Non-fatal: lead was created, file attachment failed */
+      console.warn('CV attachment failed:', err.message);
     }
   }
 
-  try {
-    const bitrixRes = await fetch(`${webhookUrl}crm.lead.add.json`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    const data = await bitrixRes.json();
-    if (data.error) {
-      console.error('Bitrix24 error:', data.error, data.error_description);
-      return res.status(502).json({ error: 'CRM rejected the request' });
-    }
-
-    return res.status(200).json({ ok: true, id: data.result });
-  } catch (err) {
-    console.error('CRM request failed:', err);
-    return res.status(502).json({ error: 'CRM unreachable' });
-  }
+  return res.status(200).json({ ok: true, id: leadId });
 }
