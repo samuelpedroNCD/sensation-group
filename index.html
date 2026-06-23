@@ -551,12 +551,11 @@
     /* ─── HERO PLAY BUTTON ─── */
     .hero-play {
       position: absolute;
-      bottom: 44px;
+      bottom: 36px;
       right: 48px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 14px;
+      justify-content: center;
       cursor: pointer;
       z-index: 3;
       background: none;
@@ -564,8 +563,8 @@
       padding: 0;
     }
     .hero-play__circle {
-      width: 76px;
-      height: 76px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       border: 1px solid rgba(255,255,255,0.4);
       background: rgba(255,255,255,0.07);
@@ -581,22 +580,10 @@
       transform: scale(1.1);
     }
     .hero-play__circle svg {
-      width: 22px;
-      height: 22px;
+      width: 14px;
+      height: 14px;
       fill: rgba(255,255,255,0.9);
-      margin-left: 4px;
-    }
-    .hero-play__label {
-      font-family: 'Inter', sans-serif;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-      transition: color 0.3s ease;
-    }
-    .hero-play:hover .hero-play__label {
-      color: rgba(255,255,255,0.85);
+      margin-left: 3px;
     }
 
     /* ─── VIDEO MODAL ─── */
@@ -1756,6 +1743,10 @@
         right: auto;
       }
 
+      .hero-play {
+        right: 32px;
+      }
+
       .hero-rule-bottom {
         left: 32px;
         right: 32px;
@@ -1848,6 +1839,11 @@
       .hero-indicator {
         left: 24px;
         bottom: 22px;
+      }
+
+      .hero-play {
+        bottom: 22px;
+        right: 24px;
       }
 
       .hero-rule-bottom {
@@ -2139,7 +2135,6 @@
       <span class="hero-play__circle" aria-hidden="true">
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon points="5,2 18,10 5,18"/></svg>
       </span>
-      <span class="hero-play__label" data-i18n="hero.play">Ver Showreel</span>
     </button>
 
     <div class="hero-rule-top" aria-hidden="true"></div>
