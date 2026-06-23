@@ -1,0 +1,8 @@
+{
+  "name": "sensation-group",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "formidable": "^3.5.1"
+  }
+}

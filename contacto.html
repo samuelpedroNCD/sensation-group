@@ -857,10 +857,42 @@
       var form = document.getElementById('contact-form');
       var success = document.getElementById('form-success');
       if (!form) return;
-      form.addEventListener('submit', function(e) {
+
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        form.style.display = 'none';
-        success.style.display = 'block';
+        var btn = form.querySelector('[type=submit]');
+        var originalText = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = '…';
+
+        try {
+          var res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name:       form.querySelector('[name=name]').value,
+              email:      form.querySelector('[name=email]').value,
+              phone:      form.querySelector('[name=phone]').value,
+              event_type: form.querySelector('[name=event_type]').value,
+              event_date: form.querySelector('[name=event_date]').value,
+              message:    form.querySelector('[name=message]').value,
+            }),
+          });
+          if (!res.ok) throw new Error(res.status);
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } catch (_) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+          var err = form.querySelector('.form-error');
+          if (!err) {
+            err = document.createElement('p');
+            err.className = 'form-error';
+            err.style.cssText = 'color:#c0392b;font-size:13px;margin-top:12px;';
+            form.appendChild(err);
+          }
+          err.textContent = 'Ocorreu um erro. Por favor tente novamente ou contacte-nos por email.';
+        }
       });
     })();
   </script>
