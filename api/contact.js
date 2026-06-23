@@ -44,6 +44,7 @@ export default async function handler(req, res) {
       STATUS_ID: 'NEW',
       ASSIGNED_BY_ID: 0,
       SOURCE_ID: 'WEB',
+      SOURCE_DESCRIPTION: 'sensationgroup.com',
       COMMENTS: comments,
     },
   };
